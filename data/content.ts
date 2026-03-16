@@ -155,7 +155,13 @@ Transition rules:
 How to launch:
 1. Your product must be in validating, building, alpha, or beta status first
 2. Go to your product page → click "Launch"
-3. You can schedule the launch for a specific date and time, or launch immediately
+3. Pick a launch week from the available weekly batch slots
+
+Batch slots:
+- Each week (Sunday to Sunday IST) has a maximum of 20 product launches
+- When a week is full, you'll see it marked as "Full" in the scheduler and must choose a different week
+- Up to 8 upcoming weeks are available to schedule into
+- Each product can only launch once
 
 What happens during Launch Boost:
 - Your product appears prominently on the Discover and Products pages
