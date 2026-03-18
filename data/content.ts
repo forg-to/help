@@ -345,83 +345,41 @@ Tips for great articles:
 - Be specific. "How I got my first 100 users" outperforms "My journey."
 - Publish regularly — even short articles compound over time.
 - Link to your product so readers can discover what you're building.`
-      }
-    ]
-  },
-  {
-    title: "Cross-Posting",
-    slug: "cross-posting",
-    icon: "Share2",
-    articles: [
+      },
+      /* #FIX
       {
         title: "How Cross-Posting Works",
         slug: "how-cross-posting-works",
         content: `When you write an update on forg, you can publish it to multiple platforms simultaneously — X (Twitter), LinkedIn, and Bluesky — in one click.
 
-**Image: Post composer with cross-posting toggles for X, LinkedIn, and Bluesky**
+### Step 1: Connecting your channels
+Before you can cross-post, you need to link your social accounts to Forg. There are two ways to do this:
 
-How to use it:
-1. Write your update in the post composer.
-2. Toggle the platforms you want to post to.
-3. Click **"Post"** — forg publishes to all selected platforms at once.
+1. **Via the Post Composer:** When you open the writing update modal, you'll see "Connect" buttons for X, LinkedIn, and Bluesky. Clicking these will guide you through the authorization process.
+   
+![Connect via Composer](/connect-via-composer.png)
 
-**Image: Success notification confirming your post was published on 3 platforms**
+2. **Via Studio Integrations:** Go to your **Studio** (via the sidebar) and open the **Integrations** tab. Here you can see all available platforms and connect or disconnect them in one place.
+
+![Connect via Studio](/connect-via-studio.png)
+
+### Step 2: Cross-posting your content
+Once your channels are connected, you have two ways to reach your audience across the web:
+
+1. **Using the Writing Update Modal:** From your home feed or profile, click on the "Write an update..." box. Compose your message, then toggle the icons for the platforms you want to cross-post to.
+
+![Post via Composer](/post-via-composer.png)
+
+2. **Using the Studio Compose Button:** In the **Studio**, click the **Compose** button at the top. This opens a dedicated cross-posting modal where you can draft your content and select multiple channels for simultaneous publication.
+
+![Post via Studio Compose](/post-via-studio.png)
 
 Things to know:
 - **Bluesky** is capped at **300 characters** — your post will be trimmed if it's longer.
 - **Media cross-posting is Pro only.** Free users can cross-post text. Images and videos require Pro.
-- Up to 4 images can be shared to X and LinkedIn.
-
-**Image: Composer showing a warning when Bluesky character limit is exceeded**`
-      },
-      {
-        title: "Connecting X (Twitter)",
-        slug: "connecting-x-twitter",
-        content: `Connect your X account to publish updates directly to your followers from forg.
-
-**Image: Integrations settings page showing X (Twitter) with a "Connect" button**
-
-How to connect:
-1. Go to **Settings → Integrations → X (Twitter)**.
-2. Click **"Connect X Account"**.
-3. Authorize forg on X's OAuth screen.
-
-**Image: X OAuth authorization screen asking for permission to post on behalf of forg.to**
-
-Once connected, the X toggle will appear in your post composer.`
-      },
-      {
-        title: "Connecting LinkedIn",
-        slug: "connecting-linkedin",
-        content: `Publish your professional build-in-public updates directly to your LinkedIn feed.
-
-**Image: Integrations settings showing a connected LinkedIn account with a green status**
-
-How to connect:
-1. Go to **Settings → Integrations → LinkedIn**.
-2. Click **"Connect LinkedIn"**.
-3. Authorize forg on LinkedIn's OAuth screen.
-
-**Image: LinkedIn permissions screen showing social posting access being granted to forg.to**`
-      },
-      {
-        title: "Connecting Bluesky",
-        slug: "connecting-bluesky",
-        content: `forg uses Bluesky App Passwords for secure cross-posting — your main account password is never shared.
-
-**Image: Bluesky integration form showing fields for your handle and App Password**
-
-How to connect:
-1. In your Bluesky account, go to **Settings → App Passwords** and create a new one.
-2. Copy the generated App Password.
-3. In forg, go to **Settings → Integrations → Bluesky**.
-4. Enter your Bluesky handle (e.g., \`yourname.bsky.social\`) and the App Password.
-5. Click **"Connect"**.
-
-**Image: Bluesky's App Password settings page showing where to generate and copy the password**
-
-Remember: Bluesky posts are capped at **300 characters**.`
+- Up to 4 images can be shared to X and LinkedIn.`
       }
+      */
     ]
   },
   {
@@ -432,65 +390,39 @@ Remember: Bluesky posts are capped at **300 characters**.`
       {
         title: "How Streaks Work",
         slug: "how-streaks-work",
-        content: `Build your streak by posting updates, launching products, or engaging with the community every day. Each day you contribute, your streak grows.
+        content: `Build your streak by contributing to forg every day. Any of the following count as a contribution:
+
+- Posting an update
+- Writing and publishing an article
+- Commenting on a post
+- Creating a new product
+
+Each calendar day (UTC) you contribute, your streak grows by 1.
 
 **Image: Profile header showing the current streak count with a flame icon**
 
 Milestones & Rewards
-Reach these milestones to unlock real rewards:
+Rewards repeat — you earn them again each time you hit the next multiple:
 
 | Milestone | Reward |
 |-----------|--------|
-| 7 days | **Streak Restore ×1** — recover a broken streak |
-| 14 days | **Super Upvote** — your upvotes count 2× in the feed |
-| 60 days | **50% off Pro** — a one-time discount code |
-| 100 days | **Claude Pro (1 month)** — a free month of Anthropic's Claude Pro |
+| Every 7 days (7, 14, 21 ...) | **Streak Restore ×1** — save it to recover a future broken streak |
+| 14 days (one-time unlock) | **Super Upvote** — your upvotes carry extra weight in the feed |
+| Every 60 days (60, 120 ...) | **50% off Pro** — a discount code sent to you |
+| Every 100 days (100, 200 ...) | **Claude Pro (1 month)** — a free month of Anthropic's Claude Pro |
 
 **Image: Streak rewards dashboard showing progress bars toward each milestone**
 
 Streak Restores
-If you miss a day, you have a **2-day window** to use a Restore and recover your streak. Restores are earned at 7-day milestones.
+If you miss up to **2 consecutive days**, you can spend a Restore to bridge the gap and keep your streak alive. Restores are earned automatically at every 7-day milestone.
 
 **Image: Streak recovery prompt shown the day after a missed contribution**
 
-Your streak counter is based on **IST (Indian Standard Time)**, so make sure you post before midnight IST to keep it alive.`
+Your streak counter resets at **midnight UTC**, so make sure you contribute before midnight UTC each day to keep it alive.`
       }
     ]
   },
-  {
-    title: "Integrations",
-    slug: "integrations",
-    icon: "Plug",
-    articles: [
-      {
-        title: "Platform Integrations",
-        slug: "platform-integrations",
-        content: `Connect your external accounts to display live activity as widgets on your profile. This gives visitors a complete picture of your work across the web.
-
-**Image: A profile with active GitHub contribution graph, YouTube latest video, and dev.to widgets**
-
-Supported platforms:
-
-| Platform | What it shows |
-|----------|---------------|
-| GitHub | Contribution heatmap and top repositories |
-| YouTube | Your latest videos |
-| Medium | Latest published articles |
-| dev.to | Latest published articles |
-| Hashnode | Latest published articles |
-| Substack | Latest posts |
-| LeetCode | Problem count and rating |
-| Codeforces | Rating and recent contest results |
-| CodeChef | Rating and star ranking |
-
-**Image: Integration settings page where you paste usernames for each platform**
-
-To add an integration: Go to **Settings → Integrations**, enter your username for each platform, and save. The widget will appear on your profile within a few minutes.
-
-**Image: Profile with widgets dragged and rearranged into a custom layout**`
-      }
-    ]
-  },
+  /* #FIX
   {
     title: "Scheduling",
     slug: "scheduling",
@@ -656,6 +588,7 @@ Key settings:
       }
     ]
   }
+  */
 ];
 
 export interface FAQ {
