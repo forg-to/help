@@ -17,8 +17,8 @@ export function SearchHeader() {
     : [];
 
   return (
-    <header className="sticky top-0 z-30 bg-white/80 backdrop-blur-md border-b border-gray-100 px-6 py-4">
-      <div className="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
+    <header className="sticky top-0 z-30 border-b border-gray-100 bg-white/80 px-6 py-4 backdrop-blur-md">
+      <div className="mx-auto flex w-full max-w-[1080px] items-center justify-between gap-4">
         <div className="flex items-center gap-4 flex-1">
           <button
             onClick={() => setIsMobileMenuOpen(true)}

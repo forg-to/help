@@ -4,6 +4,8 @@ import Link from "next/link";
 import { TableOfContents } from "@/components/toc";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { ReactNode } from "react";
+import { ImageLightbox } from "@/components/image-lightbox";
 
 export async function generateStaticParams() {
   const params = HELP_CONTENT.flatMap((category) =>
@@ -15,6 +17,113 @@ export async function generateStaticParams() {
   return params;
 }
 
+function parseInline(text: string): ReactNode {
+  const parts: ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|`([^`]+)`/g;
+  let lastIndex = 0;
+  let key = 0;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    if (match[1] !== undefined && match[2] !== undefined) {
+      // Markdown link [text](url)
+      parts.push(
+        <Link
+          key={key++}
+          href={match[2]}
+          className="text-accent hover:underline font-medium"
+        >
+          {match[1]}
+        </Link>
+      );
+    } else if (match[3] !== undefined) {
+      // Bold **text**
+      parts.push(
+        <strong key={key++} className="font-semibold text-[#0a0a0a]">
+          {match[3]}
+        </strong>
+      );
+    } else if (match[4] !== undefined) {
+      // Inline code `text`
+      parts.push(
+        <code key={key++} className="px-1.5 py-0.5 bg-gray-100 rounded text-xs font-mono text-gray-800">
+          {match[4]}
+        </code>
+      );
+    }
+    lastIndex = match.index + match[0].length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  if (parts.length === 0) return text;
+  if (parts.length === 1 && typeof parts[0] === "string") return parts[0];
+  return <>{parts}</>;
+}
+
+function renderBodyLines(lines: string[], baseKey: string): ReactNode {
+  const output: ReactNode[] = [];
+  let i = 0;
+
+  while (i < lines.length) {
+    const line = lines[i].trim();
+    if (!line) {
+      i++;
+      continue;
+    }
+
+    if (line.startsWith("- ") || line.startsWith("* ")) {
+      const listItems: string[] = [];
+      while (i < lines.length && (lines[i].trim().startsWith("- ") || lines[i].trim().startsWith("* "))) {
+        listItems.push(lines[i].trim().replace(/^[-*]\s+/, ""));
+        i++;
+      }
+      output.push(
+        <ul key={`${baseKey}-ul-${i}`} className="list-disc pl-5 mb-4 space-y-1.5">
+          {listItems.map((item, j) => (
+            <li key={j} className="text-sm leading-relaxed">
+              {parseInline(item)}
+            </li>
+          ))}
+        </ul>
+      );
+      continue;
+    }
+
+    if (line.match(/^\d+\.\s/)) {
+      const listItems: string[] = [];
+      while (i < lines.length && lines[i].trim().match(/^\d+\.\s/)) {
+        listItems.push(lines[i].trim().replace(/^\d+\.\s+/, ""));
+        i++;
+      }
+      output.push(
+        <ol key={`${baseKey}-ol-${i}`} className="list-decimal pl-5 mb-4 space-y-1.5">
+          {listItems.map((item, j) => (
+            <li key={j} className="text-sm leading-relaxed">
+              {parseInline(item)}
+            </li>
+          ))}
+        </ol>
+      );
+      continue;
+    }
+
+    output.push(
+      <p key={`${baseKey}-p-${i}`} className="text-sm leading-relaxed mb-2">
+        {parseInline(line)}
+      </p>
+    );
+    i++;
+  }
+
+  return <>{output}</>;
+}
+
 export default function ArticlePage({ params }: { params: { category: string; article: string } }) {
   const category = HELP_CONTENT.find((c) => c.slug === params.category);
   const article = category?.articles.find((a) => a.slug === params.article);
@@ -24,21 +133,57 @@ export default function ArticlePage({ params }: { params: { category: string; ar
   }
 
   const renderContent = (content: string) => {
-    const blocks = content.split('\n\n');
+    const blocks = content.split("\n\n");
     return blocks.map((block, i) => {
-      // Table rendering (Markdown pipes)
-      if (block.includes('|') && block.includes('---')) {
-        const rows = block.trim().split('\n');
-        const headers = rows[0].split('|').map(h => h.trim()).filter(Boolean);
-        const dataRows = rows.slice(2).map(row => row.split('|').map(c => c.trim()).filter(Boolean));
+      const trimmed = block.trim();
+      if (!trimmed) return null;
 
+      // Actual markdown image — block is ![alt text](/path/to/image.png)
+      const mdImageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      if (mdImageMatch) {
+        const [, alt, src] = mdImageMatch;
+        return <ImageLightbox key={i} src={src} alt={alt} />;
+      }
+
+      // Image placeholder — entire block is **Image: ...**
+      if (trimmed.startsWith("**Image:") && trimmed.endsWith("**")) {
+        const desc = trimmed.slice(2, -2).replace(/^Image:\s*/, "").trim();
+        return (
+          <div
+            key={i}
+            className="my-6 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 flex flex-col items-center gap-3 text-center"
+          >
+            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
+                <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5" />
+                <polyline points="21 15 16 10 5 21" strokeWidth="1.5" />
+              </svg>
+            </div>
+            <p className="text-xs text-gray-500 italic font-medium">{desc}</p>
+          </div>
+        );
+      }
+
+      // Table
+      if (trimmed.includes("|") && trimmed.includes("---")) {
+        const rows = trimmed.split("\n");
+        const headers = rows[0].split("|").map((h) => h.trim()).filter(Boolean);
+        const dataRows = rows.slice(2).map((row) => row.split("|").map((c) => c.trim()).filter(Boolean));
         return (
           <div key={i} className="overflow-x-auto mb-8">
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
                   {headers.map((h, j) => (
-                    <th key={j} className="p-3 text-left font-semibold text-sm text-[#0a0a0a]">{h}</th>
+                    <th key={j} className="p-3 text-left font-semibold text-sm text-[#0a0a0a]">
+                      {parseInline(h)}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -46,7 +191,9 @@ export default function ArticlePage({ params }: { params: { category: string; ar
                 {dataRows.map((row, j) => (
                   <tr key={j} className="border-b border-gray-100 last:border-0">
                     {row.map((cell, k) => (
-                      <td key={k} className="p-3 text-sm leading-relaxed">{cell}</td>
+                      <td key={k} className="p-3 text-sm leading-relaxed">
+                        {parseInline(cell)}
+                      </td>
                     ))}
                   </tr>
                 ))}
@@ -56,59 +203,69 @@ export default function ArticlePage({ params }: { params: { category: string; ar
         );
       }
 
-      // List rendering
-      if (block.trim().startsWith('- ') || block.trim().startsWith('* ')) {
-        const items = block.trim().split('\n');
+      const lines = trimmed.split("\n");
+
+      // Pure list block
+      if (lines[0].startsWith("- ") || lines[0].startsWith("* ")) {
         return (
           <ul key={i} className="list-disc pl-5 mb-6 space-y-2">
-            {items.map((item, j) => (
-              <li key={j} className="text-sm leading-relaxed">{item.replace(/^[-*]\s+/, '')}</li>
+            {lines.map((item, j) => (
+              <li key={j} className="text-sm leading-relaxed">
+                {parseInline(item.replace(/^[-*]\s+/, ""))}
+              </li>
             ))}
           </ul>
         );
       }
 
-      // Ordered list rendering
-      if (block.trim().match(/^\d+\.\s/)) {
-        const items = block.trim().split('\n');
+      // Pure ordered list block
+      if (lines[0].match(/^\d+\.\s/)) {
         return (
           <ol key={i} className="list-decimal pl-5 mb-6 space-y-2">
-            {items.map((item, j) => (
-              <li key={j} className="text-sm leading-relaxed">{item.replace(/^\d+\.\s+/, '')}</li>
+            {lines.map((item, j) => (
+              <li key={j} className="text-sm leading-relaxed">
+                {parseInline(item.replace(/^\d+\.\s+/, ""))}
+              </li>
             ))}
           </ol>
         );
       }
 
-      // H3-like section headers (lines that look like headers or end with :)
-      const lines = block.split('\n');
-      if (lines.length > 1 && (lines[0].endsWith(':') || (lines[0].length < 50 && lines[1].startsWith('-')))) {
-         return (
-           <div key={i} className="mb-6">
-             <h3 className="text-xl font-bold text-[#0a0a0a] mb-3" id={lines[0].replace(':', '').toLowerCase().replace(/\s+/g, '-')}>
-               {lines[0]}
-             </h3>
-             <div className="space-y-4">
-               {lines.slice(1).map((line, j) => (
-                 <p key={j} className="text-sm leading-relaxed">{line}</p>
-               ))}
-             </div>
-           </div>
-         );
+      // Section with multiple lines — first line is header, rest is body
+      if (
+        lines.length > 1 &&
+        !lines[0].startsWith("**") &&
+        !lines[0].startsWith("-") &&
+        !lines[0].startsWith("*") &&
+        !lines[0].match(/^\d+\./)
+      ) {
+        const headerId = lines[0].toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+        return (
+          <div key={i} className="mb-8">
+            <h3
+              className="text-base font-semibold text-[#0a0a0a] mb-3"
+              id={headerId}
+            >
+              {parseInline(lines[0])}
+            </h3>
+            <div>{renderBodyLines(lines.slice(1), `${i}`)}</div>
+          </div>
+        );
       }
 
-      // Default paragraph
+      // Single paragraph
       return (
         <p key={i} className="mb-6 text-sm leading-relaxed">
-          {block}
+          {parseInline(trimmed)}
         </p>
       );
     });
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-12 max-w-screen-xl mx-auto px-6 py-12">
-      <div className="flex-1 max-w-[720px] mx-auto lg:mx-0">
+    <div className="mx-auto w-full max-w-[1080px] px-6 py-12">
+      <div className="flex flex-col items-center gap-12 xl:grid xl:grid-cols-[minmax(0,720px)_240px] xl:items-start xl:justify-center">
+        <div className="w-full max-w-[720px]">
         <Breadcrumbs
           items={[
             { label: "Help", href: "/" },
@@ -137,9 +294,10 @@ export default function ArticlePage({ params }: { params: { category: string; ar
         </div>
       </div>
 
-      <aside className="hidden xl:block w-64 h-fit sticky top-28">
-        <TableOfContents content={article.content} />
-      </aside>
+        <aside className="hidden xl:block h-fit w-full max-w-[240px] sticky top-28">
+          <TableOfContents content={article.content} />
+        </aside>
+      </div>
     </div>
   );
 }

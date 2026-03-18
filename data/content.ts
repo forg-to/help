@@ -23,59 +23,162 @@ export const HELP_CONTENT: Category[] = [
         slug: "what-is-forg",
         content: `forg.to is a community for indie hackers and builders who build in public. It's where you share what you're working on — product updates, milestones, revenue numbers, failures, and wins — and connect with other people who actually understand what it means to build something from scratch.
 
+**Image: forg.to homepage showing the community feed and trending products**
+
 What you can do on forg:
 - Add your product and track its journey from idea to launch and beyond
-- Post updates about your build — what shipped, what broke, what you learned
-- Write long-form articles about your journey
+- Post updates about what you shipped, what broke, and what you learned
+- Write long-form articles about your journey (Pro)
 - Cross-post your updates to X, LinkedIn, and Bluesky in one click
-- Schedule posts ahead of time
+- Schedule posts ahead of time (Pro)
 - Follow other builders and products you care about
 - Discover trending products and builders in your niche
+- Build daily streaks and earn rewards like Claude Pro and discounts
+
+**Image: A builder's profile showcasing their products, streak count, and recent updates**
 
 forg is not a social network for everyone. It's for builders.`
+      }
+    ]
+  },
+  {
+    title: "Profile",
+    slug: "profile",
+    icon: "User",
+    articles: [
+      {
+        title: "Create profile",
+        slug: "how-to-create-forg-profile",
+        content: `Your forg profile is more than just a page. It's your public proof-of-work and your builder identity. A complete profile helps you connect with other builders and showcase your journey.
+
+Step 1: Sign up for Forg
+You can sign up for Forg with your Google or Github or X (formerly Twitter). This ensures a quick and secure onboarding process.
+
+![Sign up for Forg](/sign-in-page.png)
+
+Step 2: Choose your identity
+Once signed up, you'll need to set your core identity:
+- **Username:** Choose a unique handle (3-30 characters) that is available. This forms your permanent profile URL: \`forg.to/@username\`.
+- **Display Name:** Your professional name or the name you're known by (up to 50 characters).
+
+![Choose your username and professional name](/onboarding-username.png)
+
+Step 3: Add your project
+If you're already working on a project, you can drop the link here and it will be added to your profile immediately. If you're not ready yet, you can simply skip this step. 
+
+For more details on how products work, check out our guide on [Adding Your Product](/products/adding-your-product).
+
+![Add your first project during onboarding](/onboarding-project.png)
+
+Step 4: Introduce yourself
+Start with your first post on forg by introducing yourself to everyone. Share what you're learning, or building, or exploring. This is your first interaction with the community, so make sure to be professional and follow the rules and guidelines.
+
+![Introduce yourself to the forg community](/onboarding-introduce.png)
+
+Step 5: Profile Completion
+To make sure your profile is visible and you can fully participate in the community, your profile should be at least 40% complete. Profiles with less than 40% completion are hidden from search and cannot perform key interactions like upvoting, commenting, or sending Direct Messages.
+
+To reach the 40% threshold quickly, you can:
+- **Write a Bio:** A punchy, one-sentence description of who you are (+15%).
+- **Add Work Experience:** Build your resume by adding your professional history (+10%).
+- **Connect a Platform:** Link your GitHub, X, or LinkedIn to verify your identity (+20%).
+- **Add First Project:** Showcase what you're currently building (+30%).
+
+![Complete at least 40% of your profile to interact](/profile-completion-modal.png)
+
+Step 6: Extra things to make your profile stand out
+Beyond the basics, you can further professionalize your profile to attract collaborators and opportunities:
+- **Skills & Expertise:** Tag the technologies and tools you work with (e.g., Next.js, Rust, Figma). These tags make your profile searchable by expertise.
+- **Opportunities (Open To):** Signal if you are open to Jobs, Freelance work, Collaborations, or Mentorship.
+
+![Example of a completed professional profile](/profile-page.png)
+
+Do's and Don'ts
+- **Profile Picture:** A professional headshot or portrait photo is recommended. Anything obscene will lead to profile suspension.
+- **First and Last Name:** Your legal name should be used. Do not use anything else like company name or combination of your legal name like website, role, emojis, etc. For ex:
+    - ❌ Johnrao Doekar Visit ➡️ johndoe.com
+    - ❌ John The Product Designer 🧑🏻‍🎨
+    - ❌ Johnrao Doekar Follow For Content Marketing Tips
+- **Bio:** Share briefly about yourself. What you do, where you work, etc. Keep it professional and concise.
+- **Username:** Your username is your permanent handle. Check our [guidelines for username here](/getting-started/creating-your-account).`
       },
       {
-        title: "Creating Your Account",
-        slug: "creating-your-account",
-        content: `Sign up options:
-- Google — one-click sign in with your Google account
-- X (Twitter) — sign in with your X/Twitter account
-- LinkedIn — sign in with your LinkedIn account
-- GitHub — sign in with your GitHub account
-- Email + Password — create an account with any email address
+        title: "Work (Platform Integration)",
+        slug: "showcase-work-on-profile",
+        content: `forg is designed to prioritize what you've *actually built*. By connecting your existing professional platforms, you can showcase a 360° view of your work history and activity across the web.
 
-After signing up you'll go through a short onboarding flow to choose your username, fill in your bio, and add your first product. You can skip most of it and come back later.
+GitHub
+Connecting your GitHub account allows you to display your coding activity directly on your forg profile. 
+- **Contribution Graph:** Show your daily commit history and consistency.
+- **Top Repositories:** Feature your most important open-source work or personal projects.
+- **Languages:** Automatically display the tech stack you use most frequently.
 
-Username rules:
-- Must be unique across forg.to
-- Case-insensitive (so Kislay and kislay are the same)
-- Your profile URL is forg.to/[username]`
+![GitHub Widget](/work-github.png)
+
+YouTube
+If you create content or tutorials, the YouTube integration pulls your latest activity.
+- **Latest Videos:** Your most recent uploads appear as a gallery.
+- **Channel Stats:** Show your reach and influence in the developer community.
+
+![YouTube Widget](/work-youtube.png)
+
+Writing (Medium, dev.to, Hashnode, Substack)
+For those who build in public through writing, you can aggregate your posts from multiple platforms into one feed.
+- **Unified Blog Feed:** Pulls the latest articles from your connected blogs.
+- **Evergreen Content:** Showcases your deep dives and tutorials alongside your product updates.
+
+![Writing Widget](/work-devto.png)
+
+Competitive Programming (LeetCode, Codeforces, CodeChef)
+Showcase your problem-solving skills and technical proficiency.
+- **Live Rankings:** Display your current rating and global rank.
+- **Problem Stats:** Show the number of problems solved across different difficulty levels.
+
+![Competitive Programming](/work-cp.png)
+
+Customizing Your Layout
+You have full control over how these integrations appear on your profile. You can drag and drop widgets to change their position or resize them (Small, Medium, Large) to highlight your strongest areas.`
       },
       {
-        title: "Setting Up Your Profile",
-        slug: "setting-up-your-profile",
-        content: `Your profile is your builder identity on forg. Here's what you can fill in:
+        title: "Project",
+        slug: "profile-projects",
+        content: `There are two ways products appear on your profile:
 
-Basic info:
-- Display name and username
-- Profile photo and cover image
-- Bio (up to 100 characters — keep it sharp)
-- Location (up to 30 characters)
-- Website URL
+1. **Owned Products:** Products where you are the primary builder or founder. These appear under your "Products" tab.
+2. **Contributions:** Products where you've been added as a team member. These appear under the "Contributed to" section, highlighting your collaborative work.
 
-Skills: Tag the languages, frameworks, tools, and platforms you work with (e.g. React, TypeScript, AWS). These show up on your profile and help others find builders with specific expertise.
+![Projects and Contributions](/profile-projects.png)
 
-Social links: Add links to your X/Twitter, GitHub, LinkedIn, YouTube, or any other platform. These display on your profile.
+Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point on a resume, a forg project shows the entire timeline of how it was built — from the first "Idea" post to the final "Launched" milestone.
 
-Open to: Signal what kinds of opportunities you're open to:
-- Jobs
-- Freelance
-- Collaborations
-- Mentorship
+![Product Detail Page](/product-slug-page.png)`
+      },
+      {
+        title: "Resume",
+        slug: "forg-resume",
+        content: `forg includes a dedicated Resume section that turns your profile into a professional portfolio ready for opportunities.
 
-This is public — builders and companies can filter by these on forg.
+Work Experience
+Add your professional history including:
+- **Role and Company:** Your title and the organization.
+- **Work Type:** Full-time, Part-time, Contract, Freelance, or Internship.
+- **Description:** A brief summary of your impact (up to 500 characters).
+- **Skills:** Tag up to 10 specific skills used during that tenure.
 
-Platform integrations: Connect your accounts on Medium, dev.to, Hashnode, Substack, YouTube, GitHub, Codeforces, LeetCode, and CodeChef. These show up as widgets on your profile page, so visitors can see your activity across the internet in one place.`
+![Work Experience](/profile-resume-experience.png)
+
+Education & Certifications
+- List your degrees, institutions, and fields of study.
+- Showcase your professional certifications with direct links for verification.
+
+![Education and Certifications](/profile-resume-education.png)
+
+AI Resume Parser
+Don't want to type everything manually? Upload your existing resume as a PDF and our **Gemini-powered AI** will automatically extract your work history, education, and certifications — populating your forg profile in seconds.
+
+**Image: Resume upload interface showing "Upload PDF" button and AI parsing progress**
+
+To use the parser: Go to **Settings → Profile → Resume → Upload PDF**`
       }
     ]
   },
@@ -89,94 +192,104 @@ Platform integrations: Connect your accounts on Medium, dev.to, Hashnode, Substa
         slug: "adding-your-product",
         content: `Every builder on forg should have at least one product. A product is anything you're building — a SaaS, mobile app, browser extension, open source project, API, or anything else.
 
-To add a product: Go to your profile → click "Add Product" or go to forg.to/product/new.
+To add a product, look for the **plus icon (+)** in the left sidebar next to the "Products" section. Clicking this will take you to \`forg.to/product/new\`.
+
+![Add Product](/add-product.png)
 
 What you fill in:
 
 | Field | Details |
 |-------|---------|
 | Name | Your product's name |
-| Slug | URL-friendly identifier (e.g. my-product → forg.to/p/my-product) |
 | Tagline | One-sentence description |
 | Description | Longer description (shown on product page) |
 | Logo | Square image, shown everywhere |
 | Website URL | Your product's homepage |
 | GitHub URL | If open source |
-| Category | Choose from 44 categories (AI & ML, Developer Tools, SaaS, etc.) |
-| Product type | SaaS, Browser Extension, Mobile App, Desktop App, API, Open Source, Others |
-| Platforms | Web, iOS, Android, Mac, Windows, Linux, Chrome Extension, Firefox Extension |
-| Pricing | Free, Freemium, One-time Purchase, Subscription |
-| Status | Where in the lifecycle your product is |`
+| Category | Choose from 44 categories |
+| Product type | SaaS, Browser Extension, Mobile App, etc. |
+| Platforms | Web, iOS, Android, Mac, Windows, etc. |
+| Pricing | Free, Freemium, One-time, Subscription |
+| Status | Where in the lifecycle your product is |
+
+![New Product Form](/new-product-form.png)
+
+Slugs are auto-generated from your product name — e.g., "My Cool App" becomes \`forg.to/products/my-cool-app\`. While you don't need to provide one manually, you can change your product slug later in settings, but please note that it can only be changed **once every 30 days**.`
       },
       {
         title: "Product Lifecycle",
         slug: "product-lifecycle",
         content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time as your product evolves.
 
+![Edit Product Status](/edit-product-status.png)
+
 Pre-launch stages:
 
 | Status | Meaning |
 |--------|---------|
-| Idea | Just a concept — you haven't started building yet |
+| Idea | Just a concept, not yet started |
 | Validating | Testing whether the idea has demand |
-| Building | Actively developing the product |
+| Building | Actively in development |
 | Alpha | Internal testing phase |
-| Beta | Limited public testing with early users |
+| Beta | Limited public testing |
 
 Live stages:
 
 | Status | Meaning |
 |--------|---------|
-| Launched | Publicly launched — triggers Launch Boost (see below) |
-| Growing | Post-launch, acquiring users and iterating |
+| Launched | Publicly launched — triggers Launch Boost |
+| Growing | Post-launch, acquiring users |
 | Profitable | Generating meaningful revenue |
 | Funded | Received external investment |
-| Scaling | Aggressively growing the user base |
+| Scaling | Aggressively growing |
 
-Other statuses:
+Terminal stages:
 
 | Status | Meaning |
 |--------|---------|
-| Paused | Temporarily not working on it |
-| Dead | Shut down — this is terminal, no going back |
-| Acquired | Product was acquired — this is terminal |
+| Paused | Temporarily on hold |
+| Dead | Project discontinued |
+| Acquired | Bought by another company |
+
+**Image: A product timeline view showing status transitions from Building → Beta → Launched → Growing**
 
 Transition rules:
-- You cannot jump from idea directly to launched. You must progress through at least one intermediate stage first (validating, building, alpha, or beta).
-- Once your product is in a post-launch stage (growing, profitable, funded, scaling), you cannot move it back to pre-launch stages.
-- Dead and acquired are final. You cannot change the status after reaching these.
-- During Launch Boost week (the 7 days after launching), the launched status is locked. The system automatically transitions your product to growing after 7 days.`
+- You cannot jump from **Idea** directly to **Launched**.
+- Once post-launch, you cannot move a product back to pre-launch.
+- **Dead** and **Acquired** are final states.
+- During your 7-day Launch Boost, the Launched status is locked — only the system moves it to Growing.`
       },
       {
         title: "Launching Your Product",
-        slug: "launching-your-product",
+        slug: "launching-your-product-on-forg",
         content: `Launching on forg gives your product a 7-day Launch Boost — elevated visibility across the platform during the most important week of your product's life.
 
 How to launch:
-1. Your product must be in validating, building, alpha, or beta status first
-2. Go to your product page → click "Launch"
-3. Pick a launch week from the available weekly batch slots
+1. Your product must be in **Validating**, **Building**, **Alpha**, or **Beta** status first.
+2. Go to your product page → click **"Launch"**.
+
+![Launch Button](/product-launch-btn.png)
+
+3. Pick an available launch week from the batch scheduler.
+
+![Launch Scheduler](/schedule-launch-picker.png)
 
 Batch slots:
-- Each week (Sunday to Sunday IST) has a maximum of 20 product launches
-- When a week is full, you'll see it marked as "Full" in the scheduler and must choose a different week
-- Up to 8 upcoming weeks are available to schedule into
-- Each product can only launch once
+- Each week (**Sunday to Sunday IST**) allows a maximum of 20 product launches.
+- When a week is full, it's marked as **"Full"** and unavailable.
+- You can see and book into upcoming weeks ahead of time.
 
 What happens during Launch Boost:
-- Your product appears prominently on the Discover and Products pages
-- The launched status is locked for 7 days (no manual status changes)
-- After 7 days, your product automatically transitions to growing
+- Your product appears prominently on the Discover and Products pages.
+- The Launched status is locked for 7 days.
+- After 7 days, your product automatically transitions to **Growing**.
 
-Premium launch perks:
-- Your product gets featured placement for the first 72 hours (3 days) of the Launch Boost window
-- This means it shows at the top of the launch section for the first 3 days
-
-Tips for a successful launch:
-- Have a real product page with a logo, clear tagline, and description before you launch
-- Post an update on launch day explaining what your product does and who it's for
-- Engage with comments and questions — the algorithm rewards engagement
-- Cross-post your launch update to X and LinkedIn on launch day`
+Premium Launch ($19 one-time):
+- **Homepage Hero Slot:** Featured on forg.to's public landing page.
+- **Instant Indexing:** Submitted to Bing & Yandex via IndexNow immediately.
+- **SEO Boost:** Highest sitemap priority (1.0) and Product structured data.
+- **Forg Team Announcement:** Post from the official @forg_to account on X.
+- **Staff Pick Badge:** Permanent badge on your product card.`
       }
     ]
   },
@@ -188,58 +301,50 @@ Tips for a successful launch:
       {
         title: "Writing Updates",
         slug: "writing-updates",
-        content: `Updates are the core content on forg. Think of them as build-in-public posts — short-to-medium posts about what you're working on.
+        content: `Updates are the core content on forg. Think of them as build-in-public posts — short-to-medium posts about what you're shipping, learning, and experiencing.
 
 Character limits:
-- Free accounts: 500 characters
-- Premium accounts: 3,000 characters
+- **Free accounts:** 500 characters
+- **Pro accounts:** 3,000 characters
 
-Update types: When you write an update, you can tag it with a type to help others understand the context:
+Update types
+When you write an update, tag it with a type to give it more context in the feed:
 
 | Type | Use it when... |
 |------|----------------|
-| Update | General progress update |
-| Launch | Announcing a new product or major feature launch |
+| Update | General progress or check-in |
+| Launch | Announcing a new launch |
 | Feature | You shipped a new feature |
-| Milestone | Hit a significant goal (1,000 users, first paying customer, etc.) |
-| Revenue | Sharing revenue numbers or MRR updates |
-| Bug fix | Resolved a notable bug |
-| Design | UI/UX changes or redesigns |
-| Idea | Sharing an idea or hypothesis you're exploring |
-| Fail | Something didn't work — the community respects honesty |
-| Win | Celebrating a success |
-| Announcement | News or upcoming changes |
-| Integration | You integrated with another tool or platform |
+| Milestone | You hit a significant goal |
+| Revenue | Sharing MRR, ARR, or revenue news |
+| Bug Fix | You squashed a bug |
+| Design | Sharing a design update or redesign |
+| Idea | Thinking out loud about something new |
+| Fail | Sharing what didn't work and why |
+| Win | Celebrating a positive outcome |
+| Announcement | Important news about your product or company |
+| Integration | You added a new integration or partnership |
 
-Attaching media: You can attach images and videos to your updates. Posts with images get better visibility in the feed.
-
-Linking to a product: When writing an update, you can attach it to one of your products. This shows the update on your product page and in product feeds.
-
-Pinning updates (Premium): Premium users can pin up to 3 updates to the top of their profile.`
+Attaching media
+Attach images or videos to make your updates stand out. Posts with media get a visibility boost in the feed.`
       },
       {
         title: "Writing Articles",
         slug: "writing-articles",
-        content: `Articles are long-form content — think deep dives, essays, tutorials, and build logs. They decay slower in the feed than updates, so a great article keeps driving engagement for days.
+        content: `Articles are long-form content — think deep dives, essays, tutorials, and build logs. Writing and publishing articles is a **Pro-only** feature.
 
-Articles have their own dedicated feed at forg.to/articles.
+![Articles Page](/articles-page.png)
 
-Writing tips:
-- Articles rank better in the feed when they're substantial (not just a paragraph)
-- They're indexed by search engines, so a well-written article can bring in organic traffic to your profile
-- Add a cover image — it significantly improves click-through rates`
-      },
-      {
-        title: "Content Types",
-        slug: "content-types",
-        content: `| | Updates | Articles |
-|---|---|---|
-| Best for | Quick progress posts, milestones, daily/weekly wins | Deep dives, essays, tutorials, case studies |
-| Length | 500 chars (free) / 3,000 chars (premium) | Unlimited |
-| Feed decay | Fast (ephemeral) | Slow (evergreen) |
-| Comments | Yes | Yes |
-| Media | Images, videos | Cover image + inline images |
-| Cross-posting | Yes | No |`
+Why write articles:
+- Articles have the **highest SEO and indexing priority** on forg.
+- They decay slower in the feed — articles stay visible 50% longer than regular updates.
+- They're indexed by search engines, driving long-term traffic to your profile.
+- Adding a cover image significantly improves click-through rates.
+
+Tips for great articles:
+- Be specific. "How I got my first 100 users" outperforms "My journey."
+- Publish regularly — even short articles compound over time.
+- Link to your product so readers can discover what you're building.`
       }
     ]
   },
@@ -251,82 +356,104 @@ Writing tips:
       {
         title: "How Cross-Posting Works",
         slug: "how-cross-posting-works",
-        content: `When you write an update on forg, you can publish it to multiple platforms simultaneously with one click — X (Twitter), LinkedIn, and Bluesky, plus forg itself.
+        content: `When you write an update on forg, you can publish it to multiple platforms simultaneously — X (Twitter), LinkedIn, and Bluesky — in one click.
 
-This saves time and ensures your audience on every platform sees your build-in-public updates without you having to copy-paste.
-
-Platforms you can cross-post to:
-- X (Twitter)
-- LinkedIn
-- Bluesky
-- forg (always on by default)
+**Image: Post composer with cross-posting toggles for X, LinkedIn, and Bluesky**
 
 How to use it:
-1. Write your update in the post composer
-2. At the bottom of the composer, toggle the platforms you want to post to
-3. Click "Post" — it publishes to all selected platforms simultaneously
+1. Write your update in the post composer.
+2. Toggle the platforms you want to post to.
+3. Click **"Post"** — forg publishes to all selected platforms at once.
+
+**Image: Success notification confirming your post was published on 3 platforms**
 
 Things to know:
-- Each platform has its own character limits — Bluesky is capped at 300 characters. If your post exceeds the limit for a platform, that platform will be skipped.
-- Images attached to your forg post will also be uploaded to the connected platforms.
-- Cross-posting happens in parallel — all platforms receive the post at the same time.
-- If one platform fails (e.g. expired token), your post still publishes to the others.`
+- **Bluesky** is capped at **300 characters** — your post will be trimmed if it's longer.
+- **Media cross-posting is Pro only.** Free users can cross-post text. Images and videos require Pro.
+- Up to 4 images can be shared to X and LinkedIn.
+
+**Image: Composer showing a warning when Bluesky character limit is exceeded**`
       },
       {
         title: "Connecting X (Twitter)",
         slug: "connecting-x-twitter",
-        content: `How to connect:
-1. Go to Settings → Integrations → X (Twitter)
-2. Click "Connect X Account"
-3. You'll be redirected to X to authorize forg
-4. After approving, you'll be redirected back and your account will be connected
+        content: `Connect your X account to publish updates directly to your followers from forg.
 
-How it works behind the scenes:
-forg uses OAuth 2.0 to connect to X. Your access token is stored securely and refreshed automatically when it expires — you shouldn't need to reconnect unless you revoke access from X directly.
+**Image: Integrations settings page showing X (Twitter) with a "Connect" button**
 
-Troubleshooting:
-- "Please reconnect your X account" — Your token was revoked or expired in a way that couldn't be refreshed. Go to Settings → Integrations and reconnect.
-- "Failed to post to Twitter" — X's API rate limits may be in effect. Try again in a few minutes.
-- Images not posting to X: X supports up to 4 images per tweet. If you attach more, only the first 4 are uploaded.
+How to connect:
+1. Go to **Settings → Integrations → X (Twitter)**.
+2. Click **"Connect X Account"**.
+3. Authorize forg on X's OAuth screen.
 
-To disconnect: Go to Settings → Integrations → X → Disconnect. This removes your tokens from forg. You can also revoke access directly from your X account's connected apps settings.`
+**Image: X OAuth authorization screen asking for permission to post on behalf of forg.to**
+
+Once connected, the X toggle will appear in your post composer.`
       },
       {
         title: "Connecting LinkedIn",
         slug: "connecting-linkedin",
-        content: `How to connect:
-1. Go to Settings → Integrations → LinkedIn
-2. Click "Connect LinkedIn"
-3. Authorize forg on LinkedIn's OAuth page
-4. You'll be redirected back and your account will be connected
+        content: `Publish your professional build-in-public updates directly to your LinkedIn feed.
 
-Things to know:
-- LinkedIn access tokens expire approximately every 60 days. forg automatically refreshes them in the background — you typically won't notice.
-- If a refresh fails (e.g. you revoked access from LinkedIn), you'll need to reconnect manually.
-- Cross-posted updates are published as public LinkedIn posts to your main feed.
-- LinkedIn supports up to 4 images per post. If you attach more, only the first 4 are uploaded.
+**Image: Integrations settings showing a connected LinkedIn account with a green status**
 
-Troubleshooting:
-- "LinkedIn token expired. Please reconnect" — Go to Settings → Integrations → LinkedIn and reconnect.
-- "Failed to get LinkedIn profile" — LinkedIn may be experiencing API issues. Try again in a few minutes.`
+How to connect:
+1. Go to **Settings → Integrations → LinkedIn**.
+2. Click **"Connect LinkedIn"**.
+3. Authorize forg on LinkedIn's OAuth screen.
+
+**Image: LinkedIn permissions screen showing social posting access being granted to forg.to**`
       },
       {
         title: "Connecting Bluesky",
         slug: "connecting-bluesky",
-        content: `Bluesky uses a different approach than X and LinkedIn — it uses an App Password, not your main Bluesky password.
+        content: `forg uses Bluesky App Passwords for secure cross-posting — your main account password is never shared.
+
+**Image: Bluesky integration form showing fields for your handle and App Password**
 
 How to connect:
-1. Go to your Bluesky account settings at bsky.app
-2. Navigate to Settings → Privacy and Security → App Passwords
-3. Create a new App Password (name it something like "forg")
-4. Copy the App Password (you'll only see it once)
-5. Go to forg → Settings → Integrations → Bluesky
-6. Enter your Bluesky handle (e.g. yourname.bsky.social) and the App Password
-7. Click "Connect"
+1. In your Bluesky account, go to **Settings → App Passwords** and create a new one.
+2. Copy the generated App Password.
+3. In forg, go to **Settings → Integrations → Bluesky**.
+4. Enter your Bluesky handle (e.g., \`yourname.bsky.social\`) and the App Password.
+5. Click **"Connect"**.
 
-Important: Bluesky has a 300-character limit. If your update exceeds 300 characters, it won't be posted to Bluesky — the other platforms you selected will still receive it. Keep this in mind when writing updates you want to cross-post to Bluesky.
+**Image: Bluesky's App Password settings page showing where to generate and copy the password**
 
-To revoke access: Delete the App Password from your Bluesky settings. Since forg uses an App Password (not your main password), deleting it immediately disconnects forg without affecting your main account.`
+Remember: Bluesky posts are capped at **300 characters**.`
+      }
+    ]
+  },
+  {
+    title: "Streaks & Rewards",
+    slug: "streaks",
+    icon: "Flame",
+    articles: [
+      {
+        title: "How Streaks Work",
+        slug: "how-streaks-work",
+        content: `Build your streak by posting updates, launching products, or engaging with the community every day. Each day you contribute, your streak grows.
+
+**Image: Profile header showing the current streak count with a flame icon**
+
+Milestones & Rewards
+Reach these milestones to unlock real rewards:
+
+| Milestone | Reward |
+|-----------|--------|
+| 7 days | **Streak Restore ×1** — recover a broken streak |
+| 14 days | **Super Upvote** — your upvotes count 2× in the feed |
+| 60 days | **50% off Pro** — a one-time discount code |
+| 100 days | **Claude Pro (1 month)** — a free month of Anthropic's Claude Pro |
+
+**Image: Streak rewards dashboard showing progress bars toward each milestone**
+
+Streak Restores
+If you miss a day, you have a **2-day window** to use a Restore and recover your streak. Restores are earned at 7-day milestones.
+
+**Image: Streak recovery prompt shown the day after a missed contribution**
+
+Your streak counter is based on **IST (Indian Standard Time)**, so make sure you post before midnight IST to keep it alive.`
       }
     ]
   },
@@ -338,30 +465,29 @@ To revoke access: Delete the App Password from your Bluesky settings. Since forg
       {
         title: "Platform Integrations",
         slug: "platform-integrations",
-        content: `Beyond cross-posting, forg lets you connect external platform accounts to display your activity as widgets on your profile. This gives visitors a complete picture of what you're building and where you're active.
+        content: `Connect your external accounts to display live activity as widgets on your profile. This gives visitors a complete picture of your work across the web.
+
+**Image: A profile with active GitHub contribution graph, YouTube latest video, and dev.to widgets**
 
 Supported platforms:
 
 | Platform | What it shows |
 |----------|---------------|
-| GitHub | Contribution activity, repositories |
-| YouTube | Latest videos |
-| Medium | Latest articles |
-| dev.to | Latest posts |
-| Hashnode | Latest posts |
-| Substack | Newsletter |
-| Codeforces | Competitive programming stats |
-| LeetCode | Problem-solving stats |
-| CodeChef | Competitive programming stats |
+| GitHub | Contribution heatmap and top repositories |
+| YouTube | Your latest videos |
+| Medium | Latest published articles |
+| dev.to | Latest published articles |
+| Hashnode | Latest published articles |
+| Substack | Latest posts |
+| LeetCode | Problem count and rating |
+| Codeforces | Rating and recent contest results |
+| CodeChef | Rating and star ranking |
 
-How to add integrations:
-1. Go to Settings → Integrations
-2. Enter your username or handle for each platform
-3. Save — the widget will appear on your profile
+**Image: Integration settings page where you paste usernames for each platform**
 
-Widget layout: You can drag and drop your widgets to customize the order and size (small, medium, large) they appear on your profile. Each widget can also be hidden individually if you don't want it showing.
+To add an integration: Go to **Settings → Integrations**, enter your username for each platform, and save. The widget will appear on your profile within a few minutes.
 
-GitHub integration specifically: Connecting GitHub also lets you link pull requests and commits to your product updates, and enables GitHub activity to appear in your contribution streak.`
+**Image: Profile with widgets dragged and rearranged into a custom layout**`
       }
     ]
   },
@@ -373,28 +499,31 @@ GitHub integration specifically: Connecting GitHub also lets you link pull reque
       {
         title: "Scheduling Posts",
         slug: "scheduling-posts",
-        content: `Scheduling is a premium feature that lets you write posts now and have them publish automatically at a future time.
+        content: `Scheduling is a **Pro feature** that lets you write posts now and publish them automatically at a future time.
 
-Two ways to schedule:
+**Image: Post composer showing the "Schedule" option with date and time picker**
 
-1. Pick a specific time — Choose any exact date and time for your post to go live.
-2. Add to Queue — Drop the post into your posting queue and it publishes at the next available slot based on your queue schedule.
+How to schedule a post:
+1. Write your update in the composer.
+2. Click the **Schedule** button instead of "Post".
+3. Pick a specific date and time, or drop it into your Queue.
 
-The Queue:
+The Queue
+The Queue is your personal content calendar. Add posts to it and forg will publish them automatically at your preset time slots. You can manage your queue from the **Studio** tab.
 
-The queue is a preset schedule of time slots across the week. When you "Add to Queue," your post is dropped into the next empty slot automatically — you don't have to think about timing.
+**Image: Queue management page in Studio showing upcoming posts in daily time slots**
 
-Default queue slots (in IST — Indian Standard Time):
-- Monday–Friday: 9:00 AM and 5:00 PM
-- Saturday–Sunday: 10:00 AM
+Default queue slots (IST):
+- **Monday – Friday:** 9:00 AM and 5:00 PM
+- **Saturday – Sunday:** 10:00 AM
 
-You can fully customize these slots in Settings → Queue. Add or remove any slot on any day.
+You can customize these time slots to match your preferred posting schedule.
 
-Changing a scheduled post: You can edit or delete scheduled posts before they publish from your Studio → Drafts & Scheduled section.
+**Image: Queue settings page showing editable time slots per day of the week**
 
-Cross-posting with scheduling: Scheduled posts can also be cross-posted. Select your target platforms when writing the post — it will cross-post to all of them at the scheduled time.
+Scheduled posts look and behave like regular posts once published — including cross-posting if you've enabled it.
 
-Note: All scheduling uses IST (India Standard Time) internally. The UI shows times in your local time zone.`
+**Image: Studio "Drafts & Scheduled" tab listing upcoming scheduled posts with publish times**`
       }
     ]
   },
@@ -406,52 +535,34 @@ Note: All scheduling uses IST (India Standard Time) internally. The UI shows tim
       {
         title: "How the Feed Works",
         slug: "how-the-feed-works",
-        content: `The forg feed shows you the most relevant, recent, and engaging content from the builder community. Here's what you need to know about how it works — without the internal math.
+        content: `The forg feed shows you the most relevant and engaging content from the builder community. It's not chronological — it's ranked by a combination of engagement, quality, and recency.
 
-What appears in the feed:
-- Updates and articles from builders you follow
-- Trending updates and articles from across the community
-- New product launches
+**Image: Main Explore feed with trending updates and product cards**
 
-How content is ranked:
+Engagement ranking
+Posts are scored based on the engagement they receive. Each action has a different weight:
 
-The feed uses an engagement-based ranking system. The key signals, from most to least impactful:
+| Signal | Weight |
+|--------|--------|
+| Comment | 4.0× |
+| Upvote | 2.0× |
+| Like | 1.0× |
+| View | 0.1× |
 
-1. Comments — The strongest signal. A thoughtful comment on a post is worth more than a like. The more substantive the comment, the more it counts (very short comments count for less).
-2. Votes (on polls) — High-value engagement signal.
-3. Likes — Standard engagement signal.
-4. Views — Passive signal, counts but doesn't dominate.
+**Image: Post showing engagement counts — likes, comments, upvotes, and view count**
 
-How freshness works:
+Quality bonuses
+Beyond raw engagement, quality signals give posts an additional boost:
+- **Media attached:** +0.3 boost
+- **Post length > 100 chars:** +0.2 boost
+- **Pro account:** +0.5 boost
 
-Posts lose ranking over time automatically. A post must keep getting new engagement to stay near the top — without it, it gradually sinks. This is intentional: the feed should show what's happening now, not last week's viral post.
+**Image: A post labeled "Trending" with a high engagement score in the feed**
 
-- Updates (short posts) decay fastest
-- Articles decay slowest — a great article can stay relevant for days
-- Product posts are in between
+Time decay
+All posts lose score over time. After 72 hours, decay rate doubles. This keeps the feed fresh. Articles decay slower, so good long-form content stays visible longer.
 
-New builder advantage:
-
-If you're new to forg (account less than 14 days old, fewer than 10 posts), your posts get a natural boost in the feed. This ensures new builders get visibility even before they've built an audience. This bias fades as you become more established.
-
-Posts with media rank higher:
-Images and videos give your post a small ranking boost. If you're sharing a milestone or feature, attach a screenshot.
-
-Longer posts rank slightly higher:
-Posts over 100 characters rank slightly better than very short ones. This encourages substance.
-
-Viral surge:
-Posts that receive a burst of engagement quickly (within their first 2 hours) get an additional multiplier applied. If your post is taking off, the algorithm accelerates its visibility further.
-
-Diversity:
-The feed avoids showing two consecutive posts from the same person. Even if you post frequently, the feed will interleave other builders' content between your posts. This keeps the feed varied.
-
-What this means in practice:
-- Engage genuinely with other builders. Leaving meaningful comments helps the community and naturally increases your own visibility.
-- Post consistently. Regular posting means your content is always fresh.
-- Attach images when they add context.
-- Write posts with substance — not just "shipped!" but what you shipped and why it matters.
-- Engage with comments on your posts — replies from you count toward engagement too.`
+New builders also get an organic boost to help them get their first visibility on the platform.`
       }
     ]
   },
@@ -461,41 +572,48 @@ What this means in practice:
     icon: "Star",
     articles: [
       {
-        title: "forg Premium",
+        title: "forg Pro",
         slug: "forg-premium",
-        content: `forg Premium gives you the tools to do more with your build-in-public content.
+        content: `forg Pro gives you the tools to post consistently, grow your audience, and build in public faster.
+
+**Image: Pro pricing page showing Monthly ($10) and Annual ($6/mo) plan options**
 
 Pricing:
-- $10/month — monthly billing
-- $6/month — billed annually ($72/year, saves 40%)
+- **Monthly:** $10/month
+- **Annual:** $72/year ($6/month — save 40%)
 
-What you get with Premium:
+Content & Publishing
+- **3,000 character posts** — vs 500 on free. Tell the full story.
+- **Long-form Articles** — write deep dives with highest SEO priority on forg.
+- **Cross-post with images & video** — push media updates to X, LinkedIn, and Bluesky in one click.
+- **Schedule posts in advance** — queue up a week of content and let forg publish for you.
+- **Pin up to 3 posts** on your profile — surface your best work for every visitor.
 
-| Feature | Free | Premium |
-|---------|------|---------|
-| Post length | 500 characters | 3,000 characters |
-| Scheduling & queue | — | ✓ |
-| Post analytics | Basic | Advanced |
-| Pin posts on profile | — | Up to 3 pinned posts |
-| Email updates to product followers | — | ✓ |
-| Featured launch placement | — | 72 hours (3 days) |
-| SEO dofollow links | nofollow | dofollow on profile & top product |
+**Image: Pro feature list in the upgrade modal showing all Content & Publishing perks**
 
-Post length: The 500-character limit on free accounts is enough for most updates. Premium's 3,000-character limit is for builders who want to write detailed progress updates, mini-essays, or longer milestone posts without switching to the Article format.
+Growth & Analytics
+- **Advanced audience analytics** — view trends, traffic sources, top posts, and follower growth.
+- **Priority placement in Explore feed** — your posts and products surface higher to more builders.
+- **Dofollow profile & product backlinks** — your links pass real SEO equity to your sites.
 
-Advanced analytics: See who's engaging with your content, which updates perform best, and how your products are being discovered.
+**Image: Analytics dashboard showing follower growth chart and top-performing posts**
 
-Pinned posts: Keep up to 3 updates permanently at the top of your profile — useful for pinning your product launch announcement, a milestone post, or an intro post.
+AI & Automation
+- **Unlimited GitHub AI drafts** — free plan is limited to 3 per week. Pro removes the cap.
+- **GitHub Autopilot** — auto-publishes a post every time you merge a PR, with zero manual effort.
 
-Email updates to followers: When someone follows your product, they can opt in to receive email updates when you post new product updates. As a premium user, these email notifications are sent automatically.
+**Image: Studio showing GitHub Autopilot enabled with recent auto-drafted posts**
 
-Featured launch: When you launch a product on forg, premium users get 72 hours of featured placement at the top of the launches section — giving your launch maximum visibility during the most critical window.
+Community & Identity
+- **Premium badge** next to your name in every feed, comment, and profile.
+- **Unlimited DMs** — free accounts can start 1 new conversation per day.
+- **No ads** — clean, distraction-free experience.
+- **Profile banner image** — customize your profile cover.
+- **Email updates to followers** — notify all your followers by email when you ship.
 
-SEO dofollow links: On forg, links from user profiles and products are nofollow by default for free users. Premium users get dofollow links on their profile and their top product's website link — which means search engines pass link equity, helping your site's SEO.
+**Image: Profile showing premium badge, cover banner, and follower email notification toggle**
 
-How to upgrade: Go to Settings → Premium → Upgrade. Payments are processed securely via Polar.sh.
-
-Cancellation: You can cancel anytime. Your premium access continues until the end of your current billing period.`
+How to upgrade: Go to **Settings → Pro → Upgrade**.`
       }
     ]
   },
@@ -507,32 +625,34 @@ Cancellation: You can cancel anytime. Your premium access continues until the en
       {
         title: "Incognito Mode",
         slug: "incognito-mode",
-        content: `Incognito mode makes your profile private. When enabled:
+        content: `Incognito mode makes your profile private and hides you from search results and the explore feed.
 
-- Your profile does not appear in search results on forg
-- Your profile returns a 404 to anyone who tries to visit it directly
-- You are hidden from the public API
-- You can still use forg normally — browse the feed, post, comment, follow others
+**Image: Account settings page showing the Incognito Mode toggle set to off**
 
-To enable: Go to Settings → Privacy → Enable Incognito Mode.
+When Incognito is enabled:
+- Your profile doesn't appear in search results.
+- Your updates are hidden from the public feed.
+- People with a direct link to your profile can still view it.
 
-This is useful if you want to lurk, plan your launch in private, or take a break without deleting your account.`
+To enable: Go to **Settings → Account → Enable Incognito Mode**.
+
+**Image: Search results page showing that incognito users do not appear**`
       },
       {
         title: "Account Settings",
         slug: "account-settings",
-        content: `Changing your username: Your username can be changed from Settings → Profile. Note that your old URL will no longer work after changing — if you've shared your profile link publicly, update it.
+        content: `Manage your account identity, notifications, and data from Settings.
 
-Notification preferences: Go to Settings → Notifications to control which emails you receive:
-- Engagement notifications (likes, comments on your posts)
-- Post nudge (if you haven't posted in a while)
-- Product dormancy reminders
-- Weekly digest
-- Community spotlight features
+**Image: Account settings page with sections for username, notifications, and account management**
 
-Deleting your account: Contact support at the email listed in the footer. Account deletion is permanent.
+Key settings:
+- **Username Change:** Go to **Settings → Account** to update your @handle.
+- **Notifications:** Control which emails you receive — engagement alerts, community digests, and product updates.
+- **Deleting Your Account:** Permanently delete your account and all associated data via **Settings → Account → Delete Account**. This action is irreversible.
 
-Connected accounts: See all your OAuth connections (Google, X, LinkedIn, GitHub) and integrations from Settings → Integrations. You can disconnect any of them individually.`
+**Image: Notification preferences page with toggles for each email type**
+
+**Image: Account deletion confirmation modal with a warning about permanent data removal**`
       }
     ]
   }
@@ -546,34 +666,18 @@ export interface FAQ {
 export const FAQS: FAQ[] = [
   {
     question: "Is forg only for developers?",
-    answer: "No. forg is for anyone who builds things — designers, indie hackers, founders, makers, and developers all use it. If you're building a product and want to share the journey, forg is for you."
+    answer: "No. forg is for anyone who builds things — designers, indie hackers, founders, makers, and developers all use it."
   },
   {
     question: "Is forg free?",
-    answer: "Yes. The core platform is free. Premium ($10/month or $72/year) adds scheduling, longer posts, advanced analytics, and other power-user features."
-  },
-  {
-    question: "Can I use forg without adding a product?",
-    answer: "Yes. You can post updates, write articles, and engage with the community without having a product listed. But forg is most useful when your product is there — it becomes a changelog, a launch platform, and a community hub for your product."
+    answer: "Yes. The core platform is free. Pro ($10/month or $6/month billed annually at $72/year) adds scheduling, longer posts, analytics, and other power-user features."
   },
   {
     question: "How is forg different from X/Twitter?",
-    answer: "forg is purpose-built for builders. Your content lives on your product page as a changelog, you can track your product's lifecycle, and the community consists of other builders — not a general audience. Cross-posting lets you share to X from forg, so you don't have to choose."
-  },
-  {
-    question: "My cross-post to X/LinkedIn failed. What do I do?",
-    answer: "Go to Settings → Integrations and reconnect the affected platform. If the issue persists, check that forg still has the necessary permissions in that platform's connected apps settings."
-  },
-  {
-    question: "Can I schedule posts on mobile?",
-    answer: "Yes. forg is fully responsive and works on mobile browsers. All features including scheduling are available on mobile."
-  },
-  {
-    question: "What happens to my posts if I cancel Premium?",
-    answer: "Your posts stay. If you have pinned posts, they'll become unpinned. Scheduled future posts will not be sent after your premium period ends. Your post history and analytics are preserved."
+    answer: "forg is purpose-built for builders. Your content lives on your product page as a public changelog, and connects you with a community of people who are actually building — not just talking about it."
   },
   {
     question: "Does forg have an API?",
-    answer: "Yes. The public API is available at api.forg.to. Documentation is at api.forg.to/docs. You'll need an API key from Settings → Developer."
+    answer: "Yes. The public API is available at api.forg.to. Documentation is at api.forg.to/docs. You'll need an API key from Settings → Account."
   }
 ];

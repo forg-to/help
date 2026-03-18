@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HELP_CONTENT } from "@/data/content";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/ui/Logo";
 import * as Icons from "lucide-react";
 
 export function Sidebar({ className, onItemClick }: { className?: string; onItemClick?: () => void }) {
@@ -13,9 +14,9 @@ export function Sidebar({ className, onItemClick }: { className?: string; onItem
   return (
     <div className={cn("bg-white py-8 px-6", className)}>
       <div className="mb-8 px-2">
-        <Link href="/" className="flex items-center gap-2 font-bold text-xl text-[#0a0a0a]">
-          <div className="w-8 h-8 bg-accent rounded flex items-center justify-center text-white">f</div>
-          <span>forg.to Help</span>
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-[#0a0a0a]">
+          <Logo size="lg" />
+          <span className="leading-none">Help</span>
         </Link>
       </div>
 

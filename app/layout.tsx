@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 export const metadata: Metadata = {
   title: "forg.to Help Center",
   description: "Complete content for help.forg.to",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -20,13 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} font-sans text-foreground bg-background antialiased`}>
-        <div className="flex min-h-screen">
-          <Sidebar className="hidden lg:block w-72 border-r border-gray-100 h-screen sticky top-0 overflow-y-auto" />
-          <div className="flex-1 flex flex-col min-w-0">
+        <div className="mx-auto flex min-h-screen w-full max-w-[1440px]">
+          <Sidebar className="hidden lg:block h-screen w-72 shrink-0 overflow-y-auto border-r border-gray-100 sticky top-0" />
+          <div className="flex min-w-0 flex-1 flex-col">
             <SearchHeader />
-            <main className="flex-1 overflow-y-auto">
-              {children}
-            </main>
+            <main className="flex-1 overflow-y-auto">{children}</main>
           </div>
         </div>
       </body>
