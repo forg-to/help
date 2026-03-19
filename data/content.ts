@@ -22,7 +22,7 @@ export const HELP_CONTENT: Category[] = [
         title: "What is forg.to?",
         slug: "what-is-forg",
         lastUpdated: "March 18, 2026",
-        content: `forg.to is a community for indie hackers and builders who build in public. It's where you share what you're working on — product updates, milestones, revenue numbers, failures, and wins — and connect with other people who actually understand what it means to build something from scratch.
+        content: `forg.to is a community for indie hackers and builders who build in public. It's where you share what you're working on - product updates, milestones, revenue numbers, failures, and wins - and connect with other people who actually understand what it means to build something from scratch.
 
 ![Forg.to Banner](/forg-og-banner.png)
 
@@ -98,8 +98,8 @@ Beyond the basics, you can further professionalize your profile to attract colla
 Do's and Don'ts
 - **Profile Picture:** A professional headshot or portrait photo is recommended. Anything obscene will lead to profile suspension.
 - **First and Last Name:** Your legal name should be used. Do not use anything else like company name or combination of your legal name like website, role, emojis, etc. For ex:
-    - ❌ Johnrao Doekar Visit ➡️ johndoe.com
-    - ❌ John The Product Designer 🧑🏻‍🎨
+    - ❌ Johnrao Doekar Visit -> johndoe.com
+    - ❌ John The Product Designer
     - ❌ Johnrao Doekar Follow For Content Marketing Tips
 - **Bio:** Share briefly about yourself. What you do, where you work, etc. Keep it professional and concise.
 - **Username:** Your username is your permanent handle. Check our [guidelines for username here](/getting-started/creating-your-account).`
@@ -108,7 +108,7 @@ Do's and Don'ts
         title: "Work (Platform Integration)",
         slug: "showcase-work-on-profile",
         lastUpdated: "March 18, 2026",
-        content: `forg is designed to prioritize what you've *actually built*. By connecting your existing professional platforms, you can showcase a 360° view of your work history and activity across the web.
+        content: `forg is designed to prioritize what you've actually built. By connecting your existing professional platforms, you can showcase a 360-degree view of your work history and activity across the web.
 
 GitHub
 Connecting your GitHub account allows you to display your coding activity directly on your forg profile. 
@@ -153,7 +153,7 @@ You have full control over how these integrations appear on your profile. You ca
 
 ![Projects and Contributions](/profile-projects.png)
 
-Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point on a resume, a forg project shows the entire timeline of how it was built — from the first "Idea" post to the final "Launched" milestone.
+Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point on a resume, a forg project shows the entire timeline of how it was built - from the first "Idea" post to the final "Launched" milestone.
 
 ![Product Detail Page](/product-slug-page.png)`
       },
@@ -162,6 +162,7 @@ Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point
         slug: "forg-resume",
         lastUpdated: "March 18, 2026",
         content: `forg includes a dedicated Resume section that turns your profile into a professional portfolio ready for opportunities.
+
 Work Experience
 Add your professional history including:
 - **Role and Company:** Your title and the organization.
@@ -178,11 +179,11 @@ Education & Certifications
 ![Education and Certifications](/profile-resume-education.png)
 
 AI Resume Parser
-Don't want to type everything manually? Upload your existing resume as a PDF and our **Gemini-powered AI** will automatically extract your work history, education, and certifications — populating your forg profile in seconds.
+Don't want to type everything manually? Upload your existing resume as a PDF and our **Gemini-powered AI** will automatically extract your work history, education, and certifications - populating your forg profile in seconds.
 
 ![AI Resume Parser](/import-resume.png)
 
-To use the parser: Go to **Settings → Profile → Resume → Upload PDF**`
+To use the parser: Go to **Settings -> Profile -> Resume -> Upload PDF**`
       }
     ]
   },
@@ -195,7 +196,7 @@ To use the parser: Go to **Settings → Profile → Resume → Upload PDF**`
         title: "Adding Your Product",
         slug: "adding-your-product",
         lastUpdated: "March 18, 2026",
-        content: `Every builder on forg should have at least one product. A product is anything you're building — a SaaS, mobile app, browser extension, open source project, API, or anything else.
+        content: `Every builder on forg should have at least one product. A product is anything you're building - a SaaS, mobile app, browser extension, open source project, API, or anything else.
 
 To add a product, look for the **plus icon (+)** in the left sidebar next to the "Products" section. Clicking this will take you to \`forg.to/product/new\`.
 
@@ -219,13 +220,13 @@ What you fill in:
 
 ![New Product Form](/new-product-form.png)
 
-Slugs are auto-generated from your product name — e.g., "My Cool App" becomes \`forg.to/products/my-cool-app\`. While you don't need to provide one manually, you can change your product slug later in settings, but please note that it can only be changed **once every 30 days**.`
+Slugs are auto-generated from your product name - e.g., "My Cool App" becomes \`forg.to/products/my-cool-app\`. While you don't need to provide one manually, you can change your product slug later in settings, but please note that it can only be changed **once every 30 days**.`
       },
       {
         title: "Product Lifecycle",
         slug: "product-lifecycle",
         lastUpdated: "March 19, 2026",
-        content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time from the product page — click the status badge next to your product name to open the status selector.
+        content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time from the product page - click the status badge next to your product name to open the status selector.
 
 ![Edit Product Status](/edit-product-status.png)
 
@@ -243,7 +244,7 @@ Live stages:
 
 | Status | Meaning |
 |--------|---------|
-| Launched | Publicly launched — triggers Launch Boost |
+| Launched | Publicly launched - triggers Launch Boost |
 | Growing | Post-launch, actively acquiring users |
 | Profitable | Generating meaningful revenue |
 | Funded | Received external investment |
@@ -256,26 +257,41 @@ Terminal stages:
 | Dead | Project discontinued |
 | Acquired | Bought by another company |
 
-![A product timeline view showing status transitions from Building to Beta to Launched to Growing](/product-timeline-status.png)
 
 Transition rules:
 - You cannot jump from **Idea** directly to **Launched**.
 - Once post-launch, you cannot move a product back to pre-launch.
-- **Dead** and **Acquired** are final states — no further transitions.
-- During your 7-day Launch Boost, the Launched status is locked — only the system moves it to Growing.
+- **Dead** and **Acquired** are final states - no further transitions.
+- During your 7-day Launch Boost, the Launched status is locked - only the system moves it to Growing.
 - Paused products can return to Growing or move to Dead.
 
-Every status change is recorded in your product's public timeline.`
+Every status change is recorded in your product's public timeline.
+
+## Dormancy & Auto-Pause
+
+Forg keeps the community active and the discover feed relevant. Products that stay inactive for too long are automatically moved to **Paused** by the system.
+
+**Idea status:**
+- **60 days** with no updates posted -> you receive an email warning and a banner appears on your product page. You have 30 more days to ship an update or manually mark it as paused.
+- **90 days** with no updates posted -> the product is automatically moved to Paused by the system.
+
+**Building status:**
+- **30 days** with no updates posted -> you receive an email warning and a banner appears on your product page. You have 15 more days to ship an update or manually mark it as paused.
+- **45 days** with no updates posted -> the product is automatically moved to Paused by the system.
+
+The banner on your product page gives you two quick actions: **Mark as Paused** (freezes the project cleanly) or **Post Update** (opens the update composer and resets the clock).
+
+**Note on Idea status and SEO:** Products in the Idea stage are never indexed by search engines. This protects your domain reputation while the idea is still unproven. Once you move past Idea, standard indexing rules apply (dofollow badge, premium plan, or staff pick badge).`
       },
       {
         title: "Launching Your Product",
         slug: "launching-your-product-on-forg",
         lastUpdated: "March 18, 2026",
-        content: `Launching on forg gives your product a 7-day Launch Boost — elevated visibility across the platform during the most important week of your product's life.
+        content: `Launching on forg gives your product a 7-day Launch Boost - elevated visibility across the platform during the most important week of your product's life.
 
 How to launch:
 1. Your product must be in **Validating**, **Building**, **Alpha**, or **Beta** status first.
-2. Go to your product page → click **"Launch"**.
+2. Go to your product page -> click **"Launch"**.
 
 ![Launch Button](/product-launch-btn.png)
 
@@ -311,7 +327,7 @@ Premium Launch ($19 one-time):
         title: "Writing Updates",
         slug: "writing-updates",
         lastUpdated: "March 18, 2026",
-        content: `Updates are the core content on forg. Think of them as build-in-public posts — short-to-medium posts about what you're shipping, learning, and experiencing.
+        content: `Updates are the core content on forg. Think of them as build-in-public posts - short-to-medium posts about what you're shipping, learning, and experiencing.
 
 Character limits:
 - **Free accounts:** 500 characters
@@ -328,7 +344,7 @@ When you write an update, tag it with a type to give it more context in the feed
 | Milestone | You hit a significant goal |
 | Revenue | Sharing MRR, ARR, or revenue news |
 | Bug Fix | You squashed a bug |
-| Design | Sharing a design update or redesign |
+| Design | Sharing a decision update or redesign |
 | Idea | Thinking out loud about something new |
 | Fail | Sharing what didn't work and why |
 | Win | Celebrating a positive outcome |
@@ -342,19 +358,19 @@ Attach images or videos to make your updates stand out. Posts with media get a v
         title: "Writing Articles",
         slug: "writing-articles",
         lastUpdated: "March 18, 2026",
-        content: `Articles are long-form content — think deep dives, essays, tutorials, and build logs. Writing and publishing articles is a **Pro-only** feature.
+        content: `Articles are long-form content - think deep dives, essays, tutorials, and build logs. Writing and publishing articles is a **Pro-only** feature.
 
 ![Articles Page](/articles-page.png)
 
 Why write articles:
 - Articles have the **highest SEO and indexing priority** on forg.
-- They decay slower in the feed — articles stay visible 50% longer than regular updates.
+- They decay slower in the feed - articles stay visible 50% longer than regular updates.
 - They're indexed by search engines, driving long-term traffic to your profile.
 - Adding a cover image significantly improves click-through rates.
 
 Tips for great articles:
 - Be specific. "How I got my first 100 users" outperforms "My journey."
-- Publish regularly — even short articles compound over time.
+- Publish regularly - even short articles compound over time.
 - Link to your product so readers can discover what you're building.`
       },
       /* #FIX
@@ -362,7 +378,7 @@ Tips for great articles:
         title: "How Cross-Posting Works",
         slug: "how-cross-posting-works",
         lastUpdated: "March 18, 2026",
-        content: `When you write an update on forg, you can publish it to multiple platforms simultaneously — X (Twitter), LinkedIn, and Bluesky — in one click.
+        content: `When you write an update on forg, you can publish it to multiple platforms simultaneously - X (Twitter), LinkedIn, and Bluesky - in one click.
 
 ### Step 1: Connecting your channels
 Before you can cross-post, you need to link your social accounts to Forg. There are two ways to do this:
@@ -387,7 +403,7 @@ Once your channels are connected, you have two ways to reach your audience acros
 ![Post via Studio Compose](/post-via-studio.png)
 
 Things to know:
-- **Bluesky** is capped at **300 characters** — your post will be trimmed if it's longer.
+- **Bluesky** is capped at **300 characters** - your post will be trimmed if it's longer.
 - **Media cross-posting is Pro only.** Free users can cross-post text. Images and videos require Pro.
 - Up to 4 images can be shared to X and LinkedIn.`
       }
@@ -410,31 +426,31 @@ Things to know:
 - Commenting on a post
 - Creating a new product
 
-Each calendar day (UTC) you contribute, your streak grows by 1. Only the first contribution of the day counts — multiple actions on the same day don't stack.
+Each calendar day (UTC) you contribute, your streak grows by 1. Only the first contribution of the day counts - multiple actions on the same day don't stack.
 
 ![Profile Streak](/profile-streak.png)
 
 Milestones & Rewards
-Most rewards repeat — you earn them again each time you hit the next multiple:
+Most rewards repeat - you earn them again each time you hit the next multiple:
 
 | Milestone | Reward |
 |-----------|--------|
-| Every 7 days (7, 14, 21 ...) | **Streak Restore ×1** — automatically saved to your account |
-| 14 days (permanent unlock) | **Super Upvote** — your upvotes count 2× in the feed, forever |
-| Every 60 days (60, 120, 180 ...) | **50% off forg Pro** — a discount code sent to you |
-| Every 100 days (100, 200, 300 ...) | **Claude Pro (1 month free)** — the biggest reward on forg |
+| Every 7 days (7, 14, 21 ...) | **Streak Restore x1** - automatically saved to your account |
+| 14 days (permanent unlock) | **Super Upvote** - your upvotes count 2x in the feed, forever |
+| Every 60 days (60, 120, 180 ...) | **50% off forg Pro** - a discount code sent to you |
+| Every 100 days (100, 200, 300 ...) | **Claude Pro (1 month free)** - the biggest reward on forg |
 
 Milestones stack: at day 300 you hit both the 60-day and 100-day milestones simultaneously and receive both rewards.
 
 ![Streak Milestones](/streak-milestones.png)
 
 Streak Restores
-Restores work **automatically** — you don't need to do anything manually. When you come back after missing days, forg checks whether a Restore can save your streak and uses one automatically before recording your new contribution.
+Restores work **automatically** - you don't need to do anything manually. When you come back after missing days, forg checks whether a Restore can save your streak and uses one automatically before recording your new contribution.
 
 Rules for automatic restore:
 - You must have at least 1 Restore saved
 - You can have missed at most **2 consecutive days** (your last contribution was 2 or 3 days ago)
-- If you missed **3 or more days in a row**, the streak resets even if you have Restores saved — they cannot bridge a gap that large
+- If you missed **3 or more days in a row**, the streak resets even if you have Restores saved - they cannot bridge a gap that large
 - When a Restore fires, the missed days appear in your activity heatmap with a distinct color showing they were auto-filled
 
 You earn 1 Restore automatically every 7 days of streak. The more you maintain your streak, the more restores you accumulate as a safety net.
@@ -442,53 +458,33 @@ You earn 1 Restore automatically every 7 days of streak. The more you maintain y
 Your streak counter resets at **midnight UTC**, so make sure you contribute before midnight UTC each day to keep it alive.`
       },
       {
-        title: "Earning Claude Pro",
+        title: "Claude Pro - The 100-Day Streak Reward",
         slug: "earning-claude-pro",
         lastUpdated: "March 18, 2026",
-        content: `Claude Pro is forg's biggest streak reward — a free 1-month subscription to Anthropic's Claude Pro AI assistant, earned by building a 100-day streak.
+        content: `100 days of building in public. One month of Claude Pro, on us.
+
+A 100-day streak means you showed up every single day for over three months. No excuses, no gaps, no quitting. That's not a habit - that's a commitment to your craft.
+
+We reward that with a free month of Claude Pro. Not because it's a good marketing move (it is), but because someone who's maintained a 100-day build streak will actually use it to ship something real.
 
 ![Claude Pro Banner](/claude-pro-banner.png)
 
-What is Claude Pro?
-Claude Pro is the paid tier of Claude, Anthropic's AI assistant. With Claude Pro you get:
-- Access to Claude's most powerful models (including Claude Opus)
-- Priority access during high-traffic periods
-- Higher usage limits for longer, more complex conversations
-- Ability to upload documents, images, and data for analysis
-- Extended context window for working with large codebases and files
-
-Why does forg give this away?
-Because we believe the best builders deserve the best tools. Maintaining a 100-day streak is a serious achievement that shows real commitment to building in public. Claude Pro is our way of saying thank you — and giving you a meaningful edge to build faster.
+Claude Pro gives you access to Anthropic's most powerful models, higher usage limits, and extended context for working with large files and codebases. [Learn more at claude.ai ->](https://claude.ai)
 
 How to earn it
 1. Build and maintain a streak for **100 consecutive days**
-2. The reward is added automatically to your Streak Rewards panel on day 100
+2. The reward is added to your Streak Rewards panel on day 100
 3. forg will contact you via your registered email with instructions to claim your free month
 
-The reward is repeatable — at 200 days you earn another free month, at 300 days another, and so on indefinitely.
+FAQ
 
-Can I still earn it if I used Streak Restores?
-Yes. Restored days count toward your 100-day total. As long as your streak counter reads 100 or higher, the reward triggers — regardless of whether any of those days were auto-restored.
+**Do I need a perfect 100 days?**
+No. Streak Restores count toward your total. Use them - that's what they're for. As long as your streak counter reads 100 or higher, the reward triggers.
 
-What if I miss too many days and my streak breaks?
-Your streak resets to 1 and you start working toward 100 again from your new streak count. Any Claude Pro rewards you already claimed are yours to keep.
+**What if my streak breaks?**
+Your streak resets to 1 and you start working toward 100 again. Any Claude Pro rewards you've already claimed are yours to keep.
 
-Frequently asked questions
-
-**Does the streak need to be exactly 100 days with no gaps?**
-You can use Streak Restores to bridge gaps of up to 2 missed days. A restored day still counts toward the 100. However if your streak breaks completely, the counter resets.
-
-**What if I already have a Claude Pro subscription?**
-The reward is still granted. Contact forg support and we will arrange an extension or transfer.
-
-**How do I claim the reward?**
-The reward appears as "pending" in your Streak Rewards panel after hitting day 100. forg will send a redemption link to your registered email address within 48 hours.
-
-**Does my streak reset to 0 after I claim?**
-No. Your streak keeps running continuously. You will earn another free month at day 200, day 300, and every 100 days thereafter.
-
-**Is there a deadline to claim?**
-Pending rewards do not expire. You can claim at any time after they are issued.`
+The reward repeats. Day 200, day 300, every 100 days - another month free. The streak never stops paying.`
       }
     ]
   },
@@ -524,7 +520,7 @@ You can customize these time slots to match your preferred posting schedule.
 
 **Image: Queue settings page showing editable time slots per day of the week**
 
-Scheduled posts look and behave like regular posts once published — including cross-posting if you've enabled it.
+Scheduled posts look and behave like regular posts once published - including cross-posting if you've enabled it.
 
 **Image: Studio "Drafts & Scheduled" tab listing upcoming scheduled posts with publish times**`
       }
@@ -539,7 +535,7 @@ Scheduled posts look and behave like regular posts once published — including 
         title: "How the Feed Works",
         slug: "how-the-feed-works",
         lastUpdated: "March 18, 2026",
-        content: `The forg feed shows you the most relevant and engaging content from the builder community. It's not chronological — it's ranked by a combination of engagement, quality, and recency.
+        content: `The forg feed shows you the most relevant and engaging content from the builder community. It's not chronological - it's ranked by a combination of engagement, quality, and recency.
 
 **Image: Main Explore feed with trending updates and product cards**
 
@@ -548,12 +544,12 @@ Posts are scored based on the engagement they receive. Each action has a differe
 
 | Signal | Weight |
 |--------|--------|
-| Comment | 4.0× |
-| Upvote | 2.0× |
-| Like | 1.0× |
-| View | 0.1× |
+| Comment | 4.0x |
+| Upvote | 2.0x |
+| Like | 1.0x |
+| View | 0.1x |
 
-**Image: Post showing engagement counts — likes, comments, upvotes, and view count**
+**Image: Post showing engagement counts - likes, comments, upvotes, and view count**
 
 Quality bonuses
 Beyond raw engagement, quality signals give posts an additional boost:
@@ -585,40 +581,40 @@ New builders also get an organic boost to help them get their first visibility o
 
 Pricing:
 - **Monthly:** $10/month
-- **Annual:** $72/year ($6/month — save 40%)
+- **Annual:** $72/year ($6/month - save 40%)
 
 Content & Publishing
-- **3,000 character posts** — vs 500 on free. Tell the full story.
-- **Long-form Articles** — write deep dives with highest SEO priority on forg.
-- **Cross-post with images & video** — push media updates to X, LinkedIn, and Bluesky in one click.
-- **Schedule posts in advance** — queue up a week of content and let forg publish for you.
-- **Pin up to 3 posts** on your profile — surface your best work for every visitor.
+- **3,000 character posts** - vs 500 on free. Tell the full story.
+- **Long-form Articles** - write deep dives with highest SEO priority on forg.
+- **Cross-post with images & video** - push media updates to X, LinkedIn, and Bluesky in one click.
+- **Schedule posts in advance** - queue up a week of content and let forg publish for you.
+- **Pin up to 3 posts** on your profile - surface your best work for every visitor.
 
 **Image: Pro feature list in the upgrade modal showing all Content & Publishing perks**
 
 Growth & Analytics
-- **Advanced audience analytics** — view trends, traffic sources, top posts, and follower growth.
-- **Priority placement in Explore feed** — your posts and products surface higher to more builders.
-- **Dofollow profile & product backlinks** — your links pass real SEO equity to your sites.
+- **Advanced audience analytics** - view trends, traffic sources, top posts, and follower growth.
+- **Priority placement in Explore feed** - your posts and products surface higher to more builders.
+- **Dofollow profile & product backlinks** - your links pass real SEO equity to your sites.
 
 **Image: Analytics dashboard showing follower growth chart and top-performing posts**
 
 AI & Automation
-- **Unlimited GitHub AI drafts** — free plan is limited to 3 per week. Pro removes the cap.
-- **GitHub Autopilot** — auto-publishes a post every time you merge a PR, with zero manual effort.
+- **Unlimited GitHub AI drafts** - free plan is limited to 3 per week. Pro removes the cap.
+- **GitHub Autopilot** - auto-publishes a post every time you merge a PR, with zero manual effort.
 
 **Image: Studio showing GitHub Autopilot enabled with recent auto-drafted posts**
 
 Community & Identity
 - **Premium badge** next to your name in every feed, comment, and profile.
-- **Unlimited DMs** — free accounts can start 1 new conversation per day.
-- **No ads** — clean, distraction-free experience.
-- **Profile banner image** — customize your profile cover.
-- **Email updates to followers** — notify all your followers by email when you ship.
+- **Unlimited DMs** - free accounts can start 1 new conversation per day.
+- **No ads** - clean, distraction-free experience.
+- **Profile banner image** - customize your profile cover.
+- **Email updates to followers** - notify all your followers by email when you ship.
 
 **Image: Profile showing premium badge, cover banner, and follower email notification toggle**
 
-How to upgrade: Go to **Settings → Pro → Upgrade**.`
+How to upgrade: Go to **Settings -> Pro -> Upgrade**.`
       }
     ]
   },
@@ -640,7 +636,7 @@ When Incognito is enabled:
 - Your updates are hidden from the public feed.
 - People with a direct link to your profile can still view it.
 
-To enable: Go to **Settings → Account → Enable Incognito Mode**.
+To enable: Go to **Settings -> Account -> Enable Incognito Mode**.
 
 **Image: Search results page showing that incognito users do not appear**`
       },
@@ -653,9 +649,9 @@ To enable: Go to **Settings → Account → Enable Incognito Mode**.
 **Image: Account settings page with sections for username, notifications, and account management**
 
 Key settings:
-- **Username Change:** Go to **Settings → Account** to update your @handle.
-- **Notifications:** Control which emails you receive — engagement alerts, community digests, and product updates.
-- **Deleting Your Account:** Permanently delete your account and all associated data via **Settings → Account → Delete Account**. This action is irreversible.
+- **Username Change:** Go to **Settings -> Account** to update your @handle.
+- **Notifications:** Control which emails you receive - engagement alerts, community digests, and product updates.
+- **Deleting Your Account:** Permanently delete your account and all associated data via **Settings -> Account -> Delete Account**. This action is irreversible.
 
 **Image: Notification preferences page with toggles for each email type**
 
@@ -674,7 +670,7 @@ export interface FAQ {
 export const FAQS: FAQ[] = [
   {
     question: "Is forg only for developers?",
-    answer: "No. forg is for anyone who builds things — designers, indie hackers, founders, makers, and developers all use it."
+    answer: "No. forg is for anyone who builds things - designers, indie hackers, founders, makers, and developers all use it."
   },
   {
     question: "Is forg free?",
@@ -682,10 +678,10 @@ export const FAQS: FAQ[] = [
   },
   {
     question: "How is forg different from X/Twitter?",
-    answer: "forg is purpose-built for builders. Your content lives on your product page as a public changelog, and connects you with a community of people who are actually building — not just talking about it."
+    answer: "forg is purpose-built for builders. Your content lives on your product page as a public changelog, and connects you with a community of people who are actually building - not just talking about it."
   },
   {
     question: "Does forg have an API?",
-    answer: "Yes. The public API is available at api.forg.to. Documentation is at api.forg.to/docs. You'll need an API key from Settings → Account."
+    answer: "Yes. The public API is available at api.forg.to. Documentation is at api.forg.to/docs. You'll need an API key from Settings -> Account."
   }
 ];
