@@ -21,6 +21,7 @@ export const HELP_CONTENT: Category[] = [
       {
         title: "What is forg.to?",
         slug: "what-is-forg",
+        lastUpdated: "March 18, 2026",
         content: `forg.to is a community for indie hackers and builders who build in public. It's where you share what you're working on — product updates, milestones, revenue numbers, failures, and wins — and connect with other people who actually understand what it means to build something from scratch.
 
 **Image: forg.to homepage showing the community feed and trending products**
@@ -49,6 +50,7 @@ forg is not a social network for everyone. It's for builders.`
       {
         title: "Create profile",
         slug: "how-to-create-forg-profile",
+        lastUpdated: "March 18, 2026",
         content: `Your forg profile is more than just a page. It's your public proof-of-work and your builder identity. A complete profile helps you connect with other builders and showcase your journey.
 
 Step 1: Sign up for Forg
@@ -105,6 +107,7 @@ Do's and Don'ts
       {
         title: "Work (Platform Integration)",
         slug: "showcase-work-on-profile",
+        lastUpdated: "March 18, 2026",
         content: `forg is designed to prioritize what you've *actually built*. By connecting your existing professional platforms, you can showcase a 360° view of your work history and activity across the web.
 
 GitHub
@@ -142,6 +145,7 @@ You have full control over how these integrations appear on your profile. You ca
       {
         title: "Project",
         slug: "profile-projects",
+        lastUpdated: "March 18, 2026",
         content: `There are two ways products appear on your profile:
 
 1. **Owned Products:** Products where you are the primary builder or founder. These appear under your "Products" tab.
@@ -156,6 +160,7 @@ Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point
       {
         title: "Resume",
         slug: "forg-resume",
+        lastUpdated: "March 18, 2026",
         content: `forg includes a dedicated Resume section that turns your profile into a professional portfolio ready for opportunities.
 
 Work Experience
@@ -190,6 +195,7 @@ To use the parser: Go to **Settings → Profile → Resume → Upload PDF**`
       {
         title: "Adding Your Product",
         slug: "adding-your-product",
+        lastUpdated: "March 18, 2026",
         content: `Every builder on forg should have at least one product. A product is anything you're building — a SaaS, mobile app, browser extension, open source project, API, or anything else.
 
 To add a product, look for the **plus icon (+)** in the left sidebar next to the "Products" section. Clicking this will take you to \`forg.to/product/new\`.
@@ -219,6 +225,7 @@ Slugs are auto-generated from your product name — e.g., "My Cool App" becomes 
       {
         title: "Product Lifecycle",
         slug: "product-lifecycle",
+        lastUpdated: "March 18, 2026",
         content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time as your product evolves.
 
 ![Edit Product Status](/edit-product-status.png)
@@ -262,6 +269,7 @@ Transition rules:
       {
         title: "Launching Your Product",
         slug: "launching-your-product-on-forg",
+        lastUpdated: "March 18, 2026",
         content: `Launching on forg gives your product a 7-day Launch Boost — elevated visibility across the platform during the most important week of your product's life.
 
 How to launch:
@@ -301,6 +309,7 @@ Premium Launch ($19 one-time):
       {
         title: "Writing Updates",
         slug: "writing-updates",
+        lastUpdated: "March 18, 2026",
         content: `Updates are the core content on forg. Think of them as build-in-public posts — short-to-medium posts about what you're shipping, learning, and experiencing.
 
 Character limits:
@@ -331,6 +340,7 @@ Attach images or videos to make your updates stand out. Posts with media get a v
       {
         title: "Writing Articles",
         slug: "writing-articles",
+        lastUpdated: "March 18, 2026",
         content: `Articles are long-form content — think deep dives, essays, tutorials, and build logs. Writing and publishing articles is a **Pro-only** feature.
 
 ![Articles Page](/articles-page.png)
@@ -350,6 +360,7 @@ Tips for great articles:
       {
         title: "How Cross-Posting Works",
         slug: "how-cross-posting-works",
+        lastUpdated: "March 18, 2026",
         content: `When you write an update on forg, you can publish it to multiple platforms simultaneously — X (Twitter), LinkedIn, and Bluesky — in one click.
 
 ### Step 1: Connecting your channels
@@ -390,6 +401,7 @@ Things to know:
       {
         title: "How Streaks Work",
         slug: "how-streaks-work",
+        lastUpdated: "March 19, 2026",
         content: `Build your streak by contributing to forg every day. Any of the following count as a contribution:
 
 - Posting an update
@@ -397,28 +409,87 @@ Things to know:
 - Commenting on a post
 - Creating a new product
 
-Each calendar day (UTC) you contribute, your streak grows by 1.
+Each calendar day (UTC) you contribute, your streak grows by 1. Only the first contribution of the day counts — multiple actions on the same day don't stack.
 
-**Image: Profile header showing the current streak count with a flame icon**
+![Profile Streak](/profile-streak.png)
 
 Milestones & Rewards
-Rewards repeat — you earn them again each time you hit the next multiple:
+Most rewards repeat — you earn them again each time you hit the next multiple:
 
 | Milestone | Reward |
 |-----------|--------|
-| Every 7 days (7, 14, 21 ...) | **Streak Restore ×1** — save it to recover a future broken streak |
-| 14 days (one-time unlock) | **Super Upvote** — your upvotes carry extra weight in the feed |
-| Every 60 days (60, 120 ...) | **50% off Pro** — a discount code sent to you |
-| Every 100 days (100, 200 ...) | **Claude Pro (1 month)** — a free month of Anthropic's Claude Pro |
+| Every 7 days (7, 14, 21 ...) | **Streak Restore ×1** — automatically saved to your account |
+| 14 days (permanent unlock) | **Super Upvote** — your upvotes count 2× in the feed, forever |
+| Every 60 days (60, 120, 180 ...) | **50% off forg Pro** — a discount code sent to you |
+| Every 100 days (100, 200, 300 ...) | **Claude Pro (1 month free)** — the biggest reward on forg |
 
-**Image: Streak rewards dashboard showing progress bars toward each milestone**
+Milestones stack: at day 300 you hit both the 60-day and 100-day milestones simultaneously and receive both rewards.
+
+![Streak Milestones](/streak-milestones.png)
 
 Streak Restores
-If you miss up to **2 consecutive days**, you can spend a Restore to bridge the gap and keep your streak alive. Restores are earned automatically at every 7-day milestone.
+Restores work **automatically** — you don't need to do anything manually. When you come back after missing days, forg checks whether a Restore can save your streak and uses one automatically before recording your new contribution.
 
-**Image: Streak recovery prompt shown the day after a missed contribution**
+Rules for automatic restore:
+- You must have at least 1 Restore saved
+- You can have missed at most **2 consecutive days** (your last contribution was 2 or 3 days ago)
+- If you missed **3 or more days in a row**, the streak resets even if you have Restores saved — they cannot bridge a gap that large
+- When a Restore fires, the missed days appear in your activity heatmap with a distinct color showing they were auto-filled
+
+You earn 1 Restore automatically every 7 days of streak. The more you maintain your streak, the more restores you accumulate as a safety net.
 
 Your streak counter resets at **midnight UTC**, so make sure you contribute before midnight UTC each day to keep it alive.`
+      },
+      {
+        title: "Earning Claude Pro",
+        slug: "earning-claude-pro",
+        lastUpdated: "March 19, 2026",
+        content: `Claude Pro is forg's biggest streak reward — a free 1-month subscription to Anthropic's Claude Pro AI assistant, earned by building a 100-day streak.
+
+![Claude Pro Reward](/claude-pro-reward.png)
+
+What is Claude Pro?
+Claude Pro is the paid tier of Claude, Anthropic's AI assistant. With Claude Pro you get:
+- Access to Claude's most powerful models (including Claude Opus)
+- Priority access during high-traffic periods
+- Higher usage limits for longer, more complex conversations
+- Ability to upload documents, images, and data for analysis
+- Extended context window for working with large codebases and files
+
+Why does forg give this away?
+Because we believe the best builders deserve the best tools. Maintaining a 100-day streak is a serious achievement that shows real commitment to building in public. Claude Pro is our way of saying thank you — and giving you a meaningful edge to build faster.
+
+How to earn it
+1. Build and maintain a streak for **100 consecutive days**
+2. The reward is added automatically to your Streak Rewards panel on day 100
+3. forg will contact you via your registered email with instructions to claim your free month
+
+The reward is repeatable — at 200 days you earn another free month, at 300 days another, and so on indefinitely.
+
+![Streak Rewards Panel](/streak-rewards-panel.png)
+
+Can I still earn it if I used Streak Restores?
+Yes. Restored days count toward your 100-day total. As long as your streak counter reads 100 or higher, the reward triggers — regardless of whether any of those days were auto-restored.
+
+What if I miss too many days and my streak breaks?
+Your streak resets to 1 and you start working toward 100 again from your new streak count. Any Claude Pro rewards you already claimed are yours to keep.
+
+Frequently asked questions
+
+**Does the streak need to be exactly 100 days with no gaps?**
+You can use Streak Restores to bridge gaps of up to 2 missed days. A restored day still counts toward the 100. However if your streak breaks completely, the counter resets.
+
+**What if I already have a Claude Pro subscription?**
+The reward is still granted. Contact forg support and we will arrange an extension or transfer.
+
+**How do I claim the reward?**
+The reward appears as "pending" in your Streak Rewards panel after hitting day 100. forg will send a redemption link to your registered email address within 48 hours.
+
+**Does my streak reset to 0 after I claim?**
+No. Your streak keeps running continuously. You will earn another free month at day 200, day 300, and every 100 days thereafter.
+
+**Is there a deadline to claim?**
+Pending rewards do not expire. You can claim at any time after they are issued.`
       }
     ]
   },
@@ -431,6 +502,7 @@ Your streak counter resets at **midnight UTC**, so make sure you contribute befo
       {
         title: "Scheduling Posts",
         slug: "scheduling-posts",
+        lastUpdated: "March 18, 2026",
         content: `Scheduling is a **Pro feature** that lets you write posts now and publish them automatically at a future time.
 
 **Image: Post composer showing the "Schedule" option with date and time picker**
@@ -467,6 +539,7 @@ Scheduled posts look and behave like regular posts once published — including 
       {
         title: "How the Feed Works",
         slug: "how-the-feed-works",
+        lastUpdated: "March 18, 2026",
         content: `The forg feed shows you the most relevant and engaging content from the builder community. It's not chronological — it's ranked by a combination of engagement, quality, and recency.
 
 **Image: Main Explore feed with trending updates and product cards**
@@ -506,6 +579,7 @@ New builders also get an organic boost to help them get their first visibility o
       {
         title: "forg Pro",
         slug: "forg-premium",
+        lastUpdated: "March 18, 2026",
         content: `forg Pro gives you the tools to post consistently, grow your audience, and build in public faster.
 
 **Image: Pro pricing page showing Monthly ($10) and Annual ($6/mo) plan options**
@@ -557,6 +631,7 @@ How to upgrade: Go to **Settings → Pro → Upgrade**.`
       {
         title: "Incognito Mode",
         slug: "incognito-mode",
+        lastUpdated: "March 18, 2026",
         content: `Incognito mode makes your profile private and hides you from search results and the explore feed.
 
 **Image: Account settings page showing the Incognito Mode toggle set to off**
@@ -573,6 +648,7 @@ To enable: Go to **Settings → Account → Enable Incognito Mode**.
       {
         title: "Account Settings",
         slug: "account-settings",
+        lastUpdated: "March 18, 2026",
         content: `Manage your account identity, notifications, and data from Settings.
 
 **Image: Account settings page with sections for username, notifications, and account management**
