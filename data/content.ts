@@ -1,6 +1,7 @@
 export interface Article {
   title: string;
   slug: string;
+  subtitle?: string;
   content: string;
   lastUpdated?: string;
 }
@@ -263,9 +264,25 @@ Transition rules:
 - Once post-launch, you cannot move a product back to pre-launch.
 - **Dead** and **Acquired** are final states - no further transitions.
 - During your 7-day Launch Boost, the Launched status is locked - only the system moves it to Growing.
-- Paused products can return to Growing or move to Dead.
+- Paused products resume back to the exact status they were in before being paused.
 
 Every status change is recorded in your product's public timeline.
+
+## Paused Status
+
+When a product is **Paused**, here is what changes:
+
+- **Profile:** Still visible on your public profile and product page.
+- **Timeline:** Full update history remains visible to all visitors.
+- **Explore feed:** Not shown in the Recent or Trending tabs of the explore feed.
+- **Products page (/products):** Never listed.
+- **Landing page:** Not shown in the hero section.
+- **Upvoting:** Disabled. The upvote button is grayed out for all visitors.
+- **Posting updates:** You cannot post an update while paused. Clicking "Post Update" opens a modal prompting you to resume the project first — it shows the exact status the product will return to.
+
+**Resuming a paused product:** Click "Resume" and the product reverts to whatever status it was in *before* it was paused (tracked automatically). After resuming, all visibility and upvoting rules return to normal.
+
+**SEO while paused:** Paused products remain in the sitemap at a very low priority (crawled monthly) so they are not completely de-indexed. Products with a dofollow badge, staff pick badge, or a premium owner stay eligible for indexing even while paused.
 
 ## Dormancy & Auto-Pause
 
@@ -458,33 +475,33 @@ You earn 1 Restore automatically every 7 days of streak. The more you maintain y
 Your streak counter resets at **midnight UTC**, so make sure you contribute before midnight UTC each day to keep it alive.`
       },
       {
-        title: "Claude Pro - The 100-Day Streak Reward",
+        title: "You Can Earn Claude Pro For Free on forg.to. Here's Exactly How.",
         slug: "earning-claude-pro",
-        lastUpdated: "March 18, 2026",
-        content: `100 days of building in public. One month of Claude Pro, on us.
+        subtitle: "Build in public for 100 consecutive days. We buy you a month of Claude Pro. Every 100 days after that and another month. Indefinitely.",
+        lastUpdated: "March 19, 2026",
+        content: `100 days of building in public. That's the bar.
 
-A 100-day streak means you showed up every single day for over three months. No excuses, no gaps, no quitting. That's not a habit - that's a commitment to your craft.
+Not 100 days of having good ideas. Not 100 days of thinking about your product. 100 days of showing up and posting an update, logging progress, shipping something, being visible. Do that for 100 days straight on forg.to and we'll pay for your Claude Pro subscription for a month.
 
-We reward that with a free month of Claude Pro. Not because it's a good marketing move (it is), but because someone who's maintained a 100-day build streak will actually use it to ship something real.
+At day 200, another month. Day 300, another. It never stops.
 
-![Claude Pro Banner](/claude-pro-banner.png)
+This isn't a one-time promotion. It's how forg works. 
 
-Claude Pro gives you access to Anthropic's most powerful models, higher usage limits, and extended context for working with large files and codebases. [Learn more at claude.ai ->](https://claude.ai)
+Why Claude Pro?
 
-How to earn it
-1. Build and maintain a streak for **100 consecutive days**
-2. The reward is added to your Streak Rewards panel on day 100
-3. forg will contact you via your registered email with instructions to claim your free month
+Because a developer who's been building in public for 100 days is exactly the person who will use Claude Pro to ship faster, debug harder problems, and build better products. It's the right tool for the right person at the right moment.
 
-FAQ
+What Claude Pro gets you: Access to Claude's most powerful models, higher usage limits, and extended context for working with large codebases and files. [See full details at claude.ai →](https://claude.ai)
 
-**Do I need a perfect 100 days?**
-No. Streak Restores count toward your total. Use them - that's what they're for. As long as your streak counter reads 100 or higher, the reward triggers.
+How to earn it:
+- Create a profile on [forg.to](https://forg.to)
+- Build your streak by posting updates, logging progress, or connecting your GitHub
+- Hit day 100 and the reward appears in your Streak Rewards panel
+- We email you within 48 hours with claim instructions
 
-**What if my streak breaks?**
-Your streak resets to 1 and you start working toward 100 again. Any Claude Pro rewards you've already claimed are yours to keep.
+Do I need a perfect 100 days? No. Forg gives you Streak Restore tokens and starting from day 7, you earn one every week. Use them to cover missed days. Restored days count toward your 100.
 
-The reward repeats. Day 200, day 300, every 100 days - another month free. The streak never stops paying.`
+Does it repeat? Yes. Day 200, day 300, every 100 days and another free month. The streak keeps paying.`
       }
     ]
   },

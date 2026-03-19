@@ -275,6 +275,11 @@ export default function ArticlePage({ params }: { params: { category: string; ar
         />
 
         <h1 className="text-4xl font-bold mb-4 text-[#0a0a0a]">{article.title}</h1>
+        {article.subtitle && (
+          <p className="text-xl text-gray-500 mb-6 leading-relaxed">
+            {article.subtitle}
+          </p>
+        )}
         <p className="text-xs text-gray-400 mb-10">Last updated: {article.lastUpdated || "Oct 1, 2024"}</p>
 
         <div className="article-content">
