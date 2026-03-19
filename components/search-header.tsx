@@ -67,15 +67,23 @@ export function SearchHeader() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="fixed inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 left-0 w-72 bg-white shadow-xl flex flex-col">
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between">
-               <span className="font-bold">Menu</span>
-               <button onClick={() => setIsMobileMenuOpen(false)}><X size={20} /></button>
+        <div className="fixed inset-0 z-[60] lg:hidden">
+          <div 
+            className="fixed inset-0 bg-[#0a0a0a]/40 backdrop-blur-sm transition-opacity" 
+            onClick={() => setIsMobileMenuOpen(false)} 
+          />
+          <div className="fixed inset-y-0 left-0 w-[280px] bg-white shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out">
+            <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-white sticky top-0 z-10">
+               <span className="font-bold text-[#0a0a0a] px-2">Menu Center</span>
+               <button 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+               >
+                <X size={20} className="text-gray-500" />
+               </button>
             </div>
             <div className="flex-1 overflow-y-auto">
-              <Sidebar onItemClick={() => setIsMobileMenuOpen(false)} />
+              <Sidebar onItemClick={() => setIsMobileMenuOpen(false)} className="py-6" />
             </div>
           </div>
         </div>

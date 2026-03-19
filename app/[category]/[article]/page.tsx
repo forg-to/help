@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { TableOfContents } from "@/components/toc";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ReactNode } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 
@@ -262,6 +262,13 @@ export default function ArticlePage({ params }: { params: { category: string; ar
     });
   };
 
+  const allArticles = HELP_CONTENT.flatMap(cat => 
+    cat.articles.map(art => ({ ...art, categorySlug: cat.slug }))
+  );
+  const currentIndex = allArticles.findIndex(a => a.slug === params.article && a.categorySlug === params.category);
+  const prevArticle = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
+  const nextArticle = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
+
   return (
     <div className="mx-auto w-full max-w-[1080px] px-6 py-12">
       <div className="flex flex-col items-center gap-12 xl:grid xl:grid-cols-[minmax(0,720px)_240px] xl:items-start xl:justify-center">
@@ -286,16 +293,34 @@ export default function ArticlePage({ params }: { params: { category: string; ar
           {renderContent(article.content)}
         </div>
 
-        <div className="mt-20 pt-10 border-t border-gray-100 flex flex-col items-center">
-          <p className="text-sm font-semibold text-[#0a0a0a] mb-6">Was this helpful?</p>
-          <div className="flex gap-4">
-            <button className="flex items-center gap-2 px-6 py-2.5 border border-gray-200 rounded-full hover:border-accent hover:text-accent transition-all text-sm font-medium">
-              <ThumbsUp size={16} /> Yes
-            </button>
-            <button className="flex items-center gap-2 px-6 py-2.5 border border-gray-200 rounded-full hover:border-accent hover:text-accent transition-all text-sm font-medium">
-              <ThumbsDown size={16} /> No
-            </button>
-          </div>
+        <div className="mt-20 pt-10 border-t border-gray-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {prevArticle ? (
+            <Link 
+              href={`/${prevArticle.categorySlug}/${prevArticle.slug}`}
+              className="flex flex-col items-start p-6 rounded-xl border border-gray-100 hover:border-accent group transition-all"
+            >
+              <span className="flex items-center gap-1 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                <ChevronLeft size={14} /> Previous
+              </span>
+              <span className="text-sm font-semibold text-[#0a0a0a] group-hover:text-accent transition-colors">
+                {prevArticle.title}
+              </span>
+            </Link>
+          ) : <div />}
+
+          {nextArticle && (
+            <Link 
+              href={`/${nextArticle.categorySlug}/${nextArticle.slug}`}
+              className="flex flex-col items-end text-right p-6 rounded-xl border border-gray-100 hover:border-accent group transition-all"
+            >
+              <span className="flex items-center gap-1 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
+                Next <ChevronRight size={14} />
+              </span>
+              <span className="text-sm font-semibold text-[#0a0a0a] group-hover:text-accent transition-colors">
+                {nextArticle.title}
+              </span>
+            </Link>
+          )}
         </div>
       </div>
 
