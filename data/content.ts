@@ -24,7 +24,7 @@ export const HELP_CONTENT: Category[] = [
         lastUpdated: "March 18, 2026",
         content: `forg.to is a community for indie hackers and builders who build in public. It's where you share what you're working on — product updates, milestones, revenue numbers, failures, and wins — and connect with other people who actually understand what it means to build something from scratch.
 
-**Image: forg.to homepage showing the community feed and trending products**
+![Forg.to Banner](/forg-og-banner.png)
 
 What you can do on forg:
 - Add your product and track its journey from idea to launch and beyond
@@ -36,7 +36,7 @@ What you can do on forg:
 - Discover trending products and builders in your niche
 - Build daily streaks and earn rewards like Claude Pro and discounts
 
-**Image: A builder's profile showcasing their products, streak count, and recent updates**
+![Builder Profile](/profile-page.png)
 
 forg is not a social network for everyone. It's for builders.`
       }
@@ -162,7 +162,6 @@ Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point
         slug: "forg-resume",
         lastUpdated: "March 18, 2026",
         content: `forg includes a dedicated Resume section that turns your profile into a professional portfolio ready for opportunities.
-
 Work Experience
 Add your professional history including:
 - **Role and Company:** Your title and the organization.
@@ -181,7 +180,7 @@ Education & Certifications
 AI Resume Parser
 Don't want to type everything manually? Upload your existing resume as a PDF and our **Gemini-powered AI** will automatically extract your work history, education, and certifications — populating your forg profile in seconds.
 
-**Image: Resume upload interface showing "Upload PDF" button and AI parsing progress**
+![AI Resume Parser](/import-resume.png)
 
 To use the parser: Go to **Settings → Profile → Resume → Upload PDF**`
       }
@@ -225,8 +224,8 @@ Slugs are auto-generated from your product name — e.g., "My Cool App" becomes 
       {
         title: "Product Lifecycle",
         slug: "product-lifecycle",
-        lastUpdated: "March 18, 2026",
-        content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time as your product evolves.
+        lastUpdated: "March 19, 2026",
+        content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time from the product page — click the status badge next to your product name to open the status selector.
 
 ![Edit Product Status](/edit-product-status.png)
 
@@ -245,10 +244,9 @@ Live stages:
 | Status | Meaning |
 |--------|---------|
 | Launched | Publicly launched — triggers Launch Boost |
-| Growing | Post-launch, acquiring users |
+| Growing | Post-launch, actively acquiring users |
 | Profitable | Generating meaningful revenue |
 | Funded | Received external investment |
-| Scaling | Aggressively growing |
 
 Terminal stages:
 
@@ -258,13 +256,16 @@ Terminal stages:
 | Dead | Project discontinued |
 | Acquired | Bought by another company |
 
-**Image: A product timeline view showing status transitions from Building → Beta → Launched → Growing**
+![A product timeline view showing status transitions from Building to Beta to Launched to Growing](/product-timeline-status.png)
 
 Transition rules:
 - You cannot jump from **Idea** directly to **Launched**.
 - Once post-launch, you cannot move a product back to pre-launch.
-- **Dead** and **Acquired** are final states.
-- During your 7-day Launch Boost, the Launched status is locked — only the system moves it to Growing.`
+- **Dead** and **Acquired** are final states — no further transitions.
+- During your 7-day Launch Boost, the Launched status is locked — only the system moves it to Growing.
+- Paused products can return to Growing or move to Dead.
+
+Every status change is recorded in your product's public timeline.`
       },
       {
         title: "Launching Your Product",
@@ -443,10 +444,10 @@ Your streak counter resets at **midnight UTC**, so make sure you contribute befo
       {
         title: "Earning Claude Pro",
         slug: "earning-claude-pro",
-        lastUpdated: "March 19, 2026",
+        lastUpdated: "March 18, 2026",
         content: `Claude Pro is forg's biggest streak reward — a free 1-month subscription to Anthropic's Claude Pro AI assistant, earned by building a 100-day streak.
 
-![Claude Pro Reward](/claude-pro-reward.png)
+![Claude Pro Banner](/claude-pro-banner.png)
 
 What is Claude Pro?
 Claude Pro is the paid tier of Claude, Anthropic's AI assistant. With Claude Pro you get:
@@ -465,8 +466,6 @@ How to earn it
 3. forg will contact you via your registered email with instructions to claim your free month
 
 The reward is repeatable — at 200 days you earn another free month, at 300 days another, and so on indefinitely.
-
-![Streak Rewards Panel](/streak-rewards-panel.png)
 
 Can I still earn it if I used Streak Restores?
 Yes. Restored days count toward your 100-day total. As long as your streak counter reads 100 or higher, the reward triggers — regardless of whether any of those days were auto-restored.
