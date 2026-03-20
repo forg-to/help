@@ -6,6 +6,48 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ReactNode } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
+import { Metadata } from "next";
+
+const BASE_URL = "https://help.forg.to";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { category: string; article: string };
+}): Promise<Metadata> {
+  const category = HELP_CONTENT.find((c) => c.slug === params.category);
+  const article = category?.articles.find((a) => a.slug === params.article);
+
+  if (!category || !article) {
+    return { title: "Not Found" };
+  }
+
+  const url = `${BASE_URL}/${params.category}/${params.article}`;
+  const plainText = article.content.replace(/[#*[\]!`]/g, "").replace(/\([^)]+\)/g, "").trim();
+  const description = article.subtitle || plainText.slice(0, 155).trim() + "…";
+
+  return {
+    title: article.title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: article.title,
+      description,
+      siteName: "forg Help Center",
+      publishedTime: article.lastUpdated ? new Date(article.lastUpdated).toISOString() : undefined,
+      modifiedTime: article.lastUpdated ? new Date(article.lastUpdated).toISOString() : undefined,
+      images: [{ url: "/forg-og-banner.png", width: 1200, height: 630, alt: article.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description,
+      images: ["/forg-og-banner.png"],
+    },
+  };
+}
 
 export async function generateStaticParams() {
   const params = HELP_CONTENT.flatMap((category) =>
@@ -262,14 +304,82 @@ export default function ArticlePage({ params }: { params: { category: string; ar
     });
   };
 
-  const allArticles = HELP_CONTENT.flatMap(cat => 
+  const allArticles = HELP_CONTENT.flatMap(cat =>
     cat.articles.map(art => ({ ...art, categorySlug: cat.slug }))
   );
   const currentIndex = allArticles.findIndex(a => a.slug === params.article && a.categorySlug === params.category);
   const prevArticle = currentIndex > 0 ? allArticles[currentIndex - 1] : null;
   const nextArticle = currentIndex < allArticles.length - 1 ? allArticles[currentIndex + 1] : null;
 
+  const articleUrl = `${BASE_URL}/${params.category}/${params.article}`;
+  const plainText = article.content.replace(/[#*[\]!`]/g, "").replace(/\([^)]+\)/g, "").trim();
+  const description = article.subtitle || plainText.slice(0, 155).trim() + "…";
+  const publishedTime = article.lastUpdated ? new Date(article.lastUpdated).toISOString() : new Date().toISOString();
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description,
+    url: articleUrl,
+    datePublished: publishedTime,
+    dateModified: publishedTime,
+    author: {
+      "@type": "Organization",
+      name: "Forg",
+      url: "https://forg.to",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Forg",
+      url: "https://forg.to",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/logo.png`,
+      },
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: "forg Help Center",
+      url: BASE_URL,
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Help",
+        item: BASE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: category.title,
+        item: `${BASE_URL}/${category.slug}/${category.articles[0].slug}`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: articleUrl,
+      },
+    ],
+  };
+
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
     <div className="mx-auto w-full max-w-[1080px] px-6 py-12">
       <div className="flex flex-col items-center gap-12 xl:grid xl:grid-cols-[minmax(0,720px)_240px] xl:items-start xl:justify-center">
         <div className="w-full max-w-[720px]">
@@ -329,5 +439,6 @@ export default function ArticlePage({ params }: { params: { category: string; ar
         </aside>
       </div>
     </div>
+    </>
   );
 }
