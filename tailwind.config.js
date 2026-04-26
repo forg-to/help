@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
+        bricolage: ["var(--font-bricolage)", "sans-serif"],
       },
     },
   },

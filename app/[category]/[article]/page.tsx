@@ -7,6 +7,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ReactNode } from "react";
 import { ImageLightbox } from "@/components/image-lightbox";
 import { Metadata } from "next";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkUnwrapImages from "remark-unwrap-images";
 
 const BASE_URL = "https://help.forg.to";
 
@@ -59,113 +62,6 @@ export async function generateStaticParams() {
   return params;
 }
 
-function parseInline(text: string): ReactNode {
-  const parts: ReactNode[] = [];
-  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*(.+?)\*\*|`([^`]+)`/g;
-  let lastIndex = 0;
-  let key = 0;
-  let match;
-
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
-    }
-    if (match[1] !== undefined && match[2] !== undefined) {
-      // Markdown link [text](url)
-      parts.push(
-        <Link
-          key={key++}
-          href={match[2]}
-          className="text-accent hover:underline font-medium"
-        >
-          {match[1]}
-        </Link>
-      );
-    } else if (match[3] !== undefined) {
-      // Bold **text**
-      parts.push(
-        <strong key={key++} className="font-semibold text-[#0a0a0a]">
-          {match[3]}
-        </strong>
-      );
-    } else if (match[4] !== undefined) {
-      // Inline code `text`
-      parts.push(
-        <code key={key++} className="px-1.5 py-0.5 bg-gray-100 rounded text-xs font-mono text-gray-800">
-          {match[4]}
-        </code>
-      );
-    }
-    lastIndex = match.index + match[0].length;
-  }
-
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
-  }
-
-  if (parts.length === 0) return text;
-  if (parts.length === 1 && typeof parts[0] === "string") return parts[0];
-  return <>{parts}</>;
-}
-
-function renderBodyLines(lines: string[], baseKey: string): ReactNode {
-  const output: ReactNode[] = [];
-  let i = 0;
-
-  while (i < lines.length) {
-    const line = lines[i].trim();
-    if (!line) {
-      i++;
-      continue;
-    }
-
-    if (line.startsWith("- ") || line.startsWith("* ")) {
-      const listItems: string[] = [];
-      while (i < lines.length && (lines[i].trim().startsWith("- ") || lines[i].trim().startsWith("* "))) {
-        listItems.push(lines[i].trim().replace(/^[-*]\s+/, ""));
-        i++;
-      }
-      output.push(
-        <ul key={`${baseKey}-ul-${i}`} className="list-disc pl-5 mb-4 space-y-1.5">
-          {listItems.map((item, j) => (
-            <li key={j} className="text-sm leading-relaxed">
-              {parseInline(item)}
-            </li>
-          ))}
-        </ul>
-      );
-      continue;
-    }
-
-    if (line.match(/^\d+\.\s/)) {
-      const listItems: string[] = [];
-      while (i < lines.length && lines[i].trim().match(/^\d+\.\s/)) {
-        listItems.push(lines[i].trim().replace(/^\d+\.\s+/, ""));
-        i++;
-      }
-      output.push(
-        <ol key={`${baseKey}-ol-${i}`} className="list-decimal pl-5 mb-4 space-y-1.5">
-          {listItems.map((item, j) => (
-            <li key={j} className="text-sm leading-relaxed">
-              {parseInline(item)}
-            </li>
-          ))}
-        </ol>
-      );
-      continue;
-    }
-
-    output.push(
-      <p key={`${baseKey}-p-${i}`} className="text-sm leading-relaxed mb-2">
-        {parseInline(line)}
-      </p>
-    );
-    i++;
-  }
-
-  return <>{output}</>;
-}
-
 export default function ArticlePage({ params }: { params: { category: string; article: string } }) {
   const category = HELP_CONTENT.find((c) => c.slug === params.category);
   const article = category?.articles.find((a) => a.slug === params.article);
@@ -174,134 +70,68 @@ export default function ArticlePage({ params }: { params: { category: string; ar
     notFound();
   }
 
+  function generateId(text: string) {
+    return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
   const renderContent = (content: string) => {
-    const blocks = content.split("\n\n");
-    return blocks.map((block, i) => {
-      const trimmed = block.trim();
-      if (!trimmed) return null;
-
-      // Actual markdown image — block is ![alt text](/path/to/image.png)
-      const mdImageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
-      if (mdImageMatch) {
-        const [, alt, src] = mdImageMatch;
-        return <ImageLightbox key={i} src={src} alt={alt} />;
-      }
-
-      // Image placeholder — entire block is **Image: ...**
-      if (trimmed.startsWith("**Image:") && trimmed.endsWith("**")) {
-        const desc = trimmed.slice(2, -2).replace(/^Image:\s*/, "").trim();
-        return (
-          <div
-            key={i}
-            className="my-6 rounded-xl border-2 border-dashed border-gray-200 bg-gray-50 p-8 flex flex-col items-center gap-3 text-center"
-          >
-            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
-                <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5" />
-                <polyline points="21 15 16 10 5 21" strokeWidth="1.5" />
-              </svg>
+    return (
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm, remarkUnwrapImages]}
+        components={{
+          h1: ({ node, ...props }) => <h1 className="text-3xl font-bold mt-8 mb-4 border-b border-[#e8e6dc] pb-2 text-[#141413] font-bricolage tracking-tight" id={generateId(props.children?.toString() || "")} {...props} />,
+          h2: ({ node, ...props }) => <h2 className="text-xl font-bold mt-8 mb-4 border-b border-[#e8e6dc] pb-2 text-[#141413] font-bricolage tracking-tight" id={generateId(props.children?.toString() || "")} {...props} />,
+          h3: ({ node, ...props }) => <h3 className="text-lg font-bold mt-6 mb-3 text-[#141413] font-bricolage tracking-tight" id={generateId(props.children?.toString() || "")} {...props} />,
+          h4: ({ node, ...props }) => <h4 className="text-base font-bold mt-4 mb-2 text-[#141413] font-bricolage tracking-tight" id={generateId(props.children?.toString() || "")} {...props} />,
+          p: ({ node, ...props }) => {
+            const childrenContent = props.children?.toString() || "";
+            if (childrenContent.startsWith("Image:") || childrenContent.startsWith("**Image:")) {
+              const desc = childrenContent.replace(/^\*?\*?Image:\s*/, "").replace(/\*?\*?$/, "").trim();
+              return (
+                <div className="my-8 rounded-xl border-2 border-dashed border-[#e8e6dc] bg-[#faf9f5] p-10 flex flex-col items-center gap-4 text-center">
+                  <div className="w-14 h-14 bg-[#f0eee6] rounded-xl flex items-center justify-center">
+                    <svg className="w-7 h-7 text-[#87867f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
+                      <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5" />
+                      <polyline points="21 15 16 10 5 21" strokeWidth="1.5" />
+                    </svg>
+                  </div>
+                  <p className="text-[13px] text-[#87867f] italic font-medium max-w-sm">{desc}</p>
+                </div>
+              );
+            }
+            return <p className="mb-4 leading-relaxed text-[#5e5d59]" {...props} />;
+          },
+          a: ({ node, ...props }) => {
+            const href = props.href || "";
+            if (href.startsWith("http")) {
+              return <a target="_blank" rel="noopener noreferrer" className="text-[#c96442] hover:underline font-medium" {...props} />;
+            }
+            return <Link href={href} className="text-[#c96442] hover:underline font-medium" {...props} />;
+          },
+          img: ({ node, ...props }) => (
+            <div className="my-8"><ImageLightbox src={props.src || ""} alt={props.alt || ""} /></div>
+          ),
+          ul: ({ node, ...props }) => <ul className="list-disc pl-5 mb-4 text-[#5e5d59] space-y-2" {...props} />,
+          ol: ({ node, ...props }) => <ol className="list-decimal pl-5 mb-4 text-[#5e5d59] space-y-2" {...props} />,
+          li: ({ node, ...props }) => <li className="leading-relaxed" {...props} />,
+          table: ({ node, ...props }) => (
+            <div className="overflow-x-auto mb-8 w-full">
+              <table className="w-full border-collapse text-[#5e5d59]" {...props} />
             </div>
-            <p className="text-xs text-gray-500 italic font-medium">{desc}</p>
-          </div>
-        );
-      }
-
-      // Table
-      if (trimmed.includes("|") && trimmed.includes("---")) {
-        const rows = trimmed.split("\n");
-        const headers = rows[0].split("|").map((h) => h.trim()).filter(Boolean);
-        const dataRows = rows.slice(2).map((row) => row.split("|").map((c) => c.trim()).filter(Boolean));
-        return (
-          <div key={i} className="overflow-x-auto mb-8">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-200">
-                  {headers.map((h, j) => (
-                    <th key={j} className="p-3 text-left font-semibold text-sm text-[#0a0a0a]">
-                      {parseInline(h)}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {dataRows.map((row, j) => (
-                  <tr key={j} className="border-b border-gray-100 last:border-0">
-                    {row.map((cell, k) => (
-                      <td key={k} className="p-3 text-sm leading-relaxed">
-                        {parseInline(cell)}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        );
-      }
-
-      const lines = trimmed.split("\n");
-
-      // Pure list block
-      if (lines[0].startsWith("- ") || lines[0].startsWith("* ")) {
-        return (
-          <ul key={i} className="list-disc pl-5 mb-6 space-y-2">
-            {lines.map((item, j) => (
-              <li key={j} className="text-sm leading-relaxed">
-                {parseInline(item.replace(/^[-*]\s+/, ""))}
-              </li>
-            ))}
-          </ul>
-        );
-      }
-
-      // Pure ordered list block
-      if (lines[0].match(/^\d+\.\s/)) {
-        return (
-          <ol key={i} className="list-decimal pl-5 mb-6 space-y-2">
-            {lines.map((item, j) => (
-              <li key={j} className="text-sm leading-relaxed">
-                {parseInline(item.replace(/^\d+\.\s+/, ""))}
-              </li>
-            ))}
-          </ol>
-        );
-      }
-
-      // Section with multiple lines — first line is header, rest is body
-      if (
-        lines.length > 1 &&
-        !lines[0].startsWith("**") &&
-        !lines[0].startsWith("-") &&
-        !lines[0].startsWith("*") &&
-        !lines[0].match(/^\d+\./)
-      ) {
-        const headerId = lines[0].toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-        return (
-          <div key={i} className="mb-8">
-            <h3
-              className="text-base font-semibold text-[#0a0a0a] mb-3"
-              id={headerId}
-            >
-              {parseInline(lines[0])}
-            </h3>
-            <div>{renderBodyLines(lines.slice(1), `${i}`)}</div>
-          </div>
-        );
-      }
-
-      // Single paragraph
-      return (
-        <p key={i} className="mb-6 text-sm leading-relaxed">
-          {parseInline(trimmed)}
-        </p>
-      );
-    });
+          ),
+          th: ({ node, ...props }) => <th className="border border-[#e8e6dc] px-4 py-3 text-left font-medium bg-[#f0eee6] rounded-t-lg text-[#141413]" {...props} />,
+          td: ({ node, ...props }) => <td className="border border-[#e8e6dc] px-4 py-3" {...props} />,
+          strong: ({ node, ...props }) => <strong className="font-semibold text-[#141413]" {...props} />,
+          code: ({ node, inline, ...props }: any) => 
+            inline ? <code className="bg-[#f0eee6] text-[#141413] px-1.5 py-0.5 rounded text-[13px] font-mono border border-[#e8e6dc]" {...props} /> 
+                   : <pre className="bg-[#141413] text-[#faf9f5] p-5 rounded-xl overflow-x-auto mb-6 text-[13px] font-mono shadow-sm"><code {...props} /></pre>,
+          blockquote: ({ node, ...props }) => <blockquote className="border-l-4 border-[#c96442] pl-4 italic text-[#87867f] my-6" {...props} />
+        }}
+      >
+        {content}
+      </ReactMarkdown>
+    );
   };
 
   const allArticles = HELP_CONTENT.flatMap(cat =>
@@ -391,7 +221,7 @@ export default function ArticlePage({ params }: { params: { category: string; ar
           ]}
         />
 
-        <h1 className="text-4xl font-bold mb-4 text-[#0a0a0a]">{article.title}</h1>
+        <h1 className="text-4xl font-bold mb-4 text-[#141413] tracking-tight font-bricolage">{article.title}</h1>
         {article.subtitle && (
           <p className="text-xl text-gray-500 mb-6 leading-relaxed">
             {article.subtitle}
@@ -407,12 +237,12 @@ export default function ArticlePage({ params }: { params: { category: string; ar
           {prevArticle ? (
             <Link 
               href={`/${prevArticle.categorySlug}/${prevArticle.slug}`}
-              className="flex flex-col items-start p-6 rounded-xl border border-gray-100 hover:border-accent group transition-all"
+              className="flex flex-col items-start p-6 rounded-xl border border-gray-100 hover:border-[#c96442] group transition-all"
             >
               <span className="flex items-center gap-1 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                 <ChevronLeft size={14} /> Previous
               </span>
-              <span className="text-sm font-semibold text-[#0a0a0a] group-hover:text-accent transition-colors">
+              <span className="text-sm font-semibold text-[#141413] group-hover:text-[#c96442] transition-colors">
                 {prevArticle.title}
               </span>
             </Link>
@@ -421,12 +251,12 @@ export default function ArticlePage({ params }: { params: { category: string; ar
           {nextArticle && (
             <Link 
               href={`/${nextArticle.categorySlug}/${nextArticle.slug}`}
-              className="flex flex-col items-end text-right p-6 rounded-xl border border-gray-100 hover:border-accent group transition-all"
+              className="flex flex-col items-end text-right p-6 rounded-xl border border-gray-100 hover:border-[#c96442] group transition-all"
             >
               <span className="flex items-center gap-1 text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">
                 Next <ChevronRight size={14} />
               </span>
-              <span className="text-sm font-semibold text-[#0a0a0a] group-hover:text-accent transition-colors">
+              <span className="text-sm font-semibold text-[#141413] group-hover:text-[#c96442] transition-colors">
                 {nextArticle.title}
               </span>
             </Link>

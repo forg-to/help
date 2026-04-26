@@ -37,7 +37,7 @@ export function Logo({ className, size = "md", showImage = true }: LogoProps) {
       )}
       <span
         className={cn(
-          "font-sans font-bold tracking-tight text-[var(--text-primary)] leading-none select-none",
+          "font-bricolage font-bold tracking-tight text-[#141413] leading-none select-none",
           sizeClasses[size]
         )}
       >

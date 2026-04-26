@@ -421,41 +421,34 @@ Attach images or videos to make your updates stand out. Posts with media get a v
 - Publish regularly — even short articles compound over time.
 - Link to your product so readers can discover what you're building on [forg.to](https://forg.to).`
       },
-      /* #FIX
       {
         title: "How Cross-Posting Works",
         slug: "how-cross-posting-works",
-        lastUpdated: "March 18, 2026",
-        content: `When you write an update on forg, you can publish it to multiple platforms simultaneously - X (Twitter), LinkedIn, and Bluesky - in one click.
+        lastUpdated: "April 26, 2026",
+        content: `When you write an update on forg, you can publish it to multiple platforms simultaneously - X (Twitter), LinkedIn, Threads, and Bluesky - in one click.
+
+![Post Composer Unopened](/post-composer-unopened.png)
 
 ### Step 1: Connecting your channels
-Before you can cross-post, you need to link your social accounts to Forg. There are two ways to do this:
+Before you can cross-post, you need to securely link your social accounts to forg.
 
-1. **Via the Post Composer:** When you open the writing update modal, you'll see "Connect" buttons for X, LinkedIn, and Bluesky. Clicking these will guide you through the authorization process.
+When you open the writing update modal, you'll see "Connect" buttons for X, LinkedIn, Threads, and Bluesky. Clicking these will guide you through the authorization process.
 
-![Connect via Composer](/connect-via-composer.png)
+![Post Composer Opened](/post-composer-opened.png)
 
-2. **Via Studio Integrations:** Go to your **Studio** (via the sidebar) and open the **Integrations** tab. Here you can see all available platforms and connect or disconnect them in one place.
-
-![Connect via Studio](/connect-via-studio.png)
+![Connect Channels Modal](/connect-channels-modal.png)
 
 ### Step 2: Cross-posting your content
-Once your channels are connected, you have two ways to reach your audience across the web:
+From your home feed or profile, click on the "Write an update..." box. Compose your main message, then toggle the icons for the platforms you want to cross-post to. 
 
-1. **Using the Writing Update Modal:** From your home feed or profile, click on the "Write an update..." box. Compose your message, then toggle the icons for the platforms you want to cross-post to.
+You can also edit and customize the content specifically for a particular channel! Once selected, you'll have the option to tailor your message so it perfectly fits each platform's audience.
 
-![Post via Composer](/post-via-composer.png)
+![Cross Posting Modal](/cross-posting-modal.png)
 
-2. **Using the Studio Compose Button:** In the **Studio**, click the **Compose** button at the top. This opens a dedicated cross-posting modal where you can draft your content and select multiple channels for simultaneous publication.
-
-![Post via Studio Compose](/post-via-studio.png)
-
-Things to know:
-- **Bluesky** is capped at **300 characters** - your post will be trimmed if it's longer.
-- **Media cross-posting is Pro only.** Free users can cross-post text. Images and videos require Pro.
-- Up to 4 images can be shared to X and LinkedIn.`
+### Things to know:
+- **Media cross-posting requires [Forg Pro](https://forg.to/pro).** Free users can cross-post text. Images and videos require a [Forg Pro](https://forg.to/pro) subscription.
+- Up to 4 images can be shared to X, Threads, and LinkedIn.`
       }
-      */
     ]
   },
   {

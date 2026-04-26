@@ -14,9 +14,9 @@ export function Sidebar({ className, onItemClick }: { className?: string; onItem
   return (
     <div className={cn("bg-white py-8 px-6", className)}>
       <div className="mb-8 px-2">
-        <Link href="/" className="flex items-center gap-2 text-xl font-bold text-[#0a0a0a]">
+        <Link href="/" className="flex items-center gap-2">
           <Logo size="lg" />
-          <span className="leading-none">Help</span>
+          <span className="text-[13px] font-sans font-medium text-[#87867f] uppercase tracking-wider mt-1">Help</span>
         </Link>
       </div>
 

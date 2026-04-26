@@ -1,11 +1,12 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/components/sidebar";
 import { SearchHeader } from "@/components/search-header";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const bricolage = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage" });
 
 const BASE_URL = "https://help.forg.to";
 
@@ -72,9 +73,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans text-foreground bg-background antialiased`}>
+      <body className={`${inter.variable} ${bricolage.variable} font-sans text-foreground bg-background antialiased text-[15px]`}>
         <div className="mx-auto flex min-h-screen w-full max-w-[1440px]">
-          <Sidebar className="hidden lg:block h-screen w-72 shrink-0 overflow-y-auto border-r border-gray-100 sticky top-0" />
+          <Sidebar className="hidden lg:block h-screen w-72 shrink-0 overflow-y-auto border-r border-[#e8e6dc] sticky top-0" />
           <div className="flex min-w-0 flex-1 flex-col">
             <SearchHeader />
             <main className="flex-1 overflow-y-auto">{children}</main>
