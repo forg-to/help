@@ -448,6 +448,36 @@ You can also edit and customize the content specifically for a particular channe
 ### Things to know:
 - **Media cross-posting requires [Forg Pro](https://forg.to/pro).** Free users can cross-post text. Images and videos require a [Forg Pro](https://forg.to/pro) subscription.
 - Up to 4 images can be shared to X, Threads, and LinkedIn.`
+      },
+      {
+        title: "Scheduling Posts",
+        slug: "scheduling-posts",
+        lastUpdated: "March 18, 2026",
+        content: `Scheduling is a **Pro feature** that lets you write posts now and publish them automatically at a future time.
+
+**Image: Post composer showing the "Schedule" option with date and time picker**
+
+How to schedule a post:
+1. Write your update in the composer.
+2. Click the **Schedule** button instead of "Post".
+3. Pick a specific date and time, or drop it into your Queue.
+
+The Queue
+The Queue is your personal content calendar. Add posts to it and forg will publish them automatically at your preset time slots. You can manage your queue from the **Studio** tab.
+
+**Image: Queue management page in Studio showing upcoming posts in daily time slots**
+
+Default queue slots (IST):
+- **Monday – Friday:** 9:00 AM and 5:00 PM
+- **Saturday – Sunday:** 10:00 AM
+
+You can customize these time slots to match your preferred posting schedule.
+
+**Image: Queue settings page showing editable time slots per day of the week**
+
+Scheduled posts look and behave like regular posts once published - including cross-posting if you've enabled it.
+
+**Image: Studio "Drafts & Scheduled" tab listing upcoming scheduled posts with publish times**`
       }
     ]
   },
@@ -529,43 +559,6 @@ No. [Streak Restores](/streaks/how-streaks-work) count toward your total. Use th
 Your streak resets to 1 and you start working toward 100 again. Any Claude Pro rewards you've already claimed are yours to keep.
 
 The reward repeats. Day 200, day 300, every 100 days — another month free. The streak never stops paying.`
-      }
-    ]
-  },
-  {
-    title: "Scheduling",
-    slug: "scheduling",
-    icon: "Calendar",
-    articles: [
-      {
-        title: "Scheduling Posts",
-        slug: "scheduling-posts",
-        lastUpdated: "March 18, 2026",
-        content: `Scheduling is a **Pro feature** that lets you write posts now and publish them automatically at a future time.
-
-**Image: Post composer showing the "Schedule" option with date and time picker**
-
-How to schedule a post:
-1. Write your update in the composer.
-2. Click the **Schedule** button instead of "Post".
-3. Pick a specific date and time, or drop it into your Queue.
-
-The Queue
-The Queue is your personal content calendar. Add posts to it and forg will publish them automatically at your preset time slots. You can manage your queue from the **Studio** tab.
-
-**Image: Queue management page in Studio showing upcoming posts in daily time slots**
-
-Default queue slots (IST):
-- **Monday – Friday:** 9:00 AM and 5:00 PM
-- **Saturday – Sunday:** 10:00 AM
-
-You can customize these time slots to match your preferred posting schedule.
-
-**Image: Queue settings page showing editable time slots per day of the week**
-
-Scheduled posts look and behave like regular posts once published - including cross-posting if you've enabled it.
-
-**Image: Studio "Drafts & Scheduled" tab listing upcoming scheduled posts with publish times**`
       }
     ]
   },
