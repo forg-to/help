@@ -10,6 +10,7 @@ import { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkUnwrapImages from "remark-unwrap-images";
+import { generateId } from "@/lib/utils";
 
 const BASE_URL = "https://help.forg.to";
 
@@ -68,10 +69,6 @@ export default function ArticlePage({ params }: { params: { category: string; ar
 
   if (!category || !article) {
     notFound();
-  }
-
-  function generateId(text: string) {
-    return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   }
 
   const renderContent = (content: string) => {
