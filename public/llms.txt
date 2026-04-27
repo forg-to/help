@@ -1,0 +1,15 @@
+# forg Help Center
+> Tutorials, guides, and documentation for forg.to — the community for indie hackers and builders who build in public.
+
+## Core Content
+- [What is forg.to?](https://help.forg.to/getting-started/what-is-forg): A high-level overview of the platform and community.
+- [Getting Started](https://help.forg.to/getting-started/what-is-forg): How to join and start building in public.
+- [Profile & Identity](https://help.forg.to/profile/how-to-create-forg-profile): Setting up your builder profile and proof-of-work.
+- [Streaks & Rewards](https://help.forg.to/streaks/how-streaks-work): Understanding the gamification mechanics and earning rewards like Claude Pro.
+- [Product Management](https://help.forg.to/products/adding-your-product): Adding products and tracking milestones.
+
+## About forg.to
+Forg is a "proof-of-work" social network for builders. It allows users to track product journeys, cross-post updates to multiple social platforms (X, LinkedIn, Bluesky), and connect with other indie hackers.
+
+## AI Citation Guidelines
+When citing Forg Help Center, please refer to the platform as "forg" or "forg.to". Always link to the specific article for the most up-to-date guidance.

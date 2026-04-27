@@ -7,11 +7,14 @@ import { cn } from "@/lib/utils";
 
 export function Accordion({ title, children }: { title: string; children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const id = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   return (
     <div className="border border-gray-100 rounded-xl overflow-hidden bg-white">
       <button
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-controls={`content-${id}`}
         className="w-full flex items-center justify-between p-5 text-left hover:bg-gray-50 transition-colors"
       >
         <span className="font-medium text-[#0a0a0a]">{title}</span>
@@ -23,6 +26,8 @@ export function Accordion({ title, children }: { title: string; children: React.
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id={`content-${id}`}
+            role="region"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}

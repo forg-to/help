@@ -173,6 +173,13 @@ export default function ArticlePage({ params }: { params: { category: string; ar
       name: "forg Help Center",
       url: BASE_URL,
     },
+    mentions: [
+      { "@type": "Thing", name: "Indie Hackers" },
+      { "@type": "Thing", name: "Build in Public" },
+      { "@type": "Thing", name: "SaaS" },
+      { "@type": "Organization", name: "Forg", url: "https://forg.to" }
+    ],
+    keywords: "build in public, indie hacker, product updates, milestone tracking, social cross-posting"
   };
 
   const breadcrumbSchema = {
@@ -182,7 +189,7 @@ export default function ArticlePage({ params }: { params: { category: string; ar
       {
         "@type": "ListItem",
         position: 1,
-        name: "Help",
+        name: "Forg Help",
         item: BASE_URL,
       },
       {

@@ -11,7 +11,12 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: {
       "@type": "Answer",
-      text: faq.answer.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1"),
+      text: faq.answer
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1") // Strip links
+        .replace(/(\*\*|__)(.*?)\1/g, "$2")      // Strip bold
+        .replace(/(\*|_)(.*?)\1/g, "$2")         // Strip italic
+        .replace(/`([^`]+)`/g, "$1")              // Strip code
+        .trim(),
     },
   })),
 };
@@ -23,11 +28,22 @@ const websiteSchema = {
   url: "https://help.forg.to",
   description:
     "Tutorials, guides, and support for forg.to — the community for indie hackers and builders who build in public.",
-  isPartOf: {
-    "@type": "WebSite",
-    name: "forg",
-    url: "https://forg.to",
+  publisher: {
+    "@type": "Organization",
+    name: "Forg",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://help.forg.to/logo.png"
+    }
   },
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://help.forg.to/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
 };
 
 export default function HomePage() {

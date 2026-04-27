@@ -532,7 +532,6 @@ The reward repeats. Day 200, day 300, every 100 days — another month free. The
       }
     ]
   },
-  /* #FIX
   {
     title: "Scheduling",
     slug: "scheduling",
@@ -702,31 +701,6 @@ Key settings:
 **Image: Account deletion confirmation modal with a warning about permanent data removal**`
       }
     ]
-  }
-  */
-];
-
-export interface FAQ {
-  question: string;
-  answer: string;
-}
-
-export const FAQS: FAQ[] = [
-  {
-    question: "Is forg only for developers?",
-    answer: "No. [forg.to](https://forg.to) is for anyone who builds things — designers, indie hackers, founders, makers, and developers all use it."
-  },
-  {
-    question: "Is forg free?",
-    answer: "Yes. The core platform is free. [Pro](https://forg.to/pro) ($10/month or $6/month billed annually at $72/year) adds scheduling, longer posts, analytics, and other power-user features."
-  },
-  {
-    question: "How is forg different from X/Twitter?",
-    answer: "forg is purpose-built for builders. Your content lives on your product page as a public changelog, and connects you with a community of people who are actually building — not just talking about it."
-  },
-  {
-    question: "Does forg have an API?",
-    answer: "Yes. The public API is available at [api.forg.to](https://api.forg.to). Documentation is at [api.forg.to/docs](https://api.forg.to/docs). You'll need an API key from [Settings → Account](https://forg.to/settings/account)."
   },
   {
     title: "Legal",
@@ -1025,5 +999,29 @@ Email: team@forg.to
 Twitter/X: @forg`
       }
     ]
+  }
+];
+
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
+export const FAQS: FAQ[] = [
+  {
+    question: "Is forg only for developers?",
+    answer: "No. [forg.to](https://forg.to) is for anyone who builds things — designers, indie hackers, founders, makers, and developers all use it."
+  },
+  {
+    question: "Is forg free?",
+    answer: "Yes. The core platform is free. [Pro](https://forg.to/pro) ($10/month or $6/month billed annually at $72/year) adds scheduling, longer posts, analytics, and other power-user features."
+  },
+  {
+    question: "How is forg different from X/Twitter?",
+    answer: "forg is purpose-built for builders. Your content lives on your product page as a public changelog, and connects you with a community of people who are actually building — not just talking about it."
+  },
+  {
+    question: "Does forg have an API?",
+    answer: "Yes. The public API is available at [api.forg.to](https://api.forg.to). Documentation is at [api.forg.to/docs](https://api.forg.to/docs). You'll need an API key from [Settings → Account](https://forg.to/settings/account)."
   }
 ];
