@@ -616,6 +616,8 @@ When you create an account, we collect the following information depending on yo
 **Linked Social Accounts (Optional):**
 - **Twitter/X:** Username, display name, profile image, account identifier, OAuth tokens for posting
 - **LinkedIn:** Email, name, profile image, account identifier, OAuth tokens for posting
+- **Bluesky:** Handle, display name, profile image, account identifier, app password for posting
+- **Threads:** Username, display name, profile image, account identifier, OAuth tokens for posting
 
 ### 1.2 Content You Submit
 
@@ -638,7 +640,8 @@ We expressly do not collect the following information:
 
 We use the information we collect for the following purposes:
 - **To provide the Services:** Authenticate your account, display your profile, and enable core functionality.
-- **To enable cross-posting:** Post content on your behalf to connected social platforms (Twitter/X, LinkedIn) when you authorize it.
+- **To enable cross-posting:** Post content on your behalf to connected social platforms (Twitter/X, LinkedIn, Bluesky, Threads) when you authorize it.
+- **To power AI features:** Pass resume content to Google Gemini for AI-assisted resume parsing when you explicitly trigger the feature.
 - **To send notifications:** Email you about product launches, engagement updates, and important platform communications.
 - **To display community features:** Show leaderboards, trending products, and community activity.
 - **To improve the Services:** Analyze aggregate, anonymized usage patterns to improve the platform.
@@ -663,7 +666,10 @@ We use the following third-party services to operate the platform:
 - **Inngest:** Background job scheduling for automated tasks
 - **Twitter/X API:** OAuth authentication and cross-posting
 - **LinkedIn API:** OAuth authentication and cross-posting
+- **Bluesky API:** Authentication and cross-posting
+- **Threads API:** OAuth authentication and cross-posting
 - **Google API:** OAuth authentication
+- **Google Gemini AI:** Resume text parsing (only when you explicitly use the AI Resume Parser feature)
 
 ### 3.3 No Sale of Personal Information
 
@@ -674,7 +680,8 @@ We do not sell, rent, or trade your personal information to third parties for th
 We retain your information for as long as your account is active or as needed to provide you the Services. Specifically:
 - **Account data:** Retained until you request account deletion
 - **Products and content:** Retained until you delete them or request account deletion
-- **OAuth tokens:** Retained while your social accounts are connected; deleted when you disconnect
+- **OAuth tokens / app passwords:** Retained while your social accounts are connected; deleted when you disconnect
+- **Resume data for AI parsing:** Not stored by forg after processing; sent to Google Gemini only at the moment of parsing and not retained by us
 
 ## 5. Data Security
 
@@ -804,7 +811,7 @@ We reserve the right to remove any content that violates these Terms or that we 
 
 ### 6.1 Authorization
 
-When you connect your Twitter/X or LinkedIn accounts, you authorize Forg to post content on your behalf to these platforms. You remain responsible for all content posted through these connections.
+When you connect your Twitter/X, LinkedIn, Bluesky, or Threads accounts, you authorize Forg to post content on your behalf to these platforms. You remain responsible for all content posted through these connections.
 
 ### 6.2 Platform Compliance
 
@@ -871,6 +878,187 @@ If you have any questions about these Terms, please contact us at:
 **forg.**
 Email: team@forg.to
 Twitter/X: [@forg_to](https://x.com/forg_to)`
+      },
+      {
+        title: "Content Policy",
+        slug: "content-policy",
+        lastUpdated: "April 27, 2026",
+        content: `This document describes the content policies that forg and its members must adhere to. These rules apply to all content posted on [forg.to](https://forg.to) — updates, articles, product pages, comments, profile information, and any other user-generated content.
+
+## Illegal content
+
+We do not allow content that:
+
+- is illegal, promotes illegal activity, or infringes on the legal rights of others.
+
+## Intellectual property abuse
+
+We do not allow content that:
+
+- **Infringes copyright.** It is our policy to respond to notices of alleged infringement. If you believe your copyright has been violated, email us at [team@forg.to](mailto:team@forg.to).
+
+- **Sells or promotes counterfeit products.** Counterfeit goods contain a trademark or logo identical to or substantially indistinguishable from another brand's trademark, mimicking brand features to pass off as genuine products.
+
+## Dangerous or derogatory content
+
+We do not allow content that:
+
+- **Incites hatred or promotes discrimination** against any individual or group on the basis of race or ethnic origin, religion, disability, age, nationality, veteran status, sexual orientation, gender, gender identity, or any characteristic associated with systemic discrimination or marginalization.
+
+  *Examples: Promoting hate groups or hate group paraphernalia; encouraging others to believe a person or group is inhuman, inferior, or worthy of being hated.*
+
+- **Harasses, intimidates, or bullies** an individual or group of individuals.
+
+  *Examples: Singling out someone for abuse; suggesting a tragic event did not happen or that victims are actors.*
+
+- **Threatens or advocates for physical or mental harm** to oneself or others.
+
+  *Examples: Content advocating suicide or self-harm; threatening someone with real-life harm; promoting, glorifying, or condoning violence; content made by or in support of terrorist groups.*
+
+- **Exploits others through extortion.**
+
+  *Examples: Revenge porn, blackmail.*
+
+## Animal cruelty
+
+We do not allow content that:
+
+- Promotes cruelty or gratuitous violence toward animals.
+- Promotes the sale of products obtained from endangered or threatened species.
+
+## Misrepresentative content
+
+### Misleading representation
+
+We do not allow content that:
+
+- Misrepresents, misstates, or conceals information about the publisher, the content creator, the purpose of the content, or the content itself.
+- Falsely implies affiliation with or endorsement by another individual, organization, product, or service.
+
+  *Examples: Impersonating other products; misusing company logos.*
+
+### Unreliable and harmful claims
+
+We do not allow content that:
+
+- Makes claims that are demonstrably false and could undermine participation or trust in electoral or democratic processes.
+- Promotes harmful health claims or contradicts authoritative scientific consensus on public health matters.
+- Contradicts authoritative scientific consensus on climate change.
+
+### Deceptive practices
+
+We do not allow:
+
+- Enticing users to engage with content under false or unclear pretenses.
+- Attempting to steal or trick users into sharing personal information (e.g., phishing).
+- Promoting products or services using false, dishonest, or deceptive claims (e.g., "Get Rich Quick" schemes).
+- Coordinating with other accounts to conceal or misrepresent your identity on matters of political or social concern.
+
+### Manipulated media
+
+We do not allow content that:
+
+- Deceives users through manipulated media related to politics, social issues, or matters of public concern.
+
+## Enabling dishonest behavior
+
+We do not allow content that:
+
+- **Helps users mislead others.** *Examples: Creating fake documents such as passports or diplomas; selling paper-writing or exam-taking services.*
+
+- **Promotes hacking or cracking**, or provides instructions, equipment, or software that tampers with or provides unauthorized access to devices, software, servers, or websites.
+
+- **Enables unauthorized surveillance of another person.** *Examples: Spyware; GPS trackers marketed to spy on someone without their consent. This does not include products or services designed for parents to monitor their underage children.*
+
+## Sexually explicit content
+
+We do not allow content that:
+
+- Includes graphic sexual text, image, audio, video, or games.
+- Contains non-consensual sexual themes, whether simulated or real.
+- Promotes the creation or distribution of AI-generated deepfake pornography.
+
+## Compensated sexual acts
+
+We do not allow content that may be interpreted as promoting a sexual act in exchange for compensation.
+
+## Child sexual abuse and exploitation
+
+We do not allow content that sexually exploits or abuses children, or that promotes the sexual exploitation or abuse of children. This includes:
+
+- Child grooming
+- Sextortion targeting minors
+- Sexualization of minors
+- Trafficking of children
+
+We will take appropriate action, including reporting to relevant authorities and disabling accounts. If you believe a child is in danger, contact the police immediately. To report such behavior on forg, email [team@forg.to](mailto:team@forg.to).
+
+## Enforcement
+
+Violations of this Content Policy may result in content removal, account suspension, or permanent termination. Serious violations may be reported to law enforcement. To report a violation, email [team@forg.to](mailto:team@forg.to).`
+      },
+      {
+        title: "Code of Conduct",
+        slug: "code-of-conduct",
+        lastUpdated: "April 27, 2026",
+        content: `forg is a community for builders who build in public. To keep it worth building in, we ask everyone to follow these standards.
+
+## The short version
+
+forg is dedicated to providing a harassment-free experience for everyone, regardless of gender and gender identity, age, sexual orientation, disability, physical appearance, body size, race, or religion (or lack thereof). We do not tolerate harassment of community members in any form. Sexual language and imagery are never appropriate. Accounts found to be violating these rules may be suspended permanently.
+
+We also strongly discourage inaccurate information on your forg profile. Your profile is your proof-of-work — keep it honest.
+
+## The detailed version
+
+### Behavior that builds a great community
+
+- Using welcoming and inclusive language
+- Referring to people by their preferred pronouns and using gender-neutral pronouns when uncertain
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community as a whole
+- Showing empathy toward other members
+
+### Behavior that is not acceptable
+
+- The use of sexualized language or imagery, and unwelcome sexual attention or advances
+- Trolling, insulting or derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing someone else's private information — such as a physical or electronic address — without their explicit permission
+- Other conduct that could reasonably be considered inappropriate in a professional setting
+- Dismissing or attacking inclusion-oriented requests
+
+### Profile integrity
+
+Your profile is your builder identity. Do not put inaccurate information on your forg profile. Specifically:
+
+- **Profile Picture:** A professional headshot or portrait photo is recommended. Anything obscene will lead to profile suspension.
+- **Display Name:** Use your real name or the name you're genuinely known by. Do not use your company name, role title, emojis, or promotional text in your name field.
+- **Bio:** Keep it honest, professional, and concise.
+- **Products:** Only list products you have actually built or meaningfully contributed to.
+
+### Product and update integrity
+
+- Only post updates about products you own or are actively contributing to.
+- Do not fabricate metrics (users, revenue, etc.) in updates.
+- Do not use forg updates as spam or self-promotional blasts unrelated to your actual building journey.
+
+## Enforcement
+
+Violations of this Code of Conduct may be reported by emailing [team@forg.to](mailto:team@forg.to). All reports will be reviewed and investigated and will result in a response deemed necessary and appropriate to the circumstances.
+
+forg has the right and responsibility to remove profiles or other contributions that are not aligned to this Code of Conduct, or to suspend temporarily or permanently any member for behavior deemed inaccurate, false, inappropriate, threatening, offensive, or harmful.
+
+## Attribution
+
+This code of conduct is adapted from:
+1. [DEV Community](https://dev.to/code-of-conduct)
+2. [Contributor Covenant](https://www.contributor-covenant.org/)
+
+## Contact
+
+If you have questions about this Code of Conduct or need to report an issue, contact us at [team@forg.to](mailto:team@forg.to).`
       }
     ]
   }
