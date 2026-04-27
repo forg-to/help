@@ -727,5 +727,303 @@ export const FAQS: FAQ[] = [
   {
     question: "Does forg have an API?",
     answer: "Yes. The public API is available at [api.forg.to](https://api.forg.to). Documentation is at [api.forg.to/docs](https://api.forg.to/docs). You'll need an API key from [Settings → Account](https://forg.to/settings/account)."
+  },
+  {
+    title: "Legal",
+    slug: "legal",
+    icon: "Shield",
+    articles: [
+      {
+        title: "Privacy Policy",
+        slug: "privacy",
+        lastUpdated: "February 6, 2026",
+        content: `# Privacy Policy
+
+Last Updated: February 6, 2026 | Effective Date: February 6, 2026
+
+This Privacy Policy describes how Forg ("we," "us," or "our") collects, uses, and shares information about you when you use our website located at forg.to and any related services (collectively, the "Services").
+
+By accessing or using the Services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with this Privacy Policy, you must not access or use the Services.
+
+## 1. Information We Collect
+
+### 1.1 Information You Provide Directly
+
+When you create an account, we collect the following information depending on your authentication method:
+
+**Google OAuth:**
+- Your Google account identifier
+- Your email address
+- Your display name
+- Your profile image URL
+
+**Email & Password:**
+- Your email address
+- Your password (stored securely as a hash)
+
+**Linked Social Accounts (Optional):**
+- **Twitter/X:** Username, display name, profile image, account identifier, OAuth tokens for posting
+- **LinkedIn:** Email, name, profile image, account identifier, OAuth tokens for posting
+
+### 1.2 Content You Submit
+
+We collect content you voluntarily submit to the Services, including:
+- Product information (name, description, images, links)
+- Updates and posts you create
+- Comments and interactions
+- Scheduled posts for cross-posting
+
+### 1.3 Information We Do Not Collect
+
+We expressly do not collect the following information:
+- Your direct messages or private communications on social platforms
+- Your complete followers or following lists
+- Your browsing history outside of forg.
+- Your location data or IP address for tracking purposes
+- Any financial or payment information
+
+## 2. How We Use Your Information
+
+We use the information we collect for the following purposes:
+- **To provide the Services:** Authenticate your account, display your profile, and enable core functionality.
+- **To enable cross-posting:** Post content on your behalf to connected social platforms (Twitter/X, LinkedIn) when you authorize it.
+- **To send notifications:** Email you about product launches, engagement updates, and important platform communications.
+- **To display community features:** Show leaderboards, trending products, and community activity.
+- **To improve the Services:** Analyze aggregate, anonymized usage patterns to improve the platform.
+
+## 3. How We Share Your Information
+
+### 3.1 Public Information
+
+The following information is publicly visible to all Forg users:
+- Your username, display name, and profile image
+- Your products and their associated content
+- Updates and posts you publish
+- Your engagement activity (likes, comments, follows)
+
+### 3.2 Third-Party Service Providers
+
+We use the following third-party services to operate the platform:
+- **MongoDB Atlas:** Database hosting for storing user accounts and content
+- **Vercel:** Website and API hosting
+- **Cloudinary:** Image storage and optimization for product logos and uploads
+- **Resend:** Email delivery for notifications and communications
+- **Inngest:** Background job scheduling for automated tasks
+- **Twitter/X API:** OAuth authentication and cross-posting
+- **LinkedIn API:** OAuth authentication and cross-posting
+- **Google API:** OAuth authentication
+
+### 3.3 No Sale of Personal Information
+
+We do not sell, rent, or trade your personal information to third parties for their marketing purposes.
+
+## 4. Data Retention
+
+We retain your information for as long as your account is active or as needed to provide you the Services. Specifically:
+- **Account data:** Retained until you request account deletion
+- **Products and content:** Retained until you delete them or request account deletion
+- **OAuth tokens:** Retained while your social accounts are connected; deleted when you disconnect
+
+## 5. Data Security
+
+We implement appropriate technical and organizational measures to protect your information against unauthorized access, alteration, disclosure, or destruction. These measures include encrypted data transmission (HTTPS), secure database access controls, password hashing, and OAuth token security. However, no method of transmission over the Internet or method of electronic storage is completely secure, and we cannot guarantee absolute security.
+
+## 6. Your Rights and Choices
+
+### 6.1 Access and Portability
+
+You may access your account information, products, and activity through your profile at any time.
+
+### 6.2 Disconnect Social Accounts
+
+You may disconnect your Twitter/X or LinkedIn accounts at any time through Settings. This will revoke our ability to post on your behalf and delete the associated OAuth tokens.
+
+### 6.3 Account Deletion
+
+You may request deletion of your account by contacting us. Upon deletion, we will remove your profile information and content.
+
+## 7. Children's Privacy
+
+The Services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13, we will take steps to delete such information.
+
+## 8. International Data Transfers
+
+Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country. By using the Services, you consent to the transfer of your information to these countries.
+
+## 9. Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Your continued use of the Services after any such changes constitutes your acceptance of the new Privacy Policy.
+
+## 10. Contact Information
+
+If you have any questions about this Privacy Policy or our data practices, please contact us at:
+
+**forg.**
+Email: team@forg.to
+Twitter/X: @forg`
+      },
+      {
+        title: "Terms of Service",
+        slug: "terms",
+        lastUpdated: "February 6, 2026",
+        content: `# Terms of Service
+
+Last Updated: February 6, 2026 | Effective Date: February 6, 2026
+
+These Terms of Service ("Terms") govern your access to and use of forg., including our website located at forg.to and any related services (collectively, the "Services"). Please read these Terms carefully before using the Services.
+
+By accessing or using the Services, you agree to be bound by these Terms. If you do not agree to these Terms, you must not access or use the Services.
+
+## 1. Eligibility
+
+You must be at least 13 years of age to use the Services. By using the Services, you represent and warrant that you meet this age requirement and have the legal capacity to enter into these Terms. If you are using the Services on behalf of an organization, you represent and warrant that you have the authority to bind that organization to these Terms.
+
+## 2. Account Registration
+
+### 2.1 Authentication Methods
+
+To use the Services, you must create an account using one of the following methods:
+- **Google OAuth:** Authenticate using your Google account
+- **Email & Password:** Register with your email address and a password
+
+You are responsible for maintaining the security of your account credentials. You agree to notify us immediately of any unauthorized access to or use of your account.
+
+### 2.2 Account Linking
+
+After registration, you may optionally link additional social accounts (Twitter/X, LinkedIn) to enable cross-posting features. By linking these accounts, you authorize Forg to post content on your behalf to these platforms.
+
+### 2.3 Account Accuracy
+
+You agree that all information provided is accurate and current. You may not impersonate any person or entity or misrepresent your affiliation with any person or entity.
+
+### 2.4 One Account Per User
+
+Each individual may maintain only one Forg account. Creating multiple accounts to circumvent restrictions is prohibited and may result in termination of all associated accounts.
+
+## 3. Community Guidelines
+
+### 3.1 Authentic Engagement
+
+Forg is designed to foster genuine connections between builders. Users are expected to engage authentically with the community through likes, comments, and follows.
+
+### 3.2 Content Standards
+
+Users must maintain respectful and constructive interactions. Content that is spam, abusive, or violates any applicable laws is prohibited.
+
+## 4. Acceptable Use
+
+### 4.1 Permitted Use
+
+You may use the Services to:
+- Create and manage product pages to showcase your projects
+- Share updates about your products and building journey
+- Participate in the weekly Launch Boost program
+- Cross-post content to connected social platforms (Twitter/X, LinkedIn)
+- Schedule posts for future publication
+- Engage with and discover other builders in the community
+
+### 4.2 Prohibited Conduct
+
+You agree not to:
+- Create multiple accounts to manipulate platform features
+- Use bots, scripts, or automated tools to generate fake engagements
+- Submit content that you do not own or have rights to
+- Attempt to reverse-engineer, decompile, or hack the Services
+- Interfere with or disrupt the integrity or performance of the Services
+- Harass, abuse, or harm other users
+- Violate any applicable laws or the terms of connected platforms
+- Circumvent any security measures or access restrictions
+- Use the Services for any commercial purpose without our prior written consent
+
+## 5. Content and Submissions
+
+### 5.1 Your Content
+
+When you submit content to forg., you represent and warrant that:
+- You are the owner of the content or have the rights to post it
+- The content does not violate any third-party rights
+- The content complies with applicable platform terms of service
+
+### 5.2 License
+
+By submitting content to forg., you grant us a non-exclusive, worldwide, royalty-free license to display the content within the Services for the purpose of operating the platform. This license terminates when your content is removed from the platform.
+
+### 5.3 Content Removal
+
+We reserve the right to remove any content that violates these Terms or that we determine, in our sole discretion, is harmful to the community or the Services.
+
+## 6. Cross-Posting and Social Connections
+
+### 6.1 Authorization
+
+When you connect your Twitter/X or LinkedIn accounts, you authorize Forg to post content on your behalf to these platforms. You remain responsible for all content posted through these connections.
+
+### 6.2 Platform Compliance
+
+You agree to comply with the terms of service of all connected platforms. Forg is not responsible for any actions taken by these platforms regarding your account or content.
+
+## 7. Termination
+
+### 7.1 Termination by You
+
+You may stop using the Services at any time. You may request account deletion by contacting us.
+
+### 7.2 Termination by Us
+
+We may suspend or terminate your access to the Services at any time, with or without cause, with or without notice. Reasons for termination may include, but are not limited to:
+- Violation of these Terms
+- Fraudulent or illegal activity
+- Behavior that is harmful to other users or the community
+- Extended periods of inactivity
+
+### 7.3 Effect of Termination
+
+Upon termination, your right to use the Services will immediately cease. Provisions of these Terms that by their nature should survive termination will survive, including but not limited to disclaimers, limitations of liability, and dispute resolution provisions.
+
+## 8. Disclaimers
+
+THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE SERVICES OR THE SERVERS THAT MAKE THEM AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+
+## 9. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL FORG, ITS AFFILIATES, DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM (A) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES; (B) ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES; (C) ANY CONTENT OBTAINED FROM THE SERVICES; OR (D) UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT, WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+## 10. Indemnification
+
+You agree to indemnify, defend, and hold harmless Forg and its officers, directors, employees, and agents from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney's fees) arising from: (a) your use of and access to the Services; (b) your violation of any term of these Terms; (c) your violation of any third-party right, including without limitation any copyright, property, or privacy right; or (d) any claim that your content caused damage to a third party.
+
+## 11. Changes to Terms
+
+We reserve the right to modify these Terms at any time. We will notify you of any material changes by posting the new Terms on this page and updating the "Last Updated" date. Your continued use of the Services after any such changes constitutes your acceptance of the new Terms. If you do not agree to the modified Terms, you must stop using the Services.
+
+## 12. General Provisions
+
+### 12.1 Entire Agreement
+
+These Terms, together with the Privacy Policy, constitute the entire agreement between you and Forg regarding the Services and supersede all prior agreements and understandings.
+
+### 12.2 Severability
+
+If any provision of these Terms is held to be invalid or unenforceable, such provision shall be struck and the remaining provisions shall be enforced to the fullest extent under law.
+
+### 12.3 Waiver
+
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
+
+### 12.4 Assignment
+
+You may not assign or transfer these Terms or your rights hereunder without our prior written consent. We may assign these Terms without restriction.
+
+## 13. Contact Information
+
+If you have any questions about these Terms, please contact us at:
+
+**forg.**
+Email: team@forg.to
+Twitter/X: @forg`
+      }
+    ]
   }
 ];
