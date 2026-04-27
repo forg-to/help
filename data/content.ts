@@ -570,119 +570,10 @@ Scheduled posts look and behave like regular posts once published - including cr
     ]
   },
   {
-    title: "Feed & Discovery",
-    slug: "feed-and-discovery",
-    icon: "Compass",
-    articles: [
-      {
-        title: "How the Feed Works",
-        slug: "how-the-feed-works",
-        lastUpdated: "March 18, 2026",
-        content: `The forg feed shows you the most relevant and engaging content from the builder community. It's not chronological - it's ranked by a combination of engagement, quality, and recency.
-
-**Image: Main Explore feed with trending updates and product cards**
-
-Engagement ranking
-Posts are scored based on the engagement they receive. Each action has a different weight:
-
-| Signal | Weight |
-|--------|--------|
-| Comment | 4.0x |
-| Upvote | 2.0x |
-| Like | 1.0x |
-| View | 0.1x |
-
-**Image: Post showing engagement counts - likes, comments, upvotes, and view count**
-
-Quality bonuses
-Beyond raw engagement, quality signals give posts an additional boost:
-- **Media attached:** +0.3 boost
-- **Post length > 100 chars:** +0.2 boost
-- **Pro account:** +0.5 boost
-
-**Image: A post labeled "Trending" with a high engagement score in the feed**
-
-Time decay
-All posts lose score over time. After 72 hours, decay rate doubles. This keeps the feed fresh. Articles decay slower, so good long-form content stays visible longer.
-
-New builders also get an organic boost to help them get their first visibility on the platform.`
-      }
-    ]
-  },
-  {
-    title: "Premium",
-    slug: "premium",
-    icon: "Star",
-    articles: [
-      {
-        title: "forg Pro",
-        slug: "forg-premium",
-        lastUpdated: "March 18, 2026",
-        content: `forg Pro gives you the tools to post consistently, grow your audience, and build in public faster.
-
-**Image: Pro pricing page showing Monthly ($10) and Annual ($6/mo) plan options**
-
-Pricing:
-- **Monthly:** $10/month
-- **Annual:** $72/year ($6/month - save 40%)
-
-Content & Publishing
-- **3,000 character posts** - vs 500 on free. Tell the full story.
-- **Long-form Articles** - write deep dives with highest SEO priority on forg.
-- **Cross-post with images & video** - push media updates to X, LinkedIn, and Bluesky in one click.
-- **Schedule posts in advance** - queue up a week of content and let forg publish for you.
-- **Pin up to 3 posts** on your profile - surface your best work for every visitor.
-
-**Image: Pro feature list in the upgrade modal showing all Content & Publishing perks**
-
-Growth & Analytics
-- **Advanced audience analytics** - view trends, traffic sources, top posts, and follower growth.
-- **Priority placement in Explore feed** - your posts and products surface higher to more builders.
-- **Dofollow profile & product backlinks** - your links pass real SEO equity to your sites.
-
-**Image: Analytics dashboard showing follower growth chart and top-performing posts**
-
-AI & Automation
-- **Unlimited GitHub AI drafts** - free plan is limited to 3 per week. Pro removes the cap.
-- **GitHub Autopilot** - auto-publishes a post every time you merge a PR, with zero manual effort.
-
-**Image: Studio showing GitHub Autopilot enabled with recent auto-drafted posts**
-
-Community & Identity
-- **Premium badge** next to your name in every feed, comment, and profile.
-- **Unlimited DMs** - free accounts can start 1 new conversation per day.
-- **No ads** - clean, distraction-free experience.
-- **Profile banner image** - customize your profile cover.
-- **Email updates to followers** - notify all your followers by email when you ship.
-
-**Image: Profile showing premium badge, cover banner, and follower email notification toggle**
-
-How to upgrade: Go to **Settings -> Pro -> Upgrade**.`
-      }
-    ]
-  },
-  {
     title: "Account",
     slug: "account",
     icon: "User",
     articles: [
-      {
-        title: "Incognito Mode",
-        slug: "incognito-mode",
-        lastUpdated: "March 18, 2026",
-        content: `Incognito mode makes your profile private and hides you from search results and the explore feed.
-
-**Image: Account settings page showing the Incognito Mode toggle set to off**
-
-When Incognito is enabled:
-- Your profile doesn't appear in search results.
-- Your updates are hidden from the public feed.
-- People with a direct link to your profile can still view it.
-
-To enable: Go to **Settings -> Account -> Enable Incognito Mode**.
-
-**Image: Search results page showing that incognito users do not appear**`
-      },
       {
         title: "Account Settings",
         slug: "account-settings",
@@ -692,13 +583,11 @@ To enable: Go to **Settings -> Account -> Enable Incognito Mode**.
 **Image: Account settings page with sections for username, notifications, and account management**
 
 Key settings:
-- **Username Change:** Go to **Settings -> Account** to update your @handle.
+- **Username Change:** Go to **Settings → Account** to update your @handle.
 - **Notifications:** Control which emails you receive - engagement alerts, community digests, and product updates.
-- **Deleting Your Account:** Permanently delete your account and all associated data via **Settings -> Account -> Delete Account**. This action is irreversible.
+- **Deleting Your Account:** If you wish to delete your account, please email us at [team@forg.to](mailto:team@forg.to) with your reason for deletion. Our team will process your request manually.
 
-**Image: Notification preferences page with toggles for each email type**
-
-**Image: Account deletion confirmation modal with a warning about permanent data removal**`
+**Image: Notification preferences page with toggles for each email type**`
       }
     ]
   },
@@ -711,11 +600,7 @@ Key settings:
         title: "Privacy Policy",
         slug: "privacy",
         lastUpdated: "February 6, 2026",
-        content: `# Privacy Policy
-
-Last Updated: February 6, 2026 | Effective Date: February 6, 2026
-
-This Privacy Policy describes how Forg ("we," "us," or "our") collects, uses, and shares information about you when you use our website located at forg.to and any related services (collectively, the "Services").
+        content: `This Privacy Policy describes how Forg ("we," "us," or "our") collects, uses, and shares information about you when you use our website located at forg.to and any related services (collectively, the "Services").
 
 By accessing or using the Services, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy. If you do not agree with this Privacy Policy, you must not access or use the Services.
 
@@ -834,17 +719,13 @@ If you have any questions about this Privacy Policy or our data practices, pleas
 
 **forg.**
 Email: team@forg.to
-Twitter/X: @forg`
+Twitter/X: [@forg_to](https://x.com/forg_to)`
       },
       {
         title: "Terms of Service",
         slug: "terms",
         lastUpdated: "February 6, 2026",
-        content: `# Terms of Service
-
-Last Updated: February 6, 2026 | Effective Date: February 6, 2026
-
-These Terms of Service ("Terms") govern your access to and use of forg., including our website located at forg.to and any related services (collectively, the "Services"). Please read these Terms carefully before using the Services.
+        content: `These Terms of Service ("Terms") govern your access to and use of forg., including our website located at forg.to and any related services (collectively, the "Services"). Please read these Terms carefully before using the Services.
 
 By accessing or using the Services, you agree to be bound by these Terms. If you do not agree to these Terms, you must not access or use the Services.
 
@@ -996,7 +877,7 @@ If you have any questions about these Terms, please contact us at:
 
 **forg.**
 Email: team@forg.to
-Twitter/X: @forg`
+Twitter/X: [@forg_to](https://x.com/forg_to)`
       }
     ]
   }
