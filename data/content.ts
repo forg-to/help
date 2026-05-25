@@ -507,7 +507,7 @@ Most rewards repeat — you earn them again each time you hit the next multiple:
 
 | Milestone | Reward |
 |-----------|--------|
-| Every 7 days (7, 14, 21 ...) | **Streak Restore ×1** — automatically saved to your account |
+| Every 14 days (14, 28, 42 ...) | **Streak Restore ×1** — automatically saved to your account |
 | 14 days (permanent unlock) | **Super Upvote** — your upvotes count 2× in the feed, forever |
 | Every 60 days (60, 120, 180 ...) | **50% off forg [Pro](https://forg.to/pro)** — a discount code sent to you |
 | Every 100 days (100, 200, 300 ...) | **[Claude Pro (1 month free)](/streaks/earning-claude-pro)** — the biggest reward on forg |
@@ -526,7 +526,7 @@ Rules for automatic restore:
 - If you missed **3 or more days in a row**, the streak resets even if you have Restores saved — they cannot bridge a gap that large.
 - When a Restore fires, the missed days appear in your activity heatmap with a distinct color showing they were auto-filled.
 
-You earn 1 Restore automatically every 7 days of streak. The more you maintain your streak, the more restores you accumulate as a safety net.
+You earn 1 Restore automatically every 14 days of streak. The more you maintain your streak, the more restores you accumulate as a safety net.
 
 Your streak counter resets at **midnight UTC**, so make sure you contribute before midnight UTC each day to keep it alive.`
       },
