@@ -85,15 +85,13 @@ Start with your first post on forg by introducing yourself to everyone. Share wh
 
 ### Step 5: Profile Completion
 
-To make sure your profile is visible and you can fully participate in the community, your profile should be at least 40% complete. Profiles with less than 40% completion are hidden from search and cannot perform key interactions like upvoting, commenting, or sending Direct Messages.
+To make sure your profile is visible and you can fully participate in the community, your profile should be at least 60% complete. Profiles with less than 60% completion cannot perform key interactions like upvoting, commenting, or sending Direct Messages.
 
-To reach the 40% threshold quickly:
-- **Write a Bio:** A punchy, one-sentence description of who you are (+15%).
-- **Add Work Experience:** Build your resume by adding your professional history (+10%).
-- **Connect a Platform:** Link your GitHub, X, or LinkedIn to verify your identity (+20%).
-- **Add First Project:** Showcase what you're currently building (+30%).
+To reach the 60% threshold quickly:
+- **Upload a Profile Photo:** A face builds trust (+30%).
+- **Write a Bio:** A punchy, one-sentence description of who you are (+30%).
 
-![Complete at least 40% of your profile to interact](/profile-completion-modal.png)
+![Complete your profile to interact](/profile-completion-modal.png)
 
 ### Step 6: Make your profile stand out
 
