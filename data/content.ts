@@ -36,7 +36,7 @@ export const HELP_CONTENT: Category[] = [
 - Schedule posts ahead of time (Pro)
 - Follow other builders and products you care about
 - [Discover trending products and builders](https://forg.to/explore) in your niche
-- [Build daily streaks and earn rewards](/streaks/how-streaks-work) like Claude Pro and discounts
+- [Build daily streaks and earn rewards](/streaks/how-streaks-work) like restores and discounts
 
 ![Builder Profile](/profile-page.png)
 
@@ -507,10 +507,7 @@ Most rewards repeat — you earn them again each time you hit the next multiple:
 |-----------|--------|
 | Every 14 days (14, 28, 42 ...) | **Streak Restore ×1** — automatically saved to your account |
 | 14 days (permanent unlock) | **Super Upvote** — your upvotes count 2× in the feed, forever |
-| Every 60 days (60, 120, 180 ...) | **50% off forg [Pro](https://forg.to/pro)** — a discount code sent to you |
-| Every 100 days (100, 200, 300 ...) | **[Claude Pro (1 month free)](/streaks/earning-claude-pro)** — the biggest reward on forg |
-
-Milestones stack: at day 300 you hit both the 60-day and 100-day milestones simultaneously and receive both rewards.
+| 60 days (one-time) | **50% off forg [Pro](https://forg.to/pro)** — a discount code sent to you |
 
 ![Streak Milestones](/streak-milestones.png)
 
@@ -527,36 +524,6 @@ Rules for automatic restore:
 You earn 1 Restore automatically every 14 days of streak. The more you maintain your streak, the more restores you accumulate as a safety net.
 
 Your streak counter resets at **midnight UTC**, so make sure you contribute before midnight UTC each day to keep it alive.`
-      },
-      {
-        title: "Claude Pro - The 100-Day Streak Reward",
-        slug: "earning-claude-pro",
-        lastUpdated: "March 18, 2026",
-        content: `100 days of building in public. One month of Claude Pro, on us.
-
-A 100-day streak means you showed up every single day for over three months. No excuses, no gaps, no quitting. That's not a habit — that's a commitment to your craft.
-
-We reward that with a free month of Claude Pro. Not because it's a good marketing move (it is), but because someone who's maintained a 100-day build streak will actually use it to ship something real.
-
-![Claude Pro Banner](/claude-pro-banner.png)
-
-Claude Pro gives you access to Anthropic's most powerful models, higher usage limits, and extended context for working with large files and codebases. [Learn more at claude.ai →](https://claude.ai)
-
-## How to earn it
-
-1. Build and maintain a streak for **100 consecutive days** on [forg.to](https://forg.to).
-2. The reward is added to your Streak Rewards panel on day 100.
-3. forg will contact you via your registered email with instructions to claim your free month.
-
-## FAQ
-
-**Do I need a perfect 100 days?**
-No. [Streak Restores](/streaks/how-streaks-work) count toward your total. Use them — that's what they're for. As long as your streak counter reads 100 or higher, the reward triggers.
-
-**What if my streak breaks?**
-Your streak resets to 1 and you start working toward 100 again. Any Claude Pro rewards you've already claimed are yours to keep.
-
-The reward repeats. Day 200, day 300, every 100 days — another month free. The streak never stops paying.`
       }
     ]
   },

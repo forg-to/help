@@ -5,7 +5,7 @@
 - [What is forg.to?](https://help.forg.to/getting-started/what-is-forg): A high-level overview of the platform and community.
 - [Getting Started](https://help.forg.to/getting-started/what-is-forg): How to join and start building in public.
 - [Profile & Identity](https://help.forg.to/profile/how-to-create-forg-profile): Setting up your builder profile and proof-of-work.
-- [Streaks & Rewards](https://help.forg.to/streaks/how-streaks-work): Understanding the gamification mechanics and earning rewards like Claude Pro.
+- [Streaks & Rewards](https://help.forg.to/streaks/how-streaks-work): Understanding the gamification mechanics and earning streak restores and discounts.
 - [Product Management](https://help.forg.to/products/adding-your-product): Adding products and tracking milestones.
 
 ## About forg.to
