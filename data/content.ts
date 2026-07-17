@@ -543,7 +543,7 @@ Your streak counter resets at **midnight UTC**, so make sure you contribute befo
 Key settings:
 - **Username Change:** Go to **Settings → Account** to update your @handle.
 - **Notifications:** Control which emails you receive - engagement alerts, community digests, and product updates.
-- **Deleting Your Account:** If you wish to delete your account, please email us at [team@forg.to](mailto:team@forg.to) with your reason for deletion. Our team will process your request manually.
+- **Deleting Your Account:** Go to **Settings → Account → Danger Zone** and click **Delete Account**. You'll be asked to type `DELETE` to confirm. Admins can also delete accounts from the sudo-admin panel. Deletion is permanent and cannot be undone.
 
 **Image: Notification preferences page with toggles for each email type**`
       }
@@ -643,8 +643,8 @@ We do not sell, rent, or trade your personal information to third parties for th
 ## 4. Data Retention
 
 We retain your information for as long as your account is active or as needed to provide you the Services. Specifically:
-- **Account data:** Retained until you request account deletion
-- **Products and content:** Retained until you delete them or request account deletion
+- **Account data:** Retained until you delete your account (in-app, via Settings → Account → Danger Zone) or request deletion
+- **Products and content:** Retained until you delete them or delete your account
 - **OAuth tokens / app passwords:** Retained while your social accounts are connected; deleted when you disconnect
 - **Resume data for AI parsing:** Not stored by forg after processing; sent to Google Gemini only at the moment of parsing and not retained by us
 
@@ -664,7 +664,15 @@ You may disconnect your Twitter/X or LinkedIn accounts at any time through Setti
 
 ### 6.3 Account Deletion
 
-You may request deletion of your account by contacting us. Upon deletion, we will remove your profile information and content.
+You can delete your account at any time from **Settings → Account → Danger Zone** by clicking **Delete Account** and confirming with the word `DELETE`. Account deletion is permanent and cannot be undone.
+
+**What happens when you delete your account:**
+- Your profile, articles, products you own, likes/claps, social connections, notifications, scheduled posts, billing/subscription records, reports, team invites, certifications, education, work history, gamification data, and API keys are permanently removed.
+- Your **posts and comments** remain on the platform but are disassociated and shown as "Deleted User" (Reddit-style), preserving community context. A deleted account's content no longer receives any reputation/ranking boost in the feed (its profile score becomes 0).
+- **Direct messages** you sent are kept so the other participant can still read them. If the other person's account was deleted, the surviving participant sees a "Delete chat" option to remove the conversation.
+- Orphaned data tied to your account (API keys, product team memberships, affiliate/referral records) is cleaned up as part of deletion.
+
+**Re-registering with the same email:** Deleting your account does **not** free up your email address — you may create a new account using the same email later (similar to how Reddit handles email reuse). Your **username**, however, is unique and cannot be reused after deletion. Because Twitter sign-in matches accounts by email when no Twitter ID is found, signing in with the same Twitter account after re-registering will re-link to your new account rather than creating a duplicate.
 
 ## 7. Children's Privacy
 
