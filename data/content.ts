@@ -660,7 +660,7 @@ You may access your account information, products, and activity through your pro
 
 ### 6.2 Disconnect Social Accounts
 
-You may disconnect your Twitter/X or LinkedIn accounts at any time through Settings. This will revoke our ability to post on your behalf and delete the associated OAuth tokens.
+You may disconnect your Twitter/X, LinkedIn, Bluesky, or Threads accounts at any time through Settings. This will revoke our ability to post on your behalf and delete the associated OAuth tokens or app passwords.
 
 ### 6.3 Account Deletion
 
@@ -718,7 +718,7 @@ You are responsible for maintaining the security of your account credentials. Yo
 
 ### 2.2 Account Linking
 
-After registration, you may optionally link additional social accounts (Twitter/X, LinkedIn) to enable cross-posting features. By linking these accounts, you authorize Forg to post content on your behalf to these platforms.
+After registration, you may optionally link additional social accounts (Twitter/X, LinkedIn, Bluesky, Threads) to enable cross-posting features. By linking these accounts, you authorize Forg to post content on your behalf to these platforms.
 
 ### 2.3 Account Accuracy
 
@@ -746,7 +746,7 @@ You may use the Services to:
 - Create and manage product pages to showcase your projects
 - Share updates about your products and building journey
 - Participate in the weekly Launch Boost program
-- Cross-post content to connected social platforms (Twitter/X, LinkedIn)
+- Cross-post content to connected social platforms (Twitter/X, LinkedIn, Bluesky, Threads)
 - Schedule posts for future publication
 - Engage with and discover other builders in the community
 
