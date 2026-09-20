@@ -171,12 +171,12 @@ export default function ArticlePage({ params }: { params: { category: string; ar
       url: BASE_URL,
     },
     mentions: [
-      { "@type": "Thing", name: "Indie Hackers" },
-      { "@type": "Thing", name: "Build in Public" },
-      { "@type": "Thing", name: "SaaS" },
+      { "@type": "Thing", name: "Technology" },
+      { "@type": "Thing", name: "Startups" },
+      { "@type": "Thing", name: "Social Network" },
       { "@type": "Organization", name: "Forg", url: "https://forg.to" }
     ],
-    keywords: "build in public, indie hacker, product updates, milestone tracking, social cross-posting"
+    keywords: "tech community, startups, product discovery, makers, social network for tech"
   };
 
   const breadcrumbSchema = {

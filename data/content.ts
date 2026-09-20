@@ -22,25 +22,24 @@ export const HELP_CONTENT: Category[] = [
       {
         title: "What is forg.to?",
         slug: "what-is-forg",
-        lastUpdated: "March 18, 2026",
-        content: `[forg.to](https://forg.to) is a community for indie hackers and builders who build in public. It's where you share what you're working on - product updates, milestones, revenue numbers, failures, and wins - and connect with other people who actually understand what it means to build something from scratch.
+        subtitle: "forg.to is a social network for tech, startups, and everything that orbits them. Here's what it is and what you can do here.",
+        lastUpdated: "September 20, 2026",
+        content: `[forg.to](https://forg.to) is a social network for tech, startups, and everything that orbits them. Whether you're building something, working on the edges of it, or just here to follow what's happening, this is where you share your work, join the conversation, and connect with people who actually get it.
 
 ![Forg.to Banner](/forg-og-banner.png)
 
 ## What you can do on forg
 
-- Add your product and track its journey from idea to launch and beyond
-- Post updates about what you shipped, what broke, and what you learned
+- Add your projects so people can see what you're building
+- Post whatever's on your mind, same as any other social feed
 - [Write long-form articles](/content/writing-articles) about your journey (Pro)
-- Cross-post your updates to X, LinkedIn, and Bluesky in one click
+- Cross-post to X, LinkedIn, Threads, and Bluesky in one click
 - Schedule posts ahead of time (Pro)
-- Follow other builders and products you care about
-- [Discover trending products and builders](https://forg.to/explore) in your niche
-- [Build daily streaks and earn rewards](/streaks/how-streaks-work) like restores and discounts
+- Follow the people and projects you're into
+- [Discover what's trending](https://forg.to/explore) right now
+- [Build a daily streak](/streaks/how-streaks-work) and unlock rewards like restores and discounts
 
-![Builder Profile](/profile-page.png)
-
-[forg.to](https://forg.to) is not a social network for everyone. It's for builders.`
+![Builder Profile](/profile-page.png)`
       }
     ]
   },
@@ -52,70 +51,70 @@ export const HELP_CONTENT: Category[] = [
       {
         title: "Create profile",
         slug: "how-to-create-forg-profile",
-        lastUpdated: "March 18, 2026",
-        content: `Your forg profile is more than just a page. It's your public proof-of-work and your builder identity. A complete profile helps you connect with other builders and showcase your journey.
+        subtitle: "Set up your forg profile in a few steps, from signing up to making it yours.",
+        lastUpdated: "September 20, 2026",
+        content: `Your profile is your home on forg. It's where people see who you are and what you're into. A filled-out profile helps you connect with people and get the most out of the platform.
 
-### Step 1: Sign up for Forg
+### Step 1: Sign up
 
-[Sign up for Forg](https://forg.to/login) with your Google, GitHub, or X (formerly Twitter) account. This ensures a quick and secure onboarding process.
+[Sign up](https://forg.to/login) with your Google, GitHub, or X account. Quick and secure, no password to remember.
 
 ![Sign up for Forg](/sign-in-page.png)
 
 ### Step 2: Choose your identity
 
-Once signed up, you'll need to set your core identity:
-- **Username:** Choose a unique handle (3-30 characters) that is available. This forms your permanent profile URL: \`forg.to/@username\`.
-- **Display Name:** Your professional name or the name you're known by (up to 50 characters).
+- **Username:** Your unique handle (4-30 characters). This becomes your permanent profile URL: \`forg.to/@username\`.
+- **Display Name:** Your name or whatever you go by (up to 50 characters).
 
-![Choose your username and professional name](/onboarding-username.png)
+![Choose your username and name](/onboarding-username.png)
 
 ### Step 3: Add your project
 
-If you're already working on a project, you can drop the link here and it will be added to your profile immediately. If you're not ready yet, you can simply skip this step.
+Already working on something? Drop the link and it gets added to your profile right away. Not yet? Skip this, you can add one anytime.
 
-For more details on how products work, check out our guide on [Adding Your Product](/products/adding-your-product).
+See [Adding Your Project](/projects/adding-your-project) for more.
 
 ![Add your first project during onboarding](/onboarding-project.png)
 
-### Step 4: Introduce yourself
+### Step 4: Say hi
 
-Start with your first post on forg by introducing yourself to everyone. Share what you're learning, or building, or exploring. This is your first interaction with the community, so make sure to be professional and follow the rules and guidelines.
+Kick things off with a first post introducing yourself. Share what you're building, learning, or just what brought you here.
 
 ![Introduce yourself to the forg community](/onboarding-introduce.png)
 
-### Step 5: Profile Completion
+### Step 5: Hit 60% complete
 
-To make sure your profile is visible and you can fully participate in the community, your profile should be at least 60% complete. Profiles with less than 60% completion cannot perform key interactions like upvoting, commenting, or sending Direct Messages.
+Your profile needs to be at least 60% complete to upvote, comment, and send DMs. The two fastest ways there:
 
-To reach the 60% threshold quickly:
-- **Upload a Profile Photo:** A face builds trust (+30%).
-- **Write a Bio:** A punchy, one-sentence description of who you are (+30%).
+- **Add a profile photo** (+30%)
+- **Write a bio** (+30%)
 
 ![Complete your profile to interact](/profile-completion-modal.png)
 
-### Step 6: Make your profile stand out
+### Step 6: Make it yours
 
-Beyond the basics, you can further professionalize your profile to attract collaborators and opportunities:
-- **Skills & Expertise:** Tag the technologies and tools you work with (e.g., Next.js, Rust, Figma). These tags make your profile searchable by expertise.
-- **Opportunities (Open To):** Signal if you are open to Jobs, Freelance work, Collaborations, or Mentorship.
+Once the basics are done, you can go further:
 
-![Example of a completed professional profile](/profile-page.png)
+- **Banner:** Customize your profile header. Upload your own cover image, or pick from gradient presets like Sunset, Ocean, Galaxy, and more.
+- **Skills:** Tag what you work with (Next.js, Rust, Figma, whatever). Makes your profile discoverable by what you do.
+- **Spotify:** Pin a Spotify track to your profile so people see what you're listening to.
+- **Open To:** Let people know if you're open to things like jobs, freelance, collabs, or mentorship.
 
-## Do's and Don'ts
+![A completed forg profile](/profile-page.png)
 
-- **Profile Picture:** A professional headshot or portrait photo is recommended. Anything obscene will lead to profile suspension.
-- **First and Last Name:** Your legal name should be used. Do not use anything else like company name or combination of your legal name like website, role, emojis, etc. For ex:
-    - ❌ Johnrao Doekar Visit -> johndoe.com
-    - ❌ John The Product Designer
-    - ❌ Johnrao Doekar Follow For Content Marketing Tips
-- **Bio:** Share briefly about yourself. What you do, where you work, etc. Keep it professional and concise.
-- **Username:** Your username is your permanent handle. Check our [guidelines for username here](/getting-started/creating-your-account).`
+## A few tips
+
+- **Profile photo:** A clear photo of you works best. Anything obscene gets your profile suspended.
+- **Name:** Use your real name. Companies and projects get their own pages, so keep this one about you. Skip the extras like taglines, roles, emojis, or links in your name field.
+- **Bio:** Keep it short and real. What you do, what you're into.
+- **Username:** This is permanent, so pick one you'll be happy with. See our [username guidelines](/getting-started/creating-your-account).`
       },
       {
         title: "Work (Platform Integration)",
         slug: "showcase-work-on-profile",
-        lastUpdated: "March 18, 2026",
-        content: `forg is designed to prioritize what you've actually built. By connecting your existing professional platforms, you can showcase a 360-degree view of your work history and activity across the web.
+        subtitle: "Connect your accounts so your work across the web shows up right on your forg profile.",
+        lastUpdated: "September 20, 2026",
+        content: `forg pulls in what you're already doing across the web. Connect your accounts and your work shows up right on your profile, all in one place.
 
 You can manage all integrations from [Settings → Integrations](https://forg.to/settings/integrations).
 
@@ -138,9 +137,9 @@ If you create content or tutorials, the YouTube integration pulls your latest ac
 
 ### Writing (Medium, dev.to, Hashnode, Substack)
 
-For those who build in public through writing, you can aggregate your posts from multiple platforms into one feed.
+Write across a few platforms? Pull all your posts into one feed on your profile.
 - **Unified Blog Feed:** Pulls the latest articles from your connected blogs.
-- **Evergreen Content:** Showcases your deep dives and tutorials alongside your product updates.
+- **Evergreen Content:** Showcases your deep dives and tutorials alongside your posts.
 
 ![Writing Widget](/work-devto.png)
 
@@ -157,31 +156,33 @@ Showcase your problem-solving skills and technical proficiency.
 You have full control over how these integrations appear on your profile. You can drag and drop widgets to change their position or resize them (Small, Medium, Large) to highlight your strongest areas.`
       },
       {
-        title: "Project",
+        title: "Projects",
         slug: "profile-projects",
-        lastUpdated: "March 18, 2026",
-        content: `There are two ways products appear on your profile:
+        subtitle: "How your projects show up on your profile, both the ones you own and the ones you contribute to.",
+        lastUpdated: "September 20, 2026",
+        content: `There are two ways projects appear on your profile:
 
-1. **Owned Products:** Products where you are the primary builder or founder. These appear under your "Products" tab.
-2. **Contributions:** Products where you've been added as a team member. These appear under the "Contributed to" section, highlighting your collaborative work.
+1. **Owned:** Projects where you're the primary builder or founder. These appear under your "Projects" tab.
+2. **Contributions:** Projects where you've been added as a team member. These show up under the "Contributed to" section.
 
 ![Projects and Contributions](/profile-projects.png)
 
-Each project entry acts as a dynamic proof-of-work. Unlike a static bullet point on a resume, a forg project shows the entire timeline of how it was built — from the first "Idea" post to the final "Launched" milestone.
+Each project on your profile links to its own page where people can see what it is, what it does, and upvote it. It's a living page, not a static line on a resume.
 
-For more on how product pages work, see [Adding Your Product](/products/adding-your-product) and the [Product Lifecycle](/products/product-lifecycle) guide.
+For more on how project pages work, see [Adding Your Project](/projects/adding-your-project).
 
-![Product Detail Page](/product-slug-page.png)`
+![Project Detail Page](/product-slug-page.png)`
       },
       {
         title: "Resume",
         slug: "forg-resume",
-        lastUpdated: "March 18, 2026",
-        content: `forg includes a dedicated Resume section that turns your profile into a professional portfolio ready for opportunities.
+        subtitle: "Add your work history, education, and certifications, or let AI fill it in from your existing resume.",
+        lastUpdated: "September 20, 2026",
+        content: `forg has a dedicated Resume section so people can see your background right on your profile.
 
 ### Work Experience
 
-Add your professional history including:
+Add your history including:
 - **Role and Company:** Your title and the organization.
 - **Work Type:** Full-time, Part-time, Contract, Freelance, or Internship.
 - **Description:** A brief summary of your impact (up to 500 characters).
@@ -192,13 +193,13 @@ Add your professional history including:
 ### Education & Certifications
 
 - List your degrees, institutions, and fields of study.
-- Showcase your professional certifications with direct links for verification.
+- Add your certifications with direct links so people can verify them.
 
 ![Education and Certifications](/profile-resume-education.png)
 
 ### AI Resume Parser
 
-Don't want to type everything manually? Upload your existing resume as a PDF and our **Gemini-powered AI** will automatically extract your work history, education, and certifications — populating your forg profile in seconds.
+Don't want to type it all out? Upload your existing resume as a PDF and our AI pulls out your work history, education, and certifications, filling in your profile in seconds.
 
 ![AI Resume Parser](/import-resume.png)
 
@@ -207,153 +208,74 @@ To use the parser: Go to [Settings → Profile → Resume → Upload PDF](https:
     ]
   },
   {
-    title: "Products",
-    slug: "products",
+    title: "Projects",
+    slug: "projects",
     icon: "Package",
     articles: [
       {
-        title: "Adding Your Product",
-        slug: "adding-your-product",
-        lastUpdated: "March 18, 2026",
-        content: `Every builder on forg should have at least one product. A product is anything you're building — a SaaS, mobile app, browser extension, open source project, API, or anything else.
+        title: "Adding Your Project",
+        slug: "adding-your-project",
+        subtitle: "How to add a project on forg and what each field does.",
+        lastUpdated: "September 20, 2026",
+        content: `A project is anything you're building — a SaaS, mobile app, browser extension, open source project, API, or anything else. Adding one lets people see what you're working on right from your profile.
 
-To add a product, look for the **plus icon (+)** in the left sidebar next to the "Products" section. Clicking this will take you to [forg.to/product/new](https://forg.to/product/new).
+To add a project, hit the **plus icon (+)** in the left sidebar next to the "Projects" section. That takes you to [forg.to/project/new](https://forg.to/project/new).
 
-![Add Product](/add-product.png)
+![Add Project](/add-product.png)
 
 ## What you fill in
 
 | Field | Details |
 |-------|---------|
-| Name | Your product's name |
+| Name | Your project's name |
 | Tagline | One-sentence description |
-| Description | Longer description (shown on product page) |
+| Description | Longer description (shown on the project page) |
 | Logo | Square image, shown everywhere |
-| Website URL | Your product's homepage |
+| Website URL | Your project's homepage |
 | GitHub URL | If open source |
 | Category | Choose from 44 categories |
-| Product type | SaaS, Browser Extension, Mobile App, etc. |
+| Type | SaaS, Browser Extension, Mobile App, etc. |
 | Platforms | Web, iOS, Android, Mac, Windows, etc. |
 | Pricing | Free, Freemium, One-time, Subscription |
-| Status | Where in the [lifecycle](/products/product-lifecycle) your product is |
 
-![New Product Form](/new-product-form.png)
+![New Project Form](/new-product-form.png)
 
-Slugs are auto-generated from your product name — e.g., "My Cool App" becomes \`forg.to/products/my-cool-app\`. While you don't need to provide one manually, you can change your product slug later in settings, but please note that it can only be changed **once every 30 days**.`
+The slug is auto-generated from your project name — e.g. "My Cool App" becomes \`forg.to/projects/my-cool-app\`. You don't need to set one manually, but you can change it later in settings. Note that it can only be changed **once every 30 days**.`
       },
       {
-        title: "Product Lifecycle",
-        slug: "product-lifecycle",
-        lastUpdated: "March 19, 2026",
-        content: `Every product on forg has a status that reflects where it is in its journey. You can update this status at any time from your product page — click the status badge next to your product name to open the status selector.
-
-![Edit Product Status](/edit-product-status.png)
-
-### Pre-launch stages
-
-| Status | Meaning |
-|--------|---------|
-| Idea | Just a concept, not yet started |
-| Validating | Testing whether the idea has demand |
-| Building | Actively in development |
-| Alpha | Internal testing phase |
-| Beta | Limited public testing |
-
-### Live stages
-
-| Status | Meaning |
-|--------|---------|
-| Launched | Publicly launched — triggers [Launch Boost](/products/launching-your-product-on-forg) |
-| Growing | Post-launch, actively acquiring users |
-| Profitable | Generating meaningful revenue |
-| Funded | Received external investment |
-
-### Terminal stages
-
-| Status | Meaning |
-|--------|---------|
-| Paused | Temporarily on hold |
-| Dead | Project discontinued |
-| Acquired | Bought by another company |
-
-## Transition rules
-
-- You cannot jump from **Idea** directly to **Launched**.
-- Once post-launch, you cannot move a product back to pre-launch.
-- **Dead** and **Acquired** are final states — no further transitions.
-- During your 7-day [Launch Boost](/products/launching-your-product-on-forg), the Launched status is locked — only the system moves it to Growing.
-- Paused products resume back to the exact status they were in before being paused.
-
-Every status change is recorded in your product's public timeline.
-
-## Paused Status
-
-When a product is **Paused**, here is what changes:
-
-- **Profile:** Still visible on your public profile and product page.
-- **Timeline:** Full update history remains visible to all visitors.
-- **Explore feed:** Not shown in the Recent or Trending tabs of [forg.to/explore](https://forg.to/explore).
-- **Products page:** Never listed on [forg.to/products](https://forg.to/products).
-- **Landing page:** Not shown in the hero section of [forg.to](https://forg.to).
-- **Upvoting:** Disabled. The upvote button is grayed out for all visitors.
-- **Posting updates:** You cannot post an update while paused. Clicking "Post Update" opens a modal prompting you to resume the project first — it shows the exact status the product will return to.
-
-**Resuming a paused product:** Click "Resume" and the product reverts to whatever status it was in *before* it was paused (tracked automatically). After resuming, all visibility and upvoting rules return to normal.
-
-**SEO while paused:** Paused products remain in the sitemap at a very low priority (crawled monthly) so they are not completely de-indexed. Products with a dofollow badge, staff pick badge, or a premium owner stay eligible for indexing even while paused.
-
-## Dormancy & Auto-Pause
-
-Forg keeps the community active and the discover feed relevant. Products that stay inactive for too long are automatically moved to **Paused** by the system.
-
-**Idea status:**
-- **60 days** with no updates posted — you receive an email warning and a banner appears on your product page. You have 30 more days to ship an update or manually mark it as paused.
-- **90 days** with no updates posted — the product is automatically moved to Paused by the system.
-
-**Building status:**
-- **30 days** with no updates posted — you receive an email warning and a banner appears on your product page. You have 15 more days to ship an update or manually mark it as paused.
-- **45 days** with no updates posted — the product is automatically moved to Paused by the system.
-
-The banner on your product page gives you two quick actions: **Mark as Paused** (freezes the project cleanly) or **Post Update** (opens the update composer and resets the clock).
-
-**Note on Idea status and SEO:** Products in the Idea stage are never indexed by search engines. This protects your domain reputation while the idea is still unproven. Once you move past Idea, standard indexing rules apply (dofollow badge, premium plan, or staff pick badge).`
-      },
-      {
-        title: "Launching Your Product",
-        slug: "launching-your-product-on-forg",
-        lastUpdated: "March 18, 2026",
-        content: `Launching on forg gives your product a 7-day Launch Boost — elevated visibility across the platform during the most important week of your product's life.
+        title: "Launching Your Project",
+        slug: "launching-your-project-on-forg",
+        subtitle: "Launch your project on forg for a 7-day visibility boost, plus what Premium Launch adds.",
+        lastUpdated: "September 20, 2026",
+        content: `Launching on forg gives your project a 7-day Launch Boost: elevated visibility across the platform during the most important week of your project's life.
 
 ## How to launch
 
-1. Your product must be in **Validating**, **Building**, **Alpha**, or **Beta** status first.
-2. Go to your product page → click **"Launch"**.
+1. Go to your project page → click **"Launch"**.
 
 ![Launch Button](/product-launch-btn.png)
 
-3. Pick an available launch week from the batch scheduler.
+2. Pick an available launch week from the batch scheduler.
 
 ![Launch Scheduler](/schedule-launch-picker.png)
 
 ## Batch slots
 
-- Each week (**Sunday to Sunday IST**) allows a maximum of 20 product launches.
+- Each week (**Sunday to Sunday IST**) allows a maximum of 20 launches.
 - When a week is full, it's marked as **"Full"** and unavailable.
 - You can see and book into upcoming weeks ahead of time.
 
 ## What happens during Launch Boost
 
-- Your product appears prominently on the [Explore](https://forg.to/explore) and [Products](https://forg.to/products) pages.
-- The Launched status is locked for 7 days.
-- After 7 days, your product automatically transitions to **Growing**.
+- Your project appears prominently on the [Explore](https://forg.to/explore) and [Projects](https://forg.to/projects) pages for 7 days.
 
 ## Premium Launch ($19 one-time)
 
 - **Homepage Hero Slot:** Featured on [forg.to](https://forg.to)'s public landing page.
 - **Instant Indexing:** Submitted to Bing & Yandex via IndexNow immediately.
-- **SEO Boost:** Highest sitemap priority (1.0) and Product structured data.
-- **Forg Team Announcement:** Post from the official [@forg_to](https://x.com/forg_to) account on X.
-- **Staff Pick Badge:** Permanent badge on your product card.`
+- **SEO Boost:** Highest sitemap priority (1.0) and structured data.
+- **Forg Team Announcement:** Post from the official [@JoinForg](https://x.com/JoinForg) account on X.
+- **Staff Pick Badge:** Permanent badge on your project card.`
       }
     ]
   },
@@ -363,10 +285,11 @@ The banner on your product page gives you two quick actions: **Mark as Paused** 
     icon: "FileText",
     articles: [
       {
-        title: "Writing Updates",
-        slug: "writing-updates",
-        lastUpdated: "March 18, 2026",
-        content: `Updates are the core content on forg. Think of them as build-in-public posts — short-to-medium posts about what you're shipping, learning, and experiencing.
+        title: "Posting on forg",
+        slug: "posting-on-forg",
+        subtitle: "How posts work on forg, including character limits and adding media.",
+        lastUpdated: "September 20, 2026",
+        content: `Posts are the main way you share what's on your mind on forg. Write about what you're working on, something you learned, a hot take, whatever. It works like any other social feed.
 
 ## Character limits
 
@@ -375,28 +298,9 @@ The banner on your product page gives you two quick actions: **Mark as Paused** 
 | Free | 500 characters |
 | [Pro](https://forg.to/pro) | 3,000 characters |
 
-## Update types
+## Adding media
 
-When you write an update, tag it with a type to give it more context in the feed:
-
-| Type | Use it when... |
-|------|----------------|
-| Update | General progress or check-in |
-| Launch | Announcing a new launch |
-| Feature | You shipped a new feature |
-| Milestone | You hit a significant goal |
-| Revenue | Sharing MRR, ARR, or revenue news |
-| Bug Fix | You squashed a bug |
-| Design | Sharing a decision update or redesign |
-| Idea | Thinking out loud about something new |
-| Fail | Sharing what didn't work and why |
-| Win | Celebrating a positive outcome |
-| Announcement | Important news about your product or company |
-| Integration | You added a new integration or partnership |
-
-## Attaching media
-
-Attach images or videos to make your updates stand out. Posts with media get a visibility boost in the feed.`
+Attach images or videos to your posts. Posts with media tend to get more reach in the feed.`
       },
       {
         title: "Writing Articles",
@@ -417,7 +321,7 @@ Attach images or videos to make your updates stand out. Posts with media get a v
 
 - Be specific. "How I got my first 100 users" outperforms "My journey."
 - Publish regularly — even short articles compound over time.
-- Link to your product so readers can discover what you're building on [forg.to](https://forg.to).`
+- Link to your project so readers can discover what you're building on [forg.to](https://forg.to).`
       },
       {
         title: "How Cross-Posting Works",
@@ -493,7 +397,7 @@ Scheduled posts look and behave like regular posts once published - including cr
 - Posting an update
 - Writing and publishing an article
 - Commenting on a post
-- Creating a new product
+- Creating a new project
 
 Each calendar day (UTC) you contribute, your streak grows by 1. Only the first contribution of the day counts — multiple actions on the same day don't stack.
 
@@ -587,7 +491,7 @@ When you create an account, we collect the following information depending on yo
 ### 1.2 Content You Submit
 
 We collect content you voluntarily submit to the Services, including:
-- Product information (name, description, images, links)
+- Project information (name, description, images, links)
 - Updates and posts you create
 - Comments and interactions
 - Scheduled posts for cross-posting
@@ -606,9 +510,9 @@ We expressly do not collect the following information:
 We use the information we collect for the following purposes:
 - **To provide the Services:** Authenticate your account, display your profile, and enable core functionality.
 - **To enable cross-posting:** Post content on your behalf to connected social platforms (Twitter/X, LinkedIn, Bluesky, Threads) when you authorize it.
-- **To power AI features:** Pass resume content to Google Gemini for AI-assisted resume parsing when you explicitly trigger the feature.
-- **To send notifications:** Email you about product launches, engagement updates, and important platform communications.
-- **To display community features:** Show leaderboards, trending products, and community activity.
+- **To power AI features:** Pass resume content to Ollama Cloud for AI-assisted resume parsing when you explicitly trigger the feature.
+- **To send notifications:** Email you about project launches, engagement updates, and important platform communications.
+- **To display community features:** Show leaderboards, trending projects, and community activity.
 - **To improve the Services:** Analyze aggregate, anonymized usage patterns to improve the platform.
 
 ## 3. How We Share Your Information
@@ -617,7 +521,7 @@ We use the information we collect for the following purposes:
 
 The following information is publicly visible to all Forg users:
 - Your username, display name, and profile image
-- Your products and their associated content
+- Your projects and their associated content
 - Updates and posts you publish
 - Your engagement activity (likes, comments, follows)
 
@@ -626,7 +530,7 @@ The following information is publicly visible to all Forg users:
 We use the following third-party services to operate the platform:
 - **MongoDB Atlas:** Database hosting for storing user accounts and content
 - **Vercel:** Website and API hosting
-- **Cloudinary:** Image storage and optimization for product logos and uploads
+- **Cloudinary:** Image storage and optimization for project logos and uploads
 - **Resend:** Email delivery for notifications and communications
 - **Inngest:** Background job scheduling for automated tasks
 - **Twitter/X API:** OAuth authentication and cross-posting
@@ -634,7 +538,7 @@ We use the following third-party services to operate the platform:
 - **Bluesky API:** Authentication and cross-posting
 - **Threads API:** OAuth authentication and cross-posting
 - **Google API:** OAuth authentication
-- **Google Gemini AI:** Resume text parsing (only when you explicitly use the AI Resume Parser feature)
+- **Ollama Cloud:** Resume text parsing (only when you explicitly use the AI Resume Parser feature)
 
 ### 3.3 No Sale of Personal Information
 
@@ -644,9 +548,9 @@ We do not sell, rent, or trade your personal information to third parties for th
 
 We retain your information for as long as your account is active or as needed to provide you the Services. Specifically:
 - **Account data:** Retained until you delete your account (in-app, via Settings → Account → Danger Zone) or request deletion
-- **Products and content:** Retained until you delete them or delete your account
+- **Projects and content:** Retained until you delete them or delete your account
 - **OAuth tokens / app passwords:** Retained while your social accounts are connected; deleted when you disconnect
-- **Resume data for AI parsing:** Not stored by forg after processing; sent to Google Gemini only at the moment of parsing and not retained by us
+- **Resume data for AI parsing:** Not stored by forg after processing; sent to Ollama Cloud only at the moment of parsing and not retained by us
 
 ## 5. Data Security
 
@@ -656,7 +560,7 @@ We implement appropriate technical and organizational measures to protect your i
 
 ### 6.1 Access and Portability
 
-You may access your account information, products, and activity through your profile at any time.
+You may access your account information, projects, and activity through your profile at any time.
 
 ### 6.2 Disconnect Social Accounts
 
@@ -667,10 +571,10 @@ You may disconnect your Twitter/X, LinkedIn, Bluesky, or Threads accounts at any
 You can delete your account at any time from **Settings → Account → Danger Zone** by clicking **Delete Account** and confirming with the word `DELETE`. Account deletion is permanent and cannot be undone.
 
 **What happens when you delete your account:**
-- Your profile, articles, products you own, likes/claps, social connections, notifications, scheduled posts, billing/subscription records, reports, team invites, certifications, education, work history, gamification data, and API keys are permanently removed.
+- Your profile, articles, projects you own, likes/claps, social connections, notifications, scheduled posts, billing/subscription records, reports, team invites, certifications, education, work history, gamification data, and API keys are permanently removed.
 - Your **posts and comments** remain on the platform but are disassociated and shown as "Deleted User" (Reddit-style), preserving community context. A deleted account's content no longer receives any reputation/ranking boost in the feed (its profile score becomes 0).
 - **Direct messages** you sent are kept so the other participant can still read them. If the other person's account was deleted, the surviving participant sees a "Delete chat" option to remove the conversation.
-- Orphaned data tied to your account (API keys, product team memberships, affiliate/referral records) is cleaned up as part of deletion.
+- Orphaned data tied to your account (API keys, project team memberships, affiliate/referral records) is cleaned up as part of deletion.
 
 **Re-registering with the same email:** Deleting your account does **not** free up your email address — you may create a new account using the same email later (similar to how Reddit handles email reuse). Your **username**, however, is unique and cannot be reused after deletion. Because Twitter sign-in matches accounts by email when no Twitter ID is found, signing in with the same Twitter account after re-registering will re-link to your new account rather than creating a duplicate.
 
@@ -692,7 +596,7 @@ If you have any questions about this Privacy Policy or our data practices, pleas
 
 **forg.**
 Email: team@forg.to
-Twitter/X: [@forg_to](https://x.com/forg_to)`
+Twitter/X: [@JoinForg](https://x.com/JoinForg)`
       },
       {
         title: "Terms of Service",
@@ -743,8 +647,8 @@ Users must maintain respectful and constructive interactions. Content that is sp
 ### 4.1 Permitted Use
 
 You may use the Services to:
-- Create and manage product pages to showcase your projects
-- Share updates about your products and building journey
+- Create and manage project pages
+- Share updates about your projects
 - Participate in the weekly Launch Boost program
 - Cross-post content to connected social platforms (Twitter/X, LinkedIn, Bluesky, Threads)
 - Schedule posts for future publication
@@ -850,13 +754,13 @@ If you have any questions about these Terms, please contact us at:
 
 **forg.**
 Email: team@forg.to
-Twitter/X: [@forg_to](https://x.com/forg_to)`
+Twitter/X: [@JoinForg](https://x.com/JoinForg)`
       },
       {
         title: "Content Policy",
         slug: "content-policy",
         lastUpdated: "April 27, 2026",
-        content: `This document describes the content policies that forg and its members must adhere to. These rules apply to all content posted on [forg.to](https://forg.to) — updates, articles, product pages, comments, profile information, and any other user-generated content.
+        content: `This document describes the content policies that forg and its members must adhere to. These rules apply to all content posted on [forg.to](https://forg.to) — updates, articles, project pages, comments, profile information, and any other user-generated content.
 
 ## Illegal content
 
@@ -974,13 +878,13 @@ Violations of this Content Policy may result in content removal, account suspens
         title: "Code of Conduct",
         slug: "code-of-conduct",
         lastUpdated: "April 27, 2026",
-        content: `forg is a community for builders who build in public. To keep it worth building in, we ask everyone to follow these standards.
+        content: `forg is a community for people in tech, startups, and everything around them. To keep it a good place to be, we ask everyone to follow these standards.
 
 ## The short version
 
 forg is dedicated to providing a harassment-free experience for everyone, regardless of gender and gender identity, age, sexual orientation, disability, physical appearance, body size, race, or religion (or lack thereof). We do not tolerate harassment of community members in any form. Sexual language and imagery are never appropriate. Accounts found to be violating these rules may be suspended permanently.
 
-We also strongly discourage inaccurate information on your forg profile. Your profile is your proof-of-work — keep it honest.
+We also strongly discourage inaccurate information on your forg profile. It represents you, so keep it honest.
 
 ## The detailed version
 
@@ -999,23 +903,23 @@ We also strongly discourage inaccurate information on your forg profile. Your pr
 - Trolling, insulting or derogatory comments, and personal or political attacks
 - Public or private harassment
 - Publishing someone else's private information — such as a physical or electronic address — without their explicit permission
-- Other conduct that could reasonably be considered inappropriate in a professional setting
+- Other conduct that could reasonably be considered inappropriate in a shared community
 - Dismissing or attacking inclusion-oriented requests
 
 ### Profile integrity
 
-Your profile is your builder identity. Do not put inaccurate information on your forg profile. Specifically:
+Your profile represents you. Do not put inaccurate information on it. Specifically:
 
-- **Profile Picture:** A professional headshot or portrait photo is recommended. Anything obscene will lead to profile suspension.
+- **Profile Picture:** A clear photo of you works best. Anything obscene will lead to profile suspension.
 - **Display Name:** Use your real name or the name you're genuinely known by. Do not use your company name, role title, emojis, or promotional text in your name field.
-- **Bio:** Keep it honest, professional, and concise.
-- **Products:** Only list products you have actually built or meaningfully contributed to.
+- **Bio:** Keep it honest and concise.
+- **Projects:** Only list projects you have actually built or meaningfully contributed to.
 
-### Product and update integrity
+### Project and posting integrity
 
-- Only post updates about products you own or are actively contributing to.
-- Do not fabricate metrics (users, revenue, etc.) in updates.
-- Do not use forg updates as spam or self-promotional blasts unrelated to your actual building journey.
+- Only add projects you own or are actively contributing to.
+- Do not fabricate metrics (users, revenue, etc.) in your posts.
+- Do not use forg for spam or self-promotional blasts.
 
 ## Enforcement
 
@@ -1045,7 +949,7 @@ export interface FAQ {
 export const FAQS: FAQ[] = [
   {
     question: "Is forg only for developers?",
-    answer: "No. [forg.to](https://forg.to) is for anyone who builds things — designers, indie hackers, founders, makers, and developers all use it."
+    answer: "No. [forg.to](https://forg.to) is for anyone into tech and startups, whether you're building something yourself or just here to follow what's happening."
   },
   {
     question: "Is forg free?",
@@ -1053,7 +957,7 @@ export const FAQS: FAQ[] = [
   },
   {
     question: "How is forg different from X/Twitter?",
-    answer: "forg is purpose-built for builders. Your content lives on your product page as a public changelog, and connects you with a community of people who are actually building — not just talking about it."
+    answer: "forg is built around tech and startups, so your feed is full of people actually making things and the conversations that come with it, not everything all at once. You can also show your projects, work, and background right on your profile."
   },
   {
     question: "Does forg have an API?",
