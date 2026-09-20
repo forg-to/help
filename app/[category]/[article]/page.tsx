@@ -152,18 +152,25 @@ export default function ArticlePage({ params }: { params: { category: string; ar
     datePublished: publishedTime,
     dateModified: publishedTime,
     author: {
+      "@id": "https://forg.to/#organization",
       "@type": "Organization",
       name: "Forg",
       url: "https://forg.to",
     },
     publisher: {
+      "@id": "https://forg.to/#organization",
       "@type": "Organization",
       name: "Forg",
+      alternateName: ["forg", "forg.to", "joinforg"],
       url: "https://forg.to",
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/logo.png`,
       },
+      sameAs: [
+        "https://x.com/joinforg",
+        "https://www.linkedin.com/company/forg-to",
+      ],
     },
     isPartOf: {
       "@type": "WebSite",
