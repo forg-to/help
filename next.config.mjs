@@ -50,6 +50,35 @@ const nextConfig = {
         destination: "https://help.forg.to/:path*",
         permanent: true,
       },
+      // Renamed articles (preserve indexed URLs)
+      {
+        source: "/content/writing-updates",
+        destination: "/content/posting-on-forg",
+        permanent: true,
+      },
+      // Products → Projects rename
+      {
+        source: "/products/adding-your-product",
+        destination: "/projects/adding-your-project",
+        permanent: true,
+      },
+      {
+        source: "/products/launching-your-product-on-forg",
+        destination: "/projects/launching-your-project-on-forg",
+        permanent: true,
+      },
+      // Removed article (product lifecycle no longer exists)
+      {
+        source: "/products/product-lifecycle",
+        destination: "/projects/adding-your-project",
+        permanent: true,
+      },
+      // Any other old /products/* help URL
+      {
+        source: "/products/:path*",
+        destination: "/projects/:path*",
+        permanent: true,
+      },
     ];
   },
   async headers() {
