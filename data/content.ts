@@ -560,7 +560,7 @@ Portfolios follow our [Portfolio Terms](/legal/portfolio-terms). The short versi
 Key settings:
 - **Username Change:** Go to **Settings → Account** to update your @handle.
 - **Notifications:** Control which emails you receive - engagement alerts, community digests, and product updates.
-- **Deleting Your Account:** Go to **Settings → Account → Danger Zone** and click **Delete Account**. You'll be asked to type `DELETE` to confirm. Admins can also delete accounts from the sudo-admin panel. Deletion is permanent and cannot be undone.
+- **Deleting Your Account:** Go to **Settings → Account → Danger Zone** and click **Delete Account**. You'll be asked to type \`DELETE\` to confirm. Admins can also delete accounts from the sudo-admin panel. Deletion is permanent and cannot be undone.
 
 **Image: Notification preferences page with toggles for each email type**`
       }
@@ -681,7 +681,7 @@ You may disconnect your Twitter/X, LinkedIn, Bluesky, or Threads accounts at any
 
 ### 6.3 Account Deletion
 
-You can delete your account at any time from **Settings → Account → Danger Zone** by clicking **Delete Account** and confirming with the word `DELETE`. Account deletion is permanent and cannot be undone.
+You can delete your account at any time from **Settings → Account → Danger Zone** by clicking **Delete Account** and confirming with the word \`DELETE\`. Account deletion is permanent and cannot be undone.
 
 **What happens when you delete your account:**
 - Your profile, articles, projects you own, likes/claps, social connections, notifications, scheduled posts, billing/subscription records, reports, team invites, certifications, education, work history, gamification data, and API keys are permanently removed.
