@@ -432,6 +432,117 @@ Your streak counter resets at **midnight UTC**, so make sure you contribute befo
     ]
   },
   {
+    title: "Gold",
+    slug: "gold",
+    icon: "Coins",
+    articles: [
+      {
+        title: "What is Gold?",
+        slug: "what-is-gold",
+        subtitle: "Gold is forg's in-app currency. Earn it, award it to great posts, or spend it on your portfolio.",
+        lastUpdated: "October 16, 2026",
+        content: `Gold is forg's in-app currency. It lives in your wallet as a balance, and you use it to reward other builders and to unlock things like your portfolio page.
+
+## What you can use Gold for
+
+- **Award great posts:** Send Gold to the author of any update you like (1 to 10,000 per award). You can attach a comment to the award, and the post's Gold total goes up. You can't award your own posts.
+- **Claim your portfolio:** Claiming your \`yourname.forg.to\` portfolio costs a one-time fee of **25 Gold**. See [Claiming your portfolio](/portfolios/claiming-your-portfolio) for how that works.
+
+## How to earn Gold
+
+There are four ways:
+
+### 1. Get awarded by other creators
+
+When someone likes your update enough, they can award it Gold — that Gold lands in your wallet. Write things worth rewarding.
+
+### 2. Streak rewards
+
+Posting, commenting, publishing articles, or creating projects every day builds your [streak](/streaks/how-streaks-work), and hitting streak milestones pays Gold automatically:
+
+| Streak | Gold |
+|--------|------|
+| 5 days | 1 |
+| 10 days | 3 |
+| 25 days | 10 |
+| 50 days | 30 |
+| 80 days | 75 |
+| 125 days | 175 |
+| 175 days | 400 |
+
+Each milestone pays once — you earn it again only in the sense that higher milestones keep paying as you reach them.
+
+### 3. Refer & Earn
+
+Invite someone to forg with your referral link. When they complete their profile (reach 60%), you earn **10 Gold** and they get 30 days of Pro free.
+
+### 4. Buy it
+
+Need Gold right now? You can buy it directly:
+
+| Gold | Price (USD) |
+|------|-------------|
+| 100 | $1.99 |
+| 250 | $4.49 |
+| 500 | $7.99 |
+| 1,000 | $14.99 |
+| 2,500 | $34.99 |
+| 5,000 | $64.99 |
+| 10,000 | $119.99 |
+
+Open your wallet on [forg.to](https://forg.to) and hit **Buy Gold**.
+
+## A few things to know
+
+- Your balance never goes negative — an award or claim simply fails if you don't have enough Gold.
+- Gold amounts are always whole numbers.
+- Gold spent on a portfolio claim is burned (it goes to no one) and isn't refunded.`
+      }
+    ]
+  },
+  {
+    title: "Portfolios",
+    slug: "portfolios",
+    icon: "Globe",
+    articles: [
+      {
+        title: "Claiming your portfolio",
+        slug: "claiming-your-portfolio",
+        subtitle: "Get a yourname.forg.to page built from your forg profile, for a one-time 25 Gold fee.",
+        lastUpdated: "October 16, 2026",
+        content: `Your forg portfolio is a public page at \`yourname.forg.to\`, generated from your profile — projects, writing, resume, and work from around the web. There's no editor to wrestle with: you pick a template, optionally write a longer bio that lives only on the portfolio, and it updates itself as you keep building on forg.
+
+## Before you claim
+
+You need three things on your profile:
+
+- A profile photo
+- A bio
+- At least one public project or one published article
+
+## How claiming works
+
+1. Open your [portfolio settings](https://forg.to/settings/portfolio) and click **Claim your subdomain**.
+2. **Pick your name.** Subdomains are 4–15 characters: lowercase letters, numbers, and single hyphens (not at the start or end). Your own username is always available to you, but you can't take a name that's already claimed, another member's username, or the name of a project or company on forg. Choose carefully — **your subdomain is permanent and can't be changed later**.
+3. **Pick a template.** You can switch templates any time from settings.
+4. **Pay the one-time fee of 25 Gold.** The fee is burned — it goes to no one — and your page is then yours for life. If you're short, you can [earn or buy Gold](/gold/what-is-gold) first. A failed claim never costs you Gold.
+5. **Confirm, and you're live.** Your page usually comes online within seconds.
+
+Claiming also fills in your profile's website link, but only if you haven't set one.
+
+## After claiming
+
+The only things you can change are your **template** and your **detailed bio** (plain text up to 1,500 characters, shown only on the portfolio — blank lines separate paragraphs). Everything else on the page follows your forg profile automatically.
+
+There is no rename or unpublish button. If you need help with your portfolio, email [team@forg.to](mailto:team@forg.to).
+
+## Rules and removals
+
+Portfolios follow our [Portfolio Terms](/legal/portfolio-terms). In short: claim your own name, keep the content within our content rules, and don't impersonate someone else — portfolios claimed under false pretenses can be removed.`
+      }
+    ]
+  },
+  {
     title: "Account",
     slug: "account",
     icon: "User",
@@ -936,6 +1047,46 @@ This code of conduct is adapted from:
 ## Contact
 
 If you have questions about this Code of Conduct or need to report an issue, contact us at [team@forg.to](mailto:team@forg.to).`
+      },
+      {
+        title: "Portfolio Terms",
+        slug: "portfolio-terms",
+        subtitle: "The rules for yourname.forg.to pages: fair names, honest content, and when we remove a portfolio.",
+        lastUpdated: "October 16, 2026",
+        content: `These terms apply to portfolio pages at \`*.forg.to\`. They sit alongside our [Terms of Service](/legal/terms) and [Content Policy](/legal/content-policy) — where they conflict, these terms win for portfolio pages.
+
+## 1. Your name must be yours
+
+Claim a subdomain associated with you — typically your own username or something you're genuinely known by. You may not claim a name to impersonate another person, creator, brand, project, or company, or to squat on, sell, or ransom a name. Availability checks already refuse another member's username and existing project or company names; deliberately evading those checks (misspellings, extra hyphens, look-alikes) is treated the same as claiming the name itself.
+
+## 2. One page per person, permanent names
+
+Each account can claim one portfolio. Subdomains are permanent: there is no rename, transfer, or self-serve unpublish. If you have a legitimate reason to change or release your name (for example a legal name change), email [team@forg.to](mailto:team@forg.to) and we'll review it case by case.
+
+## 3. Claim fee
+
+Claiming costs a one-time fee of **25 Gold**, burned at claim time. The fee is non-refundable, including when a portfolio is removed for violating these terms.
+
+## 4. Content rules
+
+Everything on your portfolio — your bio, detailed bio, linked projects, articles, and resume — must follow our [Content Policy](/legal/content-policy) and [Code of Conduct](/legal/code-of-conduct). In particular, portfolios may not:
+
+- Impersonate another person or suggest false affiliation or endorsement.
+- Carry misleading claims about who you are, what you built, or your credentials (fake roles, fabricated metrics, projects you didn't contribute to).
+- Host or link to illegal, hateful, harassing, sexually explicit, or deceptive content, or phishing and malware.
+- Exist purely as spam, an ad farm, or SEO doorway pages with no real profile behind them.
+
+## 5. When we remove a portfolio
+
+We may remove, unpublish, or reclaim a portfolio that breaks these terms — most commonly identity theft or impersonation, claiming a name you have no connection to, or content that violates our content rules. Enforcement removals are final for the offending name: a reclaimed subdomain is not re-issued, and the claim fee is not refunded. Account-level violations may additionally lead to suspension under our Terms of Service.
+
+## 6. Reporting and appeals
+
+To report a portfolio (impersonation, stolen identity, abuse), email [team@forg.to](mailto:team@forg.to) with the portfolio address and what's wrong. If your portfolio was removed and you believe it was a mistake, reply to the notice or email the same address and we'll take another look.
+
+## 7. Changes
+
+We may update these terms as portfolios evolve. Material changes will be reflected on this page with a new "Last updated" date, and continued use of your portfolio after changes means you accept them.`
       }
     ]
   }
