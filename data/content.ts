@@ -245,8 +245,8 @@ The slug is auto-generated from your project name — e.g. "My Cool App" becomes
       {
         title: "Launching Your Project",
         slug: "launching-your-project-on-forg",
-        subtitle: "Launch your project on forg for a 7-day visibility boost, plus what Premium Launch adds.",
-        lastUpdated: "September 20, 2026",
+        subtitle: "Launch your project on forg for a 7-day visibility boost, plus what Premium adds.",
+        lastUpdated: "October 25, 2026",
         content: `Launching on forg gives your project a 7-day Launch Boost: elevated visibility across the platform during the most important week of your project's life.
 
 ## How to launch
@@ -262,20 +262,34 @@ The slug is auto-generated from your project name — e.g. "My Cool App" becomes
 ## Batch slots
 
 - Each week (**Sunday to Sunday IST**) allows a maximum of 20 launches.
-- When a week is full, it's marked as **"Full"** and unavailable.
+- When a week is full, it's marked as **"Full"**. You can still take it with a **queue skip** ($2.99).
 - You can see and book into upcoming weeks ahead of time.
+
+## Relaunching
+
+A relaunch is free when your last launch was at least 30 days ago and the week you pick has room. If you want a week inside the 30 days, or a full week, a queue skip ($2.99) gets you in.
 
 ## What happens during Launch Boost
 
 - Your project appears prominently on the [Explore](https://forg.to/explore) and [Projects](https://forg.to/projects) pages for 7 days.
 
-## Premium Launch ($19 one-time)
+## Premium ($13.99 one-time)
 
-- **Homepage Hero Slot:** Featured on [forg.to](https://forg.to)'s public landing page.
-- **Instant Indexing:** Submitted to Bing & Yandex via IndexNow immediately.
-- **SEO Boost:** Highest sitemap priority (1.0) and structured data.
-- **Forg Team Announcement:** Post from the official [@JoinForg](https://x.com/JoinForg) account on X.
-- **Staff Pick Badge:** Permanent badge on your project card.`
+- **Permanent listing:** Your project stays listed on forg for good.
+- **Individual post on X:** Posted from the official [@JoinForg](https://x.com/JoinForg) account.
+- **Guaranteed backlink:** A dofollow link from forg.to to your website.
+- **Premium badge:** Shown next to your project name, on its page and on cards.
+- **Boosted position:** On the site and in the weekly email. Your project is lifted in project lists and listed first among the week's launches in the weekly email. The Launchpad ranking itself is still decided by votes.
+
+## Add-ons
+
+| Option | Price |
+|--------|-------|
+| Queue skip | $2.99 |
+| Premium + queue skip | $16.99 |
+| Premium + queue skip + 1 month sidebar ad | $37 |
+
+All one-time, no subscription. The sidebar ad runs for 30 days and then ends on its own.`
       }
     ]
   },
