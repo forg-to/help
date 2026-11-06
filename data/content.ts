@@ -302,7 +302,7 @@ All one-time, no subscription. The sidebar ad runs for 30 days and then ends on 
         title: "Posting on forg",
         slug: "posting-on-forg",
         subtitle: "How posts work on forg, including character limits and adding media.",
-        lastUpdated: "September 20, 2026",
+        lastUpdated: "November 6, 2026",
         content: `Posts are the main way you share what's on your mind on forg. Write about what you're working on, something you learned, a hot take, whatever. It works like any other social feed.
 
 ## Character limits
@@ -314,7 +314,20 @@ All one-time, no subscription. The sidebar ad runs for 30 days and then ends on 
 
 ## Adding media
 
-Attach images or videos to your posts. Posts with media tend to get more reach in the feed.`
+Attach images or videos to your posts. Posts with media tend to get more reach in the feed.
+
+## Links in posts
+
+forg gives new posts a small push in the feed to help them find readers early. Posts that link to other websites don't get this push.
+
+These links are fine and keep the push:
+
+- Anything on forg.to, including project pages, articles, and portfolios (yourname.forg.to)
+- GitHub (github.com)
+
+Posts with other links still go live and show in the feed as normal. They just grow on their own likes and comments.
+
+**Tip:** Want to share your product? Link its forg project page instead of your website. The project page already links to your site.`
       },
       {
         title: "Writing Articles",
